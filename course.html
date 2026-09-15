@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- style -->
+     <link href="./asset/css/style.css" rel="stylesheet">
+     <link href="./asset/css/course.css" rel="stylesheet">
+     <!-- <link href="./asset/css/home.css" rel="stylesheet"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand align-middle" href="index.html">
+      <div class="d-flex align-items-center">
+        <img
+          src="./asset/img/ICTLogo9.png"
+          alt="Logo"
+          width="65"
+          height="65"
+        />
+        <div class="ms-2 lh-1">
+          <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+          <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+        </div>
+      </div>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+
+        <!-- Course with hover dropdown -->
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+    COURSE
+  </a>
+  <div class="dropdown-menu course-dropdown-menu">
+
+    <div class="dropdown-item has-submenu">
+      <span>Social</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+        <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Website</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Frontend Development</a>
+        <a href="list-course.html" class="submenu-item">Backend Development</a>
+        <a href="list-course.html" class="submenu-item">WordPress</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Design</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+        <a href="list-course.html" class="submenu-item">Graphic Design</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Programming</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Python</a>
+        <a href="list-course.html" class="submenu-item">Java</a>
+        <a href="list-course.html" class="submenu-item">C++</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Data</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Data Analysis</a>
+        <a href="list-course.html" class="submenu-item">Database Management</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Office</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+        <a href="list-course.html" class="submenu-item">Excel</a>
+        <a href="list-course.html" class="submenu-item">PowerPoint</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Networking</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">CCNA</a>
+        <a href="list-course.html" class="submenu-item">Network Security</a>
+      </div>
+    </div>
+
+  </div>
+</li>
+
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+        </li>
+      </ul>
+
+      <!-- dark mode -->
+<!-- Group theme toggle + login + register together -->
+  <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+    <button class="theme-toggle-btn border log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+
+    <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">LOGIN</button>
+    <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">REGISTER</button>
+    </div>
+  </div>
+</nav>
+    </header>
+
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container-fluid px-4 px-md-5">
+    <span class="eyebrow-bar"><i class="fa-solid fa-bolt"></i> ICT skills, taught weekly</span>
+    <h1>Explore all courses</h1>
+    <p class="lead-text">Discover practical, instructor-led courses in tech, marketing and design — built around real weekly schedules, not endless video libraries.</p>
+ 
+    <div class="search-shell">
+      <i class="fa-solid fa-magnifying-glass z-2"></i>
+      <input type="text" id="searchInput" class="form-control" placeholder="What do you want to learn?">
+      <button class="btn-search" onclick="applyFilters()">Search</button>
+    </div>
+ 
+    <div class="hero-stats">
+      <div class="stat"><b>120+</b><span>Active courses</span></div>
+      <div class="stat"><b>4.9</b><span>Average rating</span></div>
+      <div class="stat"><b>8</b><span>Skill categories</span></div>
+    </div>
+  </div>
+</section>
+ 
+ 
+<!-- ================= MAIN ================= -->
+<div class="page-shell">
+  <div class="container-fluid px-4 px-md-5">
+    <div class="row g-4">
+ 
+      <!-- FILTERS -->
+      <div class="col-lg-3">
+        <div class="filter-panel">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="filter-title"><i class="fa-solid fa-sliders text-muted"></i> Filters</span>
+            <a class="clear-link" onclick="clearFilters()">Clear all</a>
+          </div>
+ 
+          <div class="filter-group-label">Category</div>
+          <div id="categoryList">
+            <div class="cat-option active" data-cat="all"><span><span class="dot dot-all"></span>All courses</span><span class="count">6</span></div>
+            <div class="cat-option" data-cat="social"><span><span class="dot dot-social"></span>Social</span><span class="count">1</span></div>
+            <div class="cat-option" data-cat="website"><span><span class="dot dot-website"></span>Website</span><span class="count">1</span></div>
+            <div class="cat-option" data-cat="design"><span><span class="dot dot-design"></span>Design</span><span class="count">1</span></div>
+            <div class="cat-option" data-cat="programming"><span><span class="dot dot-programming"></span>Programming</span><span class="count">1</span></div>
+            <div class="cat-option" data-cat="data"><span><span class="dot dot-data"></span>Data</span><span class="count">1</span></div>
+            <div class="cat-option" data-cat="office"><span><span class="dot dot-office"></span>Office</span><span class="count">1</span></div>
+            <div class="cat-option" data-cat="networking"><span><span class="dot dot-networking"></span>Networking</span><span class="count">1</span></div>
+          </div>
+ 
+          <div class="filter-group-label">Price</div>
+          <input type="range" class="form-range" min="0" max="200" value="200" id="priceRange" oninput="document.getElementById('priceOut').innerText='$'+this.value">
+          <div class="d-flex justify-content-between" style="font-size:12.5px;color:var(--muted);">
+            <span>$0</span><span id="priceOut">$200</span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- COURSE GRID -->
+      <div class="col-lg-9">
+        <div class="section-heading">
+          <h2>Popular right now</h2>
+          <span class="result-count" id="resultCount">6 courses</span>
+        </div>
+ 
+        <div class="row g-4" id="courseGrid">
+ 
+          <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="website" data-title="Web Development">
+            <a href="#" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <div class="course-img-overlay"></div>
+          <img src="./asset/img/ABA.jpg" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Website</span>
+          <div class="course-img-overlay"></div>
+        </div>
+      
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">ABA PayWay Test Course</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$50.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+          </div>
+ 
+          <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="data" data-title="Data">
+            <a href="#" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/data_analysis.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Data</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">Data Analysis</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="bi bi-collection"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+          </div>
+ 
+          <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="programming" data-title="Programming">
+            <a href="#" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/csharp.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Programming</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">C# Programming</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+          </div>
+ 
+          <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="social" data-title="Digital Marketing">
+            <a href="#" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/digital.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Social</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">Digital Marketing</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+          </div>
+ 
+          <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="networking" data-title="IT Support">
+            <a href="#" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/IT Support.jpg" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Networking</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">IT Support</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+          </div>
+ 
+          <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="office" data-title="Microsoft Office">
+             <a href="#" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/ms_office.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Office</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">Microsoft Office</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="design" data-title="Graphic Design">
+            <a href="#" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/graphic_design.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Design</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">Graphic Design</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+          </div>
+ 
+        </div>
+ 
+        <div class="pager">
+          <button class="nav-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="nav-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- footer -->
+  <footer class="site-footer py-5 mt-5">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="row g-4">
+
+        <!-- Brand -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="navbar-brand align-middle" href="index.html">
+        <div class="d-flex align-items-center">
+          <img
+            src="./asset/img/ICTLogo9.png"
+            alt="Logo"
+            width="65"
+            height="65"
+          />
+          <div class="ms-2 lh-1">
+            <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+            <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+          </div>
+        </div>
+      </a>
+          <p class="small my-3" style="color: var(--sub);">
+            Empowering professionals through world-class ICT education since 2020.
+          </p>
+          <div class="d-flex gap-3 footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">About ICT</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">All Course</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Courses -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Popular Course</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Networking CCNA1</a></li>
+            <li><a href="#">C++ Programming</a></li>
+            <li><a href="#">React JS</a></li>
+            <li><a href="#">Web Development Frontend</a></li>
+            <li><a href="#">Mobile App (Flutter)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Contact Info</h6>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">
+              ផ្ទះលេខ 240B ផ្លូវ 132 ភូមិ06<br>
+              សង្កាត់ទឹកល្អក់ទី01<br>
+              ខណ្ឌទួលគោក រាជធានីភ្នំពេញ
+            </p>
+          </div>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">092 702 175 / 096 287 5270</p>
+          </div>
+          <div class="d-flex gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-envelope"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">ICTCenter@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Download App -->
+        <div class="col-12 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Download App</h6>
+          <p class="small mb-3" style="color: var(--sub);">
+            Download our app from the App Store and Google Play Store.
+          </p>
+          <div class="d-flex flex-column gap-2 mb-3">
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-apple"></i>
+              <span>
+                <small>Available on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-google-play"></i>
+              <span>
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+          <p class="small mb-2" style="color: var(--sub);">We accept:</p>
+          <div class="d-flex gap-2">
+            <span class="pay-badge pay-aba">ABA</span>
+            <span class="pay-badge pay-khqr">KHQR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+ <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./asset/js/darkmood.js"></script>
+    <script src="./asset/js/home.js"></script>
+    <script src="./asset/js/course.js"></script>
+</html>

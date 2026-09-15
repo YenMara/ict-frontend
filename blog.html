@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- style -->
+     <link href="./asset/css/style.css" rel="stylesheet">
+     <link href="./asset/css/blog.css" rel="stylesheet">
+     <!-- <link href="./asset/css/home.css" rel="stylesheet"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand align-middle" href="index.html">
+      <div class="d-flex align-items-center">
+        <img
+          src="./asset/img/ICTLogo9.png"
+          alt="Logo"
+          width="65"
+          height="65"
+        />
+        <div class="ms-2 lh-1">
+          <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+          <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+        </div>
+      </div>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+
+        <!-- Course with hover dropdown -->
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+    COURSE
+  </a>
+  <div class="dropdown-menu course-dropdown-menu">
+
+    <div class="dropdown-item has-submenu">
+      <span>Social</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+        <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Website</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Frontend Development</a>
+        <a href="list-course.html" class="submenu-item">Backend Development</a>
+        <a href="list-course.html" class="submenu-item">WordPress</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Design</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+        <a href="list-course.html" class="submenu-item">Graphic Design</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Programming</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Python</a>
+        <a href="list-course.html" class="submenu-item">Java</a>
+        <a href="list-course.html" class="submenu-item">C++</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Data</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Data Analysis</a>
+        <a href="list-course.html" class="submenu-item">Database Management</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Office</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+        <a href="list-course.html" class="submenu-item">Excel</a>
+        <a href="list-course.html" class="submenu-item">PowerPoint</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Networking</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">CCNA</a>
+        <a href="list-course.html" class="submenu-item">Network Security</a>
+      </div>
+    </div>
+
+  </div>
+</li>
+
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+        </li>
+      </ul>
+
+      <!-- dark mode -->
+<!-- Group theme toggle + login + register together -->
+  <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+    <button class="theme-toggle-btn border log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+
+    <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">LOGIN</button>
+    <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">REGISTER</button>
+    </div>
+  </div>
+</nav>
+    </header>
+
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow-bar"><i class="fa-solid fa-pen-nib"></i> Fresh from the team</span>
+    <h1>Our Blog</h1>
+    <p class="lead-text">Insights, tutorials, and news from the ICT Center team and industry experts.</p>
+  </div>
+</section>
+ 
+<div class="container-fluid featured-wrap px-4 px-md-5">
+  <a href="#" class="featured-post">
+    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&h=800&fit=crop" alt="Featured post">
+    <div class="fp-overlay"></div>
+    <div class="fp-content">
+      <span class="fp-badge">Feature</span>
+      <h2>ICT Course of Student Finish Grade 12</h2>
+      <div class="fp-tags">Web Development, C++, Python, Design</div>
+      <div class="fp-byline">
+        <span class="avatar">NN</span>
+        <b>Nhanh Nhim</b>
+        <span class="sep">•</span>
+        <span>Aug 21, 2026</span>
+      </div>
+    </div>
+  </a>
+</div>
+ 
+<!-- ================= MAIN ================= -->
+<div class="container-fluid page-shell px-4 px-md-5">
+ 
+  <div class="filter-bar">
+    <div class="pill-group" id="pillGroup">
+      <button class="pill-btn active" data-filter="all">All</button>
+      <button class="pill-btn" data-filter="article">Article</button>
+      <button class="pill-btn" data-filter="facebook">Facebook</button>
+      <button class="pill-btn" data-filter="youtube">Youtube</button>
+      <button class="pill-btn" data-filter="tiktok">Tiktok</button>
+    </div>
+    <div class="search-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" class="form-control" placeholder="Search articles...">
+    </div>
+  </div>
+ 
+  <div class="row g-4" id="blogGrid">
+ 
+    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="article" data-title="Introduction to Backend Development">
+      <a href="#" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="Backend Development">
+            <span class="source-badge article"><i class="fa-solid fa-file-lines"></i>Article</span>
+          </div>
+          <div class="blog-body">
+            <h3>Introduction to Backend Development</h3>
+            <p>Backend development is the part of web development that manages the server, database and application logic.</p>
+            <div class="blog-footer">
+              <span class="date"><i class="fa-regular fa-clock"></i>Jul 29, 2026</span>
+              <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+ 
+    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="facebook" data-title="Web Backend Development">
+      <a href="#" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop" alt="Web Backend Development">
+            <span class="source-badge facebook"><i class="fa-brands fa-facebook"></i>Facebook</span>
+          </div>
+          <div class="blog-body">
+            <h3>Web Backend Development</h3>
+            <p>PHP, PHP Framework, Laravel, and Database — everything you need to start building solid backend systems.</p>
+            <div class="blog-footer">
+              <span class="date"><i class="fa-regular fa-clock"></i>Aug 08, 2026</span>
+              <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+ 
+    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="facebook" data-title="Introduction to Full-Stack Development">
+      <a href="#" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop" alt="Full-Stack Development">
+            <span class="source-badge facebook"><i class="fa-brands fa-facebook"></i>Facebook</span>
+          </div>
+          <div class="blog-body">
+            <h3>Introduction to Full-Stack Development</h3>
+            <p>Full-stack development involves building both the frontend and backend of a website or application.</p>
+            <div class="blog-footer">
+              <span class="date"><i class="fa-regular fa-clock"></i>Jul 29, 2026</span>
+              <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+ 
+    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="youtube" data-title="Full Course Preview Web Development">
+      <a href="#" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" alt="Youtube course preview">
+            <span class="source-badge youtube"><i class="fa-brands fa-youtube"></i>Youtube</span>
+          </div>
+          <div class="blog-body">
+            <h3>Full Course Preview: Web Development</h3>
+            <p>A walkthrough of the full-stack curriculum, from HTML basics to deploying a finished project.</p>
+            <div class="blog-footer">
+              <span class="date"><i class="fa-regular fa-clock"></i>Jul 12, 2026</span>
+              <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+ 
+    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="tiktok" data-title="Quick Tips for New Coders">
+      <a href="#" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&h=400&fit=crop" alt="Tiktok quick tips">
+            <span class="source-badge tiktok"><i class="fa-brands fa-tiktok"></i>Tiktok</span>
+          </div>
+          <div class="blog-body">
+            <h3>Quick Tips for New Coders</h3>
+            <p>Bite-sized advice on debugging, naming variables, and staying consistent when you're just starting out.</p>
+            <div class="blog-footer">
+              <span class="date"><i class="fa-regular fa-clock"></i>Jul 05, 2026</span>
+              <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+ 
+    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="article" data-title="ICT Course of Student Finish Grade 12">
+      <a href="#" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" alt="ICT Course">
+            <span class="source-badge article"><i class="fa-solid fa-file-lines"></i>Article</span>
+          </div>
+          <div class="blog-body">
+            <h3>ICT Course of Student Finish Grade 12</h3>
+            <p>Web Development, C++, Python, Design — a look at the pathway for grade 12 graduates entering ICT.</p>
+            <div class="blog-footer">
+              <span class="date"><i class="fa-regular fa-clock"></i>Aug 21, 2026</span>
+              <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+ 
+    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="facebook" data-title="Follow us on Facebook and Telegram">
+      <a href="#" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=600&h=400&fit=crop" alt="Follow channels">
+            <span class="source-badge facebook"><i class="fa-brands fa-facebook"></i>Facebook</span>
+          </div>
+          <div class="blog-body">
+            <h3>Follow Us on Facebook &amp; Telegram</h3>
+            <p>Stay up to date with new course drops, schedule changes and student spotlights on our official channels.</p>
+            <div class="blog-footer">
+              <span class="date"><i class="fa-regular fa-clock"></i>Jun 30, 2026</span>
+              <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+ 
+    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="youtube" data-title="Backend Development Deep Dive">
+      <a href="#" class="blog-card-link">
+        <div class="blog-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="Backend deep dive">
+            <span class="source-badge youtube"><i class="fa-brands fa-youtube"></i>Youtube</span>
+          </div>
+          <div class="blog-body">
+            <h3>Backend Development Deep Dive</h3>
+            <p>An hour-long session covering APIs, databases and how to structure a Laravel project from scratch.</p>
+            <div class="blog-footer">
+              <span class="date"><i class="fa-regular fa-clock"></i>Jun 18, 2026</span>
+              <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+ 
+  </div>
+ 
+  <div class="empty-state" id="emptyState">
+    <i class="fa-regular fa-folder-open"></i>
+    <div>No posts match your filters yet.</div>
+  </div>
+ 
+</div>
+
+
+
+
+  <!-- footer -->
+  <footer class="site-footer py-5 mt-5">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="row g-4">
+
+        <!-- Brand -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="navbar-brand align-middle" href="index.html">
+        <div class="d-flex align-items-center">
+          <img
+            src="./asset/img/ICTLogo9.png"
+            alt="Logo"
+            width="65"
+            height="65"
+          />
+          <div class="ms-2 lh-1">
+            <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+            <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+          </div>
+        </div>
+      </a>
+          <p class="small my-3" style="color: var(--sub);">
+            Empowering professionals through world-class ICT education since 2020.
+          </p>
+          <div class="d-flex gap-3 footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">About ICT</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">All Course</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Courses -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Popular Course</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Networking CCNA1</a></li>
+            <li><a href="#">C++ Programming</a></li>
+            <li><a href="#">React JS</a></li>
+            <li><a href="#">Web Development Frontend</a></li>
+            <li><a href="#">Mobile App (Flutter)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Contact Info</h6>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">
+              ផ្ទះលេខ 240B ផ្លូវ 132 ភូមិ06<br>
+              សង្កាត់ទឹកល្អក់ទី01<br>
+              ខណ្ឌទួលគោក រាជធានីភ្នំពេញ
+            </p>
+          </div>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">092 702 175 / 096 287 5270</p>
+          </div>
+          <div class="d-flex gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-envelope"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">ICTCenter@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Download App -->
+        <div class="col-12 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Download App</h6>
+          <p class="small mb-3" style="color: var(--sub);">
+            Download our app from the App Store and Google Play Store.
+          </p>
+          <div class="d-flex flex-column gap-2 mb-3">
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-apple"></i>
+              <span>
+                <small>Available on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-google-play"></i>
+              <span>
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+          <p class="small mb-2" style="color: var(--sub);">We accept:</p>
+          <div class="d-flex gap-2">
+            <span class="pay-badge pay-aba">ABA</span>
+            <span class="pay-badge pay-khqr">KHQR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+ <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./asset/js/darkmood.js"></script>
+    <script src="./asset/js/home.js"></script>
+    <script src="./asset/js/blog.js"></script>
+</html>
