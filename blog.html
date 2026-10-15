@@ -33,7 +33,7 @@
 <body>
     <!-- navbar -->
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top shadow-sm">
   <div class="container-fluid">
     <a class="navbar-brand align-middle" href="index.html">
       <div class="d-flex align-items-center">
@@ -390,6 +390,39 @@
 </div>
 
 
+<!-- section2 -->
+ <section class="pv-section py-5">
+  <div class="container">
+
+    <!-- Pagination -->
+    <nav class="d-flex justify-content-center mb-4" aria-label="Photo pages">
+      <ul class="pagination pv-pagination mb-0" id="pvPagination"></ul>
+    </nav>
+
+    <!-- Stage -->
+    <div class="pv-stage mx-auto">
+      <img id="pvMain" class="pv-main" src="" alt="">
+
+      <button type="button" class="pv-nav pv-prev" id="pvPrev" aria-label="Previous photo">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button type="button" class="pv-nav pv-next" id="pvNext" aria-label="Next photo">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="pv-meta">
+        <span class="pv-counter" id="pvCounter">1 / 1</span>
+        <span class="pv-caption" id="pvCaption"></span>
+      </div>
+    </div>
+
+    <!-- Thumbnails for the current page -->
+    <div class="row row-cols-3 row-cols-md-6 g-3 mx-auto mt-3 pv-thumbs" id="pvThumbs"></div>
+
+  </div>
+</section>
+
+
 
 
   <!-- footer -->
@@ -511,4 +544,146 @@
     <script src="./asset/js/darkmood.js"></script>
     <script src="./asset/js/home.js"></script>
     <script src="./asset/js/blog.js"></script>
+
+    <script>
+  (function () {
+    /* Replace these with your own photos */
+    const photos = [
+      { src: 'asset/img/photos/photo-01.jpg', caption: 'Team photo with instructors' },
+      { src: 'asset/img/photos/photo-02.jpg', caption: 'Students in the lab' },
+      { src: 'asset/img/photos/photo-03.jpg', caption: 'Certificate ceremony' },
+      { src: 'asset/img/photos/photo-04.jpg', caption: 'Hands-on coding session' },
+      { src: 'asset/img/photos/photo-05.jpg', caption: 'Graduation day' },
+      { src: 'asset/img/photos/photo-06.jpg', caption: 'Class group photo' },
+      { src: 'asset/img/photos/photo-07.jpg', caption: 'Competition awards' },
+      { src: 'asset/img/photos/photo-08.jpg', caption: 'Workshop session' },
+      { src: 'asset/img/photos/photo-09.jpg', caption: 'Morning briefing' },
+      { src: 'asset/img/photos/photo-10.jpg', caption: 'Graduates celebrating' },
+      { src: 'asset/img/photos/photo-11.jpg', caption: 'Design studio' },
+      { src: 'asset/img/photos/photo-12.jpg', caption: 'Campus visit' }
+    ];
+
+    const PER_PAGE = 6;
+    const totalPages = Math.ceil(photos.length / PER_PAGE);
+
+    const main = document.getElementById('pvMain');
+    const counter = document.getElementById('pvCounter');
+    const caption = document.getElementById('pvCaption');
+    const pagination = document.getElementById('pvPagination');
+    const thumbs = document.getElementById('pvThumbs');
+    const stage = document.querySelector('.pv-stage');
+
+    let index = 0;
+    let swapTimer = null;
+
+    const pageOf = i => Math.floor(i / PER_PAGE);
+
+    function renderPagination() {
+      const current = pageOf(index);
+      let html = `
+        <li class="page-item ${current === 0 ? 'disabled' : ''}">
+          <button class="page-link" data-page="${current - 1}" aria-label="Previous page">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </li>`;
+
+      for (let p = 0; p < totalPages; p++) {
+        const active = p === current;
+        html += `
+          <li class="page-item ${active ? 'active' : ''}">
+            <button class="page-link" data-page="${p}" ${active ? 'aria-current="page"' : ''}>${p + 1}</button>
+          </li>`;
+      }
+
+      html += `
+        <li class="page-item ${current === totalPages - 1 ? 'disabled' : ''}">
+          <button class="page-link" data-page="${current + 1}" aria-label="Next page">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </li>`;
+
+      pagination.innerHTML = html;
+    }
+
+    function renderThumbs() {
+      const start = pageOf(index) * PER_PAGE;
+      const slice = photos.slice(start, start + PER_PAGE);
+
+      thumbs.innerHTML = slice.map((p, k) => {
+        const i = start + k;
+        return `
+          <div class="col">
+            <button type="button" class="pv-thumb ${i === index ? 'is-active' : ''}"
+                    data-index="${i}" aria-label="View ${p.caption}">
+              <img src="${p.src}" alt="" loading="lazy">
+            </button>
+          </div>`;
+      }).join('');
+    }
+
+    function preload(i) {
+      const img = new Image();
+      img.src = photos[(i + photos.length) % photos.length].src;
+    }
+
+    function show(i) {
+      index = (i + photos.length) % photos.length;
+      const photo = photos[index];
+
+      clearTimeout(swapTimer);
+      main.classList.add('is-swapping');
+      swapTimer = setTimeout(() => {
+        main.src = photo.src;
+        main.alt = photo.caption;
+        main.classList.remove('is-swapping');
+      }, 220);
+
+      caption.textContent = photo.caption;
+      counter.textContent = `${index + 1} / ${photos.length}`;
+
+      renderPagination();
+      renderThumbs();
+      preload(index + 1);
+      preload(index - 1);
+    }
+
+    /* Pagination clicks */
+    pagination.addEventListener('click', e => {
+      const btn = e.target.closest('.page-link');
+      if (!btn || btn.closest('.page-item').classList.contains('disabled')) return;
+      show(Number(btn.dataset.page) * PER_PAGE);
+    });
+
+    /* Thumbnail clicks */
+    thumbs.addEventListener('click', e => {
+      const btn = e.target.closest('.pv-thumb');
+      if (btn) show(Number(btn.dataset.index));
+    });
+
+    /* Arrows */
+    document.getElementById('pvPrev').addEventListener('click', () => show(index - 1));
+    document.getElementById('pvNext').addEventListener('click', () => show(index + 1));
+
+    /* Keyboard */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') show(index - 1);
+      if (e.key === 'ArrowRight') show(index + 1);
+    });
+
+    /* Swipe on touch devices */
+    let touchX = null;
+    stage.addEventListener('touchstart', e => {
+      touchX = e.touches[0].clientX;
+    }, { passive: true });
+
+    stage.addEventListener('touchend', e => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+      touchX = null;
+    });
+
+    show(0);
+  })();
+</script>
 </html>

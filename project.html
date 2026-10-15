@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- style -->
+    <link href="./asset/css/style.css" rel="stylesheet">
+    <link href="./asset/css/project.css" rel="stylesheet">
+    <link href="./asset/css/blog.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand align-middle" href="index.html">
+      <div class="d-flex align-items-center">
+        <img
+          src="./asset/img/ICTLogo9.png"
+          alt="Logo"
+          width="65"
+          height="65"
+        />
+        <div class="ms-2 lh-1">
+          <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+          <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+        </div>
+      </div>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+
+        <!-- Course with hover dropdown -->
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+    COURSE
+  </a>
+  <div class="dropdown-menu course-dropdown-menu">
+
+    <div class="dropdown-item has-submenu">
+      <span>Social</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+        <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Website</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Frontend Development</a>
+        <a href="list-course.html" class="submenu-item">Backend Development</a>
+        <a href="list-course.html" class="submenu-item">WordPress</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Design</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+        <a href="list-course.html" class="submenu-item">Graphic Design</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Programming</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Python</a>
+        <a href="list-course.html" class="submenu-item">Java</a>
+        <a href="list-course.html" class="submenu-item">C++</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Data</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Data Analysis</a>
+        <a href="list-course.html" class="submenu-item">Database Management</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Office</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+        <a href="list-course.html" class="submenu-item">Excel</a>
+        <a href="list-course.html" class="submenu-item">PowerPoint</a>
+      </div>
+    </div>
+
+    <div class="dropdown-item has-submenu">
+      <span>Networking</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      <div class="submenu">
+        <a href="list-course.html" class="submenu-item">CCNA</a>
+        <a href="list-course.html" class="submenu-item">Network Security</a>
+      </div>
+    </div>
+
+  </div>
+</li>
+
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+        </li>
+      </ul>
+
+      <!-- dark mode -->
+      <!-- Group theme toggle + login + register together -->
+      <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+        <button class="theme-toggle-btn border log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">LOGIN</button>
+        <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">REGISTER</button>
+      </div>
+  </div>
+</nav>
+    </header>
+
+
+<!-- section1 -->
+<section class="psx-section py-5 mt-5">
+  <div class="container">
+
+    <!-- Toolbar -->
+    <div class="psx-toolbar d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3 mb-5">
+      <div class="psx-filters d-flex flex-wrap gap-2" role="group" aria-label="Filter projects" id="psxFilters">
+        <button type="button" class="psx-pill active" data-filter="all">
+          All <span class="psx-count" data-count="all"></span>
+        </button>
+        <button type="button" class="psx-pill" data-filter="website">
+          Website <span class="psx-count" data-count="website"></span>
+        </button>
+        <button type="button" class="psx-pill" data-filter="app">
+          Mobile App <span class="psx-count" data-count="app"></span>
+        </button>
+        <button type="button" class="psx-pill" data-filter="design">
+          Design <span class="psx-count" data-count="design"></span>
+        </button>
+      </div>
+
+      <label class="psx-search position-relative">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" id="psxSearch" class="form-control" placeholder="Search projects or tech..." aria-label="Search projects">
+      </label>
+    </div>
+
+    <!-- Grid -->
+    <div class="row g-4" id="psxGrid">
+
+      <!-- Featured project -->
+      <div class="col-12 col-lg-6 psx-item" data-category="website" data-search="frontend web application html css javascript">
+        <article class="psx-card psx-card-featured h-100">
+          <div class="psx-media">
+            <img src="asset/img/projects/frontend-web-app.jpg" alt="Frontend Web Application screenshot" loading="lazy">
+            <div class="psx-media-shade"></div>
+            <span class="psx-chip"><i class="fa-solid fa-bolt me-1"></i>Featured</span>
+          </div>
+          <div class="psx-body">
+            <span class="psx-category">Website</span>
+            <h2 class="h3 fw-bold text-white mt-2 mb-3">Frontend Web Application</h2>
+            <p class="psx-text mb-4">
+              A responsive frontend web application for displaying information and services related to Phum Keyla,
+              with a clean and user-friendly interface.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="psx-tag">HTML</span>
+              <span class="psx-tag">CSS</span>
+              <span class="psx-tag">JavaScript</span>
+            </div>
+
+            <div class="psx-meta d-flex flex-wrap gap-3 mb-4">
+              <span><i class="fa-regular fa-user"></i>Yen Mara</span>
+              <span><i class="fa-solid fa-graduation-cap"></i>Nhanh Nhim</span>
+              <span><i class="fa-regular fa-clock"></i>1 month</span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-auto">
+              <button type="button" class="btn psx-btn-primary js-open-project" data-project-id="frontend-web-app">
+                View Details <i class="fa-solid fa-arrow-right ms-1"></i>
+              </button>
+              <a href="https://example.com" class="btn psx-btn-ghost" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Sample: mobile app -->
+      <div class="col-12 col-md-6 col-lg-3 psx-item" data-category="app" data-search="mobile app flutter firebase">
+        <article class="psx-card h-100">
+          <div class="psx-media">
+            <img src="asset/img/projects/sample-app.jpg" alt="Mobile app project" loading="lazy">
+            <div class="psx-media-shade"></div>
+            <span class="psx-chip">Mobile App</span>
+          </div>
+          <div class="psx-body">
+            <h3 class="h5 fw-bold text-white mb-2">Sample Mobile App</h3>
+            <p class="psx-text small mb-3">A short description of the project goes here.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="psx-tag psx-tag-sm">Flutter</span>
+              <span class="psx-tag psx-tag-sm">Firebase</span>
+            </div>
+            <button type="button" class="btn psx-btn-primary btn-sm mt-auto align-self-start js-open-project" data-project-id="sample-app">
+              View Details
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Sample: design -->
+      <div class="col-12 col-md-6 col-lg-3 psx-item" data-category="design" data-search="ui design figma ux research">
+        <article class="psx-card h-100">
+          <div class="psx-media">
+            <img src="asset/img/projects/sample-design.jpg" alt="UI design project" loading="lazy">
+            <div class="psx-media-shade"></div>
+            <span class="psx-chip">Design</span>
+          </div>
+          <div class="psx-body">
+            <h3 class="h5 fw-bold text-white mb-2">Sample UI Design</h3>
+            <p class="psx-text small mb-3">A short description of the project goes here.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="psx-tag psx-tag-sm">Figma</span>
+              <span class="psx-tag psx-tag-sm">UX Research</span>
+            </div>
+            <button type="button" class="btn psx-btn-primary btn-sm mt-auto align-self-start js-open-project" data-project-id="sample-design">
+              View Details
+            </button>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <!-- Empty state -->
+    <div class="psx-empty text-center py-5 mt-3" id="psxEmpty" hidden>
+      <i class="fa-regular fa-folder-open fs-1 mb-3"></i>
+      <p class="mb-0">No projects match your search.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- section2 -->
+ <section class="pv-section py-5">
+  <div class="container">
+
+    <!-- Pagination -->
+    <nav class="d-flex justify-content-center mb-4" aria-label="Photo pages">
+      <ul class="pagination pv-pagination mb-0" id="pvPagination"></ul>
+    </nav>
+
+    <!-- Stage -->
+    <div class="pv-stage mx-auto">
+      <img id="pvMain" class="pv-main" src="" alt="">
+
+      <button type="button" class="pv-nav pv-prev" id="pvPrev" aria-label="Previous photo">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button type="button" class="pv-nav pv-next" id="pvNext" aria-label="Next photo">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="pv-meta">
+        <span class="pv-counter" id="pvCounter">1 / 1</span>
+        <span class="pv-caption" id="pvCaption"></span>
+      </div>
+    </div>
+
+    <!-- Thumbnails for the current page -->
+    <div class="row row-cols-3 row-cols-md-6 g-3 mx-auto mt-3 pv-thumbs" id="pvThumbs"></div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="site-footer py-5 mt-5">
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row g-4">
+
+          <!-- Brand -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <a class="navbar-brand align-middle" href="index.html">
+              <div class="d-flex align-items-center">
+                <img
+                  src="./asset/img/ICTLogo9.png"
+                  alt="Logo"
+                  width="65"
+                  height="65"
+                />
+                <div class="ms-2 lh-1">
+                  <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+                  <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+                </div>
+              </div>
+            </a>
+            <p class="small my-3" style="color: var(--sub);">
+              Empowering professionals through world-class ICT education since 2020.
+            </p>
+            <div class="d-flex gap-3 footer-socials">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- About -->
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">About ICT</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">All Course</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Popular Courses -->
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Popular Course</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Networking CCNA1</a></li>
+              <li><a href="#">C++ Programming</a></li>
+              <li><a href="#">React JS</a></li>
+              <li><a href="#">Web Development Frontend</a></li>
+              <li><a href="#">Mobile App (Flutter)</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Contact Info</h6>
+            <div class="d-flex gap-3 mb-3">
+              <span class="footer-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <p class="small mb-0" style="color: var(--sub);">
+                ផ្ទះលេខ 240B ផ្លូវ 132 ភូមិ06<br>
+                សង្កាត់ទឹកល្អក់ទី01<br>
+                ខណ្ឌទួលគោក រាជធានីភ្នំពេញ
+              </p>
+            </div>
+            <div class="d-flex gap-3 mb-3">
+              <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>
+              <p class="small mb-0" style="color: var(--sub);">092 702 175 / 096 287 5270</p>
+            </div>
+            <div class="d-flex gap-3">
+              <span class="footer-icon"><i class="fa-solid fa-envelope"></i></span>
+              <p class="small mb-0" style="color: var(--sub);">ICTCenter@gmail.com</p>
+            </div>
+          </div>
+
+          <!-- Download App -->
+          <div class="col-12 col-lg-2">
+            <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Download App</h6>
+            <p class="small mb-3" style="color: var(--sub);">
+              Download our app from the App Store and Google Play Store.
+            </p>
+            <div class="d-flex flex-column gap-2 mb-3">
+              <a href="#" class="store-badge">
+                <i class="fa-brands fa-apple"></i>
+                <span>
+                  <small>Available on the</small>
+                  <strong>App Store</strong>
+                </span>
+              </a>
+              <a href="#" class="store-badge">
+                <i class="fa-brands fa-google-play"></i>
+                <span>
+                  <small>GET IT ON</small>
+                  <strong>Google Play</strong>
+                </span>
+              </a>
+            </div>
+            <p class="small mb-2" style="color: var(--sub);">We accept:</p>
+            <div class="d-flex gap-2">
+              <span class="pay-badge pay-aba">ABA</span>
+              <span class="pay-badge pay-khqr">KHQR</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./asset/js/darkmood.js"></script>
+    <script src="./asset/js/home.js"></script>
+    <script src="./asset/js/course.js"></script>
+
+<script>
+  (function () {
+    const filterBtns = document.querySelectorAll('#psxFilters .psx-pill');
+    const items = Array.from(document.querySelectorAll('#psxGrid .psx-item'));
+    const searchInput = document.getElementById('psxSearch');
+    const emptyMsg = document.getElementById('psxEmpty');
+
+    let activeFilter = 'all';
+    let query = '';
+
+    /* Fill live counts */
+    document.querySelectorAll('.psx-count').forEach(el => {
+      const cat = el.dataset.count;
+      el.textContent = cat === 'all'
+        ? items.length
+        : items.filter(i => i.dataset.category === cat).length;
+    });
+
+    function apply() {
+      let visible = 0;
+
+      items.forEach(item => {
+        const matchesCat = activeFilter === 'all' || item.dataset.category === activeFilter;
+        const matchesQuery = !query || item.dataset.search.includes(query);
+        const show = matchesCat && matchesQuery;
+
+        if (show) {
+          item.classList.remove('is-hidden', 'is-leaving');
+          visible++;
+        } else if (!item.classList.contains('is-hidden')) {
+          item.classList.add('is-leaving');
+          setTimeout(() => {
+            if (item.classList.contains('is-leaving')) {
+              item.classList.add('is-hidden');
+              item.classList.remove('is-leaving');
+            }
+          }, 400);
+        }
+      });
+
+      emptyMsg.hidden = visible > 0;
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeFilter = btn.dataset.filter;
+        filterBtns.forEach(b => b.classList.toggle('active', b === btn));
+        apply();
+      });
+    });
+
+    searchInput.addEventListener('input', e => {
+      query = e.target.value.trim().toLowerCase();
+      apply();
+    });
+  })();
+
+//   section2
+(function () {
+    /* Replace these with your own photos */
+    const photos = [
+      { src: 'asset/img/photos/photo-01.jpg', caption: 'Team photo with instructors' },
+      { src: 'asset/img/photos/photo-02.jpg', caption: 'Students in the lab' },
+      { src: 'asset/img/photos/photo-03.jpg', caption: 'Certificate ceremony' },
+      { src: 'asset/img/photos/photo-04.jpg', caption: 'Hands-on coding session' },
+      { src: 'asset/img/photos/photo-05.jpg', caption: 'Graduation day' },
+      { src: 'asset/img/photos/photo-06.jpg', caption: 'Class group photo' },
+      { src: 'asset/img/photos/photo-07.jpg', caption: 'Competition awards' },
+      { src: 'asset/img/photos/photo-08.jpg', caption: 'Workshop session' },
+      { src: 'asset/img/photos/photo-09.jpg', caption: 'Morning briefing' },
+      { src: 'asset/img/photos/photo-10.jpg', caption: 'Graduates celebrating' },
+      { src: 'asset/img/photos/photo-11.jpg', caption: 'Design studio' },
+      { src: 'asset/img/photos/photo-12.jpg', caption: 'Campus visit' }
+    ];
+
+    const PER_PAGE = 6;
+    const totalPages = Math.ceil(photos.length / PER_PAGE);
+
+    const main = document.getElementById('pvMain');
+    const counter = document.getElementById('pvCounter');
+    const caption = document.getElementById('pvCaption');
+    const pagination = document.getElementById('pvPagination');
+    const thumbs = document.getElementById('pvThumbs');
+    const stage = document.querySelector('.pv-stage');
+
+    let index = 0;
+    let swapTimer = null;
+
+    const pageOf = i => Math.floor(i / PER_PAGE);
+
+    function renderPagination() {
+      const current = pageOf(index);
+      let html = `
+        <li class="page-item ${current === 0 ? 'disabled' : ''}">
+          <button class="page-link" data-page="${current - 1}" aria-label="Previous page">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </li>`;
+
+      for (let p = 0; p < totalPages; p++) {
+        const active = p === current;
+        html += `
+          <li class="page-item ${active ? 'active' : ''}">
+            <button class="page-link" data-page="${p}" ${active ? 'aria-current="page"' : ''}>${p + 1}</button>
+          </li>`;
+      }
+
+      html += `
+        <li class="page-item ${current === totalPages - 1 ? 'disabled' : ''}">
+          <button class="page-link" data-page="${current + 1}" aria-label="Next page">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </li>`;
+
+      pagination.innerHTML = html;
+    }
+
+    function renderThumbs() {
+      const start = pageOf(index) * PER_PAGE;
+      const slice = photos.slice(start, start + PER_PAGE);
+
+      thumbs.innerHTML = slice.map((p, k) => {
+        const i = start + k;
+        return `
+          <div class="col">
+            <button type="button" class="pv-thumb ${i === index ? 'is-active' : ''}"
+                    data-index="${i}" aria-label="View ${p.caption}">
+              <img src="${p.src}" alt="" loading="lazy">
+            </button>
+          </div>`;
+      }).join('');
+    }
+
+    function preload(i) {
+      const img = new Image();
+      img.src = photos[(i + photos.length) % photos.length].src;
+    }
+
+    function show(i) {
+      index = (i + photos.length) % photos.length;
+      const photo = photos[index];
+
+      clearTimeout(swapTimer);
+      main.classList.add('is-swapping');
+      swapTimer = setTimeout(() => {
+        main.src = photo.src;
+        main.alt = photo.caption;
+        main.classList.remove('is-swapping');
+      }, 220);
+
+      caption.textContent = photo.caption;
+      counter.textContent = `${index + 1} / ${photos.length}`;
+
+      renderPagination();
+      renderThumbs();
+      preload(index + 1);
+      preload(index - 1);
+    }
+
+    /* Pagination clicks */
+    pagination.addEventListener('click', e => {
+      const btn = e.target.closest('.page-link');
+      if (!btn || btn.closest('.page-item').classList.contains('disabled')) return;
+      show(Number(btn.dataset.page) * PER_PAGE);
+    });
+
+    /* Thumbnail clicks */
+    thumbs.addEventListener('click', e => {
+      const btn = e.target.closest('.pv-thumb');
+      if (btn) show(Number(btn.dataset.index));
+    });
+
+    /* Arrows */
+    document.getElementById('pvPrev').addEventListener('click', () => show(index - 1));
+    document.getElementById('pvNext').addEventListener('click', () => show(index + 1));
+
+    /* Keyboard */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') show(index - 1);
+      if (e.key === 'ArrowRight') show(index + 1);
+    });
+
+    /* Swipe on touch devices */
+    let touchX = null;
+    stage.addEventListener('touchstart', e => {
+      touchX = e.touches[0].clientX;
+    }, { passive: true });
+
+    stage.addEventListener('touchend', e => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+      touchX = null;
+    });
+
+    show(0);
+  })();
+</script>
+
+</body>
+</html>
