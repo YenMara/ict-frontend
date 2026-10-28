@@ -31,159 +31,197 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- navbar -->
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand align-middle" href="index.html">
-      <div class="d-flex align-items-center">
-        <img
-          src="./asset/img/ICTLogo9.png"
-          alt="Logo"
-          width="65"
-          height="65"
-        />
-        <div class="ms-2 lh-1">
-          <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
-          <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
-        </div>
-      </div>
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+  <!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand align-middle" href="index.html">
+          <div class="d-flex align-items-center">
+            <img
+              src="./asset/img/ICTLogo9.png"
+              alt="Logo"
+              width="65"
+              height="65"
+            />
+            <div class="ms-2 lh-1">
+              <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+              <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+            </div>
+          </div>
+        </a>
 
-        <!-- Course with hover dropdown -->
-        <li class="nav-item dropdown hover-dropdown">
-  <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
-    COURSE
-  </a>
-  <div class="dropdown-menu course-dropdown-menu">
-
-    <div class="dropdown-item has-submenu">
-      <span>Social</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
-        <a href="list-course.html" class="submenu-item">Digital Marketing</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Website</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Frontend Development</a>
-        <a href="list-course.html" class="submenu-item">Backend Development</a>
-        <a href="list-course.html" class="submenu-item">WordPress</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Design</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">UI/UX Design</a>
-        <a href="list-course.html" class="submenu-item">Graphic Design</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Programming</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Python</a>
-        <a href="list-course.html" class="submenu-item">Java</a>
-        <a href="list-course.html" class="submenu-item">C++</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Data</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Data Analysis</a>
-        <a href="list-course.html" class="submenu-item">Database Management</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Office</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Microsoft Word</a>
-        <a href="list-course.html" class="submenu-item">Excel</a>
-        <a href="list-course.html" class="submenu-item">PowerPoint</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Networking</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">CCNA</a>
-        <a href="list-course.html" class="submenu-item">Network Security</a>
-      </div>
-    </div>
-
-  </div>
-</li>
-
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
-        </li>
-      </ul>
-
-      <!-- dark mode -->
-      <!-- Group theme toggle + login + register together -->
-      <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
-        <button class="theme-toggle-btn border log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
 
-        <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">LOGIN</button>
-        <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">REGISTER</button>
-      </div>
+            <!-- Course with hover dropdown -->
+            <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+              COURSE
+            </a>
+            <div class="dropdown-menu course-dropdown-menu">
+
+              <div class="dropdown-item has-submenu">
+                <span>Social</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+                  <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Website</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Frontend Development</a>
+                  <a href="list-course.html" class="submenu-item">Backend Development</a>
+                  <a href="list-course.html" class="submenu-item">WordPress</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Design</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+                  <a href="list-course.html" class="submenu-item">Graphic Design</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Programming</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Python</a>
+                  <a href="list-course.html" class="submenu-item">Java</a>
+                  <a href="list-course.html" class="submenu-item">C++</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Data</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Data Analysis</a>
+                  <a href="list-course.html" class="submenu-item">Database Management</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Office</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+                  <a href="list-course.html" class="submenu-item">Excel</a>
+                  <a href="list-course.html" class="submenu-item">PowerPoint</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Networking</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">CCNA</a>
+                  <a href="list-course.html" class="submenu-item">Network Security</a>
+                </div>
+              </div>
+
+            </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+
+  <!-- dark mode -->
+  <!-- Group theme toggle + login + register together -->
+          <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+            <button class="theme-toggle-btn log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">LOGIN</button>
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">REGISTER</button>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-solid fa-rocket"></i> Built by our students</span>
+    <h1>Project showcase</h1>
+    <p>Explore real-world projects developed by our students and instructors across various ICT disciplines.</p>
   </div>
-</nav>
-    </header>
-
+</header>
+ 
+<div class="wrap">
+  <!-- Featured spotlight -->
+  <article class="spot" aria-labelledby="spotTitle">
+    <div class="spot-media">
+      <span class="ribbon"><i class="fa-solid fa-star"></i> Featured project</span>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span>greyon.example.com</span></div>
+        <img src="asset/img/greyon/shot-1.jpg" alt="Greyon hotel booking website">
+      </div>
+    </div>
+    <div class="spot-body">
+      <span class="chip">Website</span>
+      <h2 id="spotTitle">Greyon</h2>
+      <p>A hotel booking platform offering convenient reservations across multiple provinces.</p>
+      <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+      <div class="meta">
+        <div class="by"><img src="asset/img/avatar-default.png" alt=""> Yen Mara</div>
+        <span><i class="fa-regular fa-clock"></i> 1 month</span>
+        <span><i class="fa-regular fa-eye"></i> 20 views</span>
+      </div>
+      <div class="btns">
+        <button type="button" class="btn primary js-open-project" data-project-id="greyon">View details <i class="fa-solid fa-arrow-right"></i></button>
+        <a class="btn" href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live demo</a>
+      </div>
+    </div>
+  </article>
+</div>
 
 <!-- section1 -->
-<section class="psx-section py-5 mt-5">
-  <div class="container">
+<section class="psx-section py-5 mt-2">
+  <div class="container-fluid">
 
     <!-- Toolbar -->
     <div class="psx-toolbar d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3 mb-5">
@@ -209,91 +247,246 @@
     </div>
 
     <!-- Grid -->
-    <div class="row g-4" id="psxGrid">
+    <div id="psxGrid">
 
-      <!-- Featured project -->
-      <div class="col-12 col-lg-6 psx-item" data-category="website" data-search="frontend web application html css javascript">
-        <article class="psx-card psx-card-featured h-100">
-          <div class="psx-media">
-            <img src="asset/img/projects/frontend-web-app.jpg" alt="Frontend Web Application screenshot" loading="lazy">
-            <div class="psx-media-shade"></div>
-            <span class="psx-chip"><i class="fa-solid fa-bolt me-1"></i>Featured</span>
+      <div class="row g-4">
+       <div class="col-12 col-md-3 psx-item" data-category="website" data-search="hotel booking html css javascript">
+      <article class="psx-card">
+        <div class="psx-media">
+          <img src="asset/img/greyon.jpg" alt="Greyon hotel booking website" loading="lazy">
+          <div class="psx-media-shade"></div>
+          <span class="psx-chip">Website</span>
+        </div>
+        <div class="psx-body">
+          <h3 class="psx-title"><button type="button" class="psx-open js-open-project" data-project-id="greyon">Greyon</button></h3>
+          <p class="psx-text">A hotel booking platform offering convenient reservations across multiple provinces.</p>
+          <div class="psx-tags">
+            <span class="psx-tag">HTML</span>
+            <span class="psx-tag">CSS</span>
+            <span class="psx-tag">JavaScript</span>
           </div>
-          <div class="psx-body">
-            <span class="psx-category">Website</span>
-            <h2 class="h3 fw-bold text-white mt-2 mb-3">Frontend Web Application</h2>
-            <p class="psx-text mb-4">
-              A responsive frontend web application for displaying information and services related to Phum Keyla,
-              with a clean and user-friendly interface.
-            </p>
-
-            <div class="d-flex flex-wrap gap-2 mb-4">
-              <span class="psx-tag">HTML</span>
-              <span class="psx-tag">CSS</span>
-              <span class="psx-tag">JavaScript</span>
+          <div class="psx-footer">
+            <div class="psx-author">
+              <img class="psx-avatar" src="asset/img/avatar-default.png" alt="">
+              <span class="psx-author-name">Yen Mara</span>
             </div>
-
-            <div class="psx-meta d-flex flex-wrap gap-3 mb-4">
-              <span><i class="fa-regular fa-user"></i>Yen Mara</span>
-              <span><i class="fa-solid fa-graduation-cap"></i>Nhanh Nhim</span>
-              <span><i class="fa-regular fa-clock"></i>1 month</span>
-            </div>
-
-            <div class="d-flex flex-wrap gap-2 mt-auto">
-              <button type="button" class="btn psx-btn-primary js-open-project" data-project-id="frontend-web-app">
-                View Details <i class="fa-solid fa-arrow-right ms-1"></i>
-              </button>
-              <a href="https://example.com" class="btn psx-btn-ghost" target="_blank" rel="noopener">
-                <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Live Demo
-              </a>
+            <div class="psx-stats">
+              <span title="Views"><i class="fa-regular fa-eye" aria-hidden="true"></i> 5</span>
+              <span title="Likes"><i class="fa-regular fa-heart" aria-hidden="true"></i> 0</span>
             </div>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
+    </div>
 
       <!-- Sample: mobile app -->
-      <div class="col-12 col-md-6 col-lg-3 psx-item" data-category="app" data-search="mobile app flutter firebase">
-        <article class="psx-card h-100">
-          <div class="psx-media">
-            <img src="asset/img/projects/sample-app.jpg" alt="Mobile app project" loading="lazy">
-            <div class="psx-media-shade"></div>
-            <span class="psx-chip">Mobile App</span>
+<div class="col-12 col-md-3 psx-item" data-category="app" data-search="mobile app flutter firebase">
+      <article class="psx-card">
+        <div class="psx-media">
+          <img src="asset/img/about-class2.jpg" alt="Students learning together" loading="lazy">
+          <div class="psx-media-shade"></div>
+          <span class="psx-chip">Mobile App</span>
+        </div>
+        <div class="psx-body">
+          <h3 class="psx-title"><button type="button" class="psx-open js-open-project" data-project-id="sample-app">Sample Mobile App</button></h3>
+          <p class="psx-text">A short description of the project goes here.</p>
+          <div class="psx-tags">
+            <span class="psx-tag">Flutter</span>
+            <span class="psx-tag">Firebase</span>
           </div>
-          <div class="psx-body">
-            <h3 class="h5 fw-bold text-white mb-2">Sample Mobile App</h3>
-            <p class="psx-text small mb-3">A short description of the project goes here.</p>
-            <div class="d-flex flex-wrap gap-2 mb-3">
-              <span class="psx-tag psx-tag-sm">Flutter</span>
-              <span class="psx-tag psx-tag-sm">Firebase</span>
+          <div class="psx-footer">
+            <div class="psx-author">
+              <img class="psx-avatar" src="asset/img/avatar-default.png" alt="">
+              <span class="psx-author-name">Author Name</span>
             </div>
-            <button type="button" class="btn psx-btn-primary btn-sm mt-auto align-self-start js-open-project" data-project-id="sample-app">
-              View Details
-            </button>
+            <div class="psx-stats">
+              <span title="Views"><i class="fa-regular fa-eye" aria-hidden="true"></i> 0</span>
+              <span title="Likes"><i class="fa-regular fa-heart" aria-hidden="true"></i> 0</span>
+            </div>
           </div>
-        </article>
+        </div>
+      </article>
+    </div>
+      <!-- Sample: design -->
+ <div class="col-12 col-md-3 psx-item" data-category="design" data-search="ui design figma ux research">
+      <article class="psx-card">
+        <div class="psx-media">
+          <img src="asset/img/about-class3.jpeg" alt="Class group photo" loading="lazy">
+          <div class="psx-media-shade"></div>
+          <span class="psx-chip">Design</span>
+        </div>
+        <div class="psx-body">
+          <h3 class="psx-title"><button type="button" class="psx-open js-open-project" data-project-id="sample-design">Sample UI Design</button></h3>
+          <p class="psx-text">A short description of the project goes here.</p>
+          <div class="psx-tags">
+            <span class="psx-tag">Figma</span>
+            <span class="psx-tag">UX Research</span>
+          </div>
+          <div class="psx-footer">
+            <div class="psx-author">
+              <img class="psx-avatar" src="asset/img/avatar-default.png" alt="">
+              <span class="psx-author-name">Author Name</span>
+            </div>
+            <div class="psx-stats">
+              <span title="Views"><i class="fa-regular fa-eye" aria-hidden="true"></i> 0</span>
+              <span title="Likes"><i class="fa-regular fa-heart" aria-hidden="true"></i> 0</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+      <!-- Sample: mobile app -->
+<div class="col-12 col-md-3 psx-item" data-category="app" data-search="mobile app flutter firebase">
+      <article class="psx-card">
+        <div class="psx-media">
+          <img src="asset/img/about-class2.jpg" alt="Students learning together" loading="lazy">
+          <div class="psx-media-shade"></div>
+          <span class="psx-chip">Mobile App</span>
+        </div>
+        <div class="psx-body">
+          <h3 class="psx-title"><button type="button" class="psx-open js-open-project" data-project-id="sample-app">Sample Mobile App</button></h3>
+          <p class="psx-text">A short description of the project goes here.</p>
+          <div class="psx-tags">
+            <span class="psx-tag">Flutter</span>
+            <span class="psx-tag">Firebase</span>
+          </div>
+          <div class="psx-footer">
+            <div class="psx-author">
+              <img class="psx-avatar" src="asset/img/avatar-default.png" alt="">
+              <span class="psx-author-name">Author Name</span>
+            </div>
+            <div class="psx-stats">
+              <span title="Views"><i class="fa-regular fa-eye" aria-hidden="true"></i> 0</span>
+              <span title="Likes"><i class="fa-regular fa-heart" aria-hidden="true"></i> 0</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+      <!-- Sample: design -->
+ <div class="col-12 col-md-3 psx-item" data-category="design" data-search="ui design figma ux research">
+      <article class="psx-card">
+        <div class="psx-media">
+          <img src="asset/img/about-class3.jpeg" alt="Class group photo" loading="lazy">
+          <div class="psx-media-shade"></div>
+          <span class="psx-chip">Design</span>
+        </div>
+        <div class="psx-body">
+          <h3 class="psx-title"><button type="button" class="psx-open js-open-project" data-project-id="sample-design">Sample UI Design</button></h3>
+          <p class="psx-text">A short description of the project goes here.</p>
+          <div class="psx-tags">
+            <span class="psx-tag">Figma</span>
+            <span class="psx-tag">UX Research</span>
+          </div>
+          <div class="psx-footer">
+            <div class="psx-author">
+              <img class="psx-avatar" src="asset/img/avatar-default.png" alt="">
+              <span class="psx-author-name">Author Name</span>
+            </div>
+            <div class="psx-stats">
+              <span title="Views"><i class="fa-regular fa-eye" aria-hidden="true"></i> 0</span>
+              <span title="Likes"><i class="fa-regular fa-heart" aria-hidden="true"></i> 0</span>
+            </div>
+        </div>
+      </article>
+    </div>
+
+
+ 
+    <!-- Sample: mobile app -->
+    <div class="col-12 col-md-3 psx-item" data-category="app" data-search="mobile app flutter firebase">
+      <article class="psx-card">
+        <div class="psx-media">
+          <img src="asset/img/about-class2.jpg" alt="Students learning together" loading="lazy">
+          <div class="psx-media-shade"></div>
+          <span class="psx-chip">Mobile App</span>
+        </div>
+        <div class="psx-body">
+          <h3 class="psx-title"><button type="button" class="psx-open js-open-project" data-project-id="sample-app">Sample Mobile App</button></h3>
+          <p class="psx-text">A short description of the project goes here.</p>
+          <div class="psx-tags">
+            <span class="psx-tag">Flutter</span>
+            <span class="psx-tag">Firebase</span>
+          </div>
+          <div class="psx-footer">
+            <div class="psx-author">
+              <img class="psx-avatar" src="asset/img/avatar-default.png" alt="">
+              <span class="psx-author-name">Author Name</span>
+            </div>
+            <div class="psx-stats">
+              <span title="Views"><i class="fa-regular fa-eye" aria-hidden="true"></i> 0</span>
+              <span title="Likes"><i class="fa-regular fa-heart" aria-hidden="true"></i> 0</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+ 
+    <!-- Sample: design -->
+    <div class="col-12 col-md-3 psx-item" data-category="design" data-search="ui design figma ux research">
+      <article class="psx-card">
+        <div class="psx-media">
+          <img src="asset/img/about-class3.jpeg" alt="Class group photo" loading="lazy">
+          <div class="psx-media-shade"></div>
+          <span class="psx-chip">Design</span>
+        </div>
+        <div class="psx-body">
+          <h3 class="psx-title"><button type="button" class="psx-open js-open-project" data-project-id="sample-design">Sample UI Design</button></h3>
+          <p class="psx-text">A short description of the project goes here.</p>
+          <div class="psx-tags">
+            <span class="psx-tag">Figma</span>
+            <span class="psx-tag">UX Research</span>
+          </div>
+          <div class="psx-footer">
+            <div class="psx-author">
+              <img class="psx-avatar" src="asset/img/avatar-default.png" alt="">
+              <span class="psx-author-name">Author Name</span>
+            </div>
+            <div class="psx-stats">
+              <span title="Views"><i class="fa-regular fa-eye" aria-hidden="true"></i> 0</span>
+              <span title="Likes"><i class="fa-regular fa-heart" aria-hidden="true"></i> 0</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+ 
+    <!-- Sample: learning platform -->
+    <div class="col-12 col-md-3 psx-item" data-category="website" data-search="learning platform education website">
+      <article class="psx-card">
+        <div class="psx-media">
+          <img src="asset/img/about-class4.jpeg" alt="Students working on a learning project" loading="lazy">
+          <div class="psx-media-shade"></div>
+          <span class="psx-chip">Website</span>
+        </div>
+        <div class="psx-body">
+          <h3 class="psx-title"><button type="button" class="psx-open js-open-project" data-project-id="sample-learning-platform">Sample Learning Platform</button></h3>
+          <p class="psx-text">A sample website concept for sharing learning resources and course materials.</p>
+          <div class="psx-tags">
+            <span class="psx-tag">HTML</span>
+            <span class="psx-tag">CSS</span>
+          </div>
+          <div class="psx-footer">
+            <div class="psx-author">
+              <img class="psx-avatar" src="asset/img/avatar-default.png" alt="">
+              <span class="psx-author-name">Author Name</span>
+            </div>
+            <div class="psx-stats">
+              <span title="Views"><i class="fa-regular fa-eye" aria-hidden="true"></i> 0</span>
+              <span title="Likes"><i class="fa-regular fa-heart" aria-hidden="true"></i> 0</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+ 
+ 
+
       </div>
 
-      <!-- Sample: design -->
-      <div class="col-12 col-md-6 col-lg-3 psx-item" data-category="design" data-search="ui design figma ux research">
-        <article class="psx-card h-100">
-          <div class="psx-media">
-            <img src="asset/img/projects/sample-design.jpg" alt="UI design project" loading="lazy">
-            <div class="psx-media-shade"></div>
-            <span class="psx-chip">Design</span>
-          </div>
-          <div class="psx-body">
-            <h3 class="h5 fw-bold text-white mb-2">Sample UI Design</h3>
-            <p class="psx-text small mb-3">A short description of the project goes here.</p>
-            <div class="d-flex flex-wrap gap-2 mb-3">
-              <span class="psx-tag psx-tag-sm">Figma</span>
-              <span class="psx-tag psx-tag-sm">UX Research</span>
-            </div>
-            <button type="button" class="btn psx-btn-primary btn-sm mt-auto align-self-start js-open-project" data-project-id="sample-design">
-              View Details
-            </button>
-          </div>
-        </article>
-      </div>
+
+
+
 
     </div>
 
@@ -306,10 +499,32 @@
   </div>
 </section>
 
+<div class="pm-overlay" id="pmOverlay" aria-hidden="true">
+  <section class="pm-dialog" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <button type="button" class="pm-close" id="pmClose" aria-label="Close project details">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <div class="pm-scroll" id="pmScroll"></div>
+  </section>
+</div>
+
+<div class="pm-lb" id="pmLb" aria-hidden="true">
+  <button type="button" class="x" aria-label="Close screenshot">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <button type="button" class="prev" aria-label="Previous screenshot">
+    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+  </button>
+  <img src="" alt="Project screenshot">
+  <button type="button" class="next" aria-label="Next screenshot">
+    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+  </button>
+  <span class="count" aria-live="polite"></span>
+</div>
 
 <!-- section2 -->
  <section class="pv-section py-5">
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- Pagination -->
     <nav class="d-flex justify-content-center mb-4" aria-label="Photo pages">
@@ -319,6 +534,9 @@
     <!-- Stage -->
     <div class="pv-stage mx-auto">
       <img id="pvMain" class="pv-main" src="" alt="">
+      <button type="button" class="pv-autoplay" id="pvAutoplay" aria-label="Pause slideshow">
+        <i class="fa-solid fa-pause" aria-hidden="true"></i>
+      </button>
 
       <button type="button" class="pv-nav pv-prev" id="pvPrev" aria-label="Previous photo">
         <i class="fa-solid fa-chevron-left"></i>
@@ -334,7 +552,9 @@
     </div>
 
     <!-- Thumbnails for the current page -->
-    <div class="row row-cols-3 row-cols-md-6 g-3 mx-auto mt-3 pv-thumbs" id="pvThumbs"></div>
+    <div class="pv-thumbs-row mt-3">
+      <div class="pv-thumbs" id="pvThumbs" tabindex="0" aria-label="Photo thumbnails. Scroll horizontally to see more photos."></div>
+    </div>
 
   </div>
 </section>
@@ -525,20 +745,23 @@
 
 //   section2
 (function () {
-    /* Replace these with your own photos */
     const photos = [
-      { src: 'asset/img/photos/photo-01.jpg', caption: 'Team photo with instructors' },
-      { src: 'asset/img/photos/photo-02.jpg', caption: 'Students in the lab' },
-      { src: 'asset/img/photos/photo-03.jpg', caption: 'Certificate ceremony' },
-      { src: 'asset/img/photos/photo-04.jpg', caption: 'Hands-on coding session' },
-      { src: 'asset/img/photos/photo-05.jpg', caption: 'Graduation day' },
-      { src: 'asset/img/photos/photo-06.jpg', caption: 'Class group photo' },
-      { src: 'asset/img/photos/photo-07.jpg', caption: 'Competition awards' },
-      { src: 'asset/img/photos/photo-08.jpg', caption: 'Workshop session' },
-      { src: 'asset/img/photos/photo-09.jpg', caption: 'Morning briefing' },
-      { src: 'asset/img/photos/photo-10.jpg', caption: 'Graduates celebrating' },
-      { src: 'asset/img/photos/photo-11.jpg', caption: 'Design studio' },
-      { src: 'asset/img/photos/photo-12.jpg', caption: 'Campus visit' }
+      { src: 'asset/img/about-class1.jpg', caption: 'Students working in the computer lab' },
+      { src: 'asset/img/about-class2.jpg', caption: 'Students learning together' },
+      { src: 'asset/img/about-class3.jpeg', caption: 'Class group photo' },
+      { src: 'asset/img/about-class4.jpeg', caption: 'Hands-on computer class' },
+      { src: 'asset/img/about-class5.jpg', caption: 'Students and instructor in class' },
+      { src: 'asset/img/about-class6.jpg', caption: 'Instructor leading a class' },
+      { src: 'asset/img/about-class5.jpg', caption: 'Students and instructor in class' },
+      { src: 'asset/img/about-class4.jpeg', caption: 'Hands-on computer class' },
+      { src: 'asset/img/about-class1.jpg', caption: 'Students working in the computer lab' },
+      { src: 'asset/img/about-class2.jpg', caption: 'Students learning together' },
+      { src: 'asset/img/about-class4.jpeg', caption: 'Hands-on computer class' },
+      { src: 'asset/img/about-class6.jpg', caption: 'Instructor leading a class' },
+      { src: 'asset/img/about-class3.jpeg', caption: 'Class group photo' },
+
+
+
     ];
 
     const PER_PAGE = 6;
@@ -550,11 +773,24 @@
     const pagination = document.getElementById('pvPagination');
     const thumbs = document.getElementById('pvThumbs');
     const stage = document.querySelector('.pv-stage');
+    const autoplayButton = document.getElementById('pvAutoplay');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     let index = 0;
     let swapTimer = null;
+    let autoplayTimer = null;
+    let autoplayPaused = prefersReducedMotion;
 
     const pageOf = i => Math.floor(i / PER_PAGE);
+
+    function updateAutoplay() {
+      clearInterval(autoplayTimer);
+      autoplayButton.setAttribute('aria-label', autoplayPaused ? 'Play slideshow' : 'Pause slideshow');
+      autoplayButton.innerHTML = `<i class="fa-solid ${autoplayPaused ? 'fa-play' : 'fa-pause'}" aria-hidden="true"></i>`;
+      if (!autoplayPaused && !document.hidden) {
+        autoplayTimer = setInterval(() => show(index + 1), 5000);
+      }
+    }
 
     function renderPagination() {
       const current = pageOf(index);
@@ -584,19 +820,29 @@
     }
 
     function renderThumbs() {
-      const start = pageOf(index) * PER_PAGE;
-      const slice = photos.slice(start, start + PER_PAGE);
-
-      thumbs.innerHTML = slice.map((p, k) => {
-        const i = start + k;
+      thumbs.innerHTML = photos.map((p, i) => {
         return `
-          <div class="col">
+          <div class="pv-thumb-item">
             <button type="button" class="pv-thumb ${i === index ? 'is-active' : ''}"
                     data-index="${i}" aria-label="View ${p.caption}">
               <img src="${p.src}" alt="" loading="lazy">
             </button>
           </div>`;
       }).join('');
+
+      const activeThumb = thumbs.querySelector('.pv-thumb.is-active');
+      if (activeThumb) {
+        const thumbsRect = thumbs.getBoundingClientRect();
+        const activeRect = activeThumb.getBoundingClientRect();
+
+        if (activeRect.left < thumbsRect.left || activeRect.right > thumbsRect.right) {
+          thumbs.scrollTo({
+            left: thumbs.scrollLeft + activeRect.left - thumbsRect.left -
+              (thumbs.clientWidth - activeThumb.offsetWidth) / 2,
+            behavior: 'auto'
+          });
+        }
+      }
     }
 
     function preload(i) {
@@ -638,9 +884,71 @@
       if (btn) show(Number(btn.dataset.index));
     });
 
+    thumbs.addEventListener('wheel', e => {
+      if (thumbs.scrollWidth <= thumbs.clientWidth) return;
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (delta) {
+        thumbs.scrollLeft += delta;
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    let dragStartX = 0;
+    let dragStartScrollLeft = 0;
+    let isDragging = false;
+    let didDrag = false;
+    let suppressClick = false;
+    let suppressClickTimer = null;
+
+    thumbs.addEventListener('pointerdown', e => {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      isDragging = true;
+      didDrag = false;
+      dragStartX = e.clientX;
+      dragStartScrollLeft = thumbs.scrollLeft;
+      thumbs.classList.add('is-dragging');
+      thumbs.setPointerCapture(e.pointerId);
+    });
+
+    thumbs.addEventListener('pointermove', e => {
+      if (!isDragging) return;
+      const distance = e.clientX - dragStartX;
+      if (Math.abs(distance) > 4) didDrag = true;
+      if (didDrag) {
+        thumbs.scrollLeft = dragStartScrollLeft - distance * 1.5;
+        e.preventDefault();
+      }
+    });
+
+    function stopThumbnailDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      thumbs.classList.remove('is-dragging');
+      if (didDrag) {
+        suppressClick = true;
+        clearTimeout(suppressClickTimer);
+        suppressClickTimer = setTimeout(() => { suppressClick = false; }, 0);
+      }
+    }
+
+    thumbs.addEventListener('pointerup', stopThumbnailDrag);
+    thumbs.addEventListener('pointercancel', stopThumbnailDrag);
+    thumbs.addEventListener('click', e => {
+      if (!suppressClick) return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      suppressClick = false;
+      clearTimeout(suppressClickTimer);
+    }, true);
+
     /* Arrows */
     document.getElementById('pvPrev').addEventListener('click', () => show(index - 1));
     document.getElementById('pvNext').addEventListener('click', () => show(index + 1));
+    autoplayButton.addEventListener('click', () => {
+      autoplayPaused = !autoplayPaused;
+      updateAutoplay();
+    });
+    document.addEventListener('visibilitychange', updateAutoplay);
 
     /* Keyboard */
     document.addEventListener('keydown', e => {
@@ -662,7 +970,272 @@
     });
 
     show(0);
+    updateAutoplay();
   })();
+  /* ================= DATA: one entry per project, keyed by data-project-id ================= */
+  const PROJECTS = {
+    greyon: {
+      title: 'Greyon',
+      category: 'Website',
+      featured: false,
+      summary: 'A hotel booking platform offering convenient reservations across multiple provinces.',
+      date: 'October 2026',
+      duration: '1 day',
+      views: 6,
+      likes: 0,
+      liveUrl: '#',
+      githubUrl: '#',
+      author: { name: 'Yen Mara', role: 'Website', avatar: 'asset/img/avatar-default.png', graduate: true },
+      stack: ['HTML', 'CSS', 'JavaScript', 'Visual Studio Code', 'GitHub', 'Bootstrap'],
+      overview: 'Greyon is a hotel booking platform designed to make finding and reserving accommodations easier and more convenient. It allows users to explore hotel branches across different provinces, view available options, and choose suitable places to stay for their trips and vacations.',
+      problem: 'Finding suitable hotels across different provinces can be time-consuming and inconvenient when information and booking services are scattered across multiple platforms. Greyon aims to simplify this process by providing a centralized platform where users can easily explore hotel branches and make reservations in one place.',
+      objectives: [
+        'Develop a user-friendly hotel booking platform.',
+        'Allow users to explore hotel branches across different provinces.',
+        'Provide hotel information and accommodation options.',
+        'Simplify the hotel reservation process.',
+        'Help users find suitable hotels for their trips and vacations.',
+        'Improve convenience and the overall user experience.'
+      ],
+      challenges: 'The main challenges included designing a user-friendly booking interface, managing hotel information across multiple provinces, handling room availability and reservations, and ensuring accurate data and a smooth user experience.',
+      solutions: 'Greyon provides a centralized hotel booking platform where users can easily explore hotel branches across different provinces, view accommodation options, and make reservations through a user-friendly interface.',
+      process: [
+        ['Planning', 'Identified the project requirements and main website features.'],
+        ['UI/UX Design', 'Planned the website layout and user-friendly interface.'],
+        ['Frontend Development', 'Built the website using HTML, CSS, and JavaScript.'],
+        ['Page Development', 'Created pages and visual components for browsing hotels across different provinces.'],
+        ['Testing', 'Tested website navigation, layouts, buttons, and responsiveness.'],
+        ['UI Improvement', 'Refined the design and usability to provide a better user experience.']
+      ],
+      /* Replace with your real screenshot paths */
+      screenshots: Array.from({ length: 15 }, (_, i) => `asset/img/greyon/shot-${i + 1}.jpg`)
+    }
+  };
+ 
+ 
+  /* Sample projects so every demo card opens a modal (delete when you add real data) */
+  [['sample-app', 'Sample Mobile App', 'Mobile App', ['Flutter', 'Firebase']],
+   ['sample-design', 'Sample UI Design', 'Design', ['Figma', 'UX Research']],
+   ['sample-learning-platform', 'Sample Learning Platform', 'Website', ['HTML', 'CSS']],
+   ['sample-student-app', 'Sample Student App', 'Mobile App', ['Flutter', 'Education']]
+  ].forEach(([id, title, category, stack]) => {
+    PROJECTS[id] = Object.assign({}, PROJECTS.greyon, {
+      title, category, featured: false, stack,
+      summary: 'A short description of the project goes here.',
+      views: 0, likes: 0, author: { name: 'Author Name', role: category, avatar: 'asset/img/avatar-default.png', graduate: true },
+      screenshots: ['asset/img/about-class2.jpg', 'asset/img/about-class3.jpeg', 'asset/img/about-class4.jpeg', 'asset/img/about-class5.jpg']
+    });
+  });
+ 
+  /* ================= Helpers ================= */
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const overlay = $('#pmOverlay'), scroller = $('#pmScroll'), closeBtn = $('#pmClose');
+  let lastFocus = null, shots = [], lbIndex = 0;
+  let heroImages = [], heroIndex = 0, heroTimer = null, usingHeroFallback = false;
+  const VISIBLE_SHOTS = 6;
+  const HERO_FALLBACKS = [
+    'asset/img/about-class1.jpg',
+    'asset/img/about-class2.jpg',
+    'asset/img/about-class3.jpeg',
+    'asset/img/about-class4.jpeg',
+    'asset/img/about-class5.jpg',
+    'asset/img/about-class6.jpg'
+  ];
+ 
+  /* ================= Render ================= */
+  function render(p) {
+    heroImages = [...p.screenshots];
+    heroIndex = 0;
+    usingHeroFallback = false;
+    const extra = p.screenshots.length - VISIBLE_SHOTS;
+    scroller.innerHTML = `
+      <div class="pm-hero">
+        <img class="pm-hero-image" src="${esc(heroImages[0] || '')}" alt="${esc(p.title)} preview">
+        <button type="button" class="pm-hero-nav pm-hero-prev" data-hero-direction="-1" aria-label="Previous project image">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="pm-hero-nav pm-hero-next" data-hero-direction="1" aria-label="Next project image">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <span class="pm-hero-count" aria-live="polite"></span>
+        <div class="pm-badges">
+          <span class="pm-badge">${esc(p.category)}</span>
+          ${p.featured ? '<span class="pm-badge is-featured"><i class="fa-solid fa-star"></i> Featured</span>' : ''}
+        </div>
+      </div>
+ 
+      <header class="pm-head">
+        <h2 class="pm-title" id="pmTitle">${esc(p.title)}</h2>
+        <p class="pm-summary">${esc(p.summary)}</p>
+        <ul class="pm-meta">
+          <li><i class="fa-regular fa-calendar"></i>${esc(p.date)}</li>
+          <li><i class="fa-regular fa-clock"></i>${esc(p.duration)}</li>
+          <li><i class="fa-regular fa-eye"></i>${p.views} views</li>
+          <li><i class="fa-regular fa-heart"></i>${p.likes} likes</li>
+        </ul>
+      </header>
+ 
+      <div class="pm-body">
+        <aside class="pm-aside">
+          <div class="pm-actions">
+            <a class="pm-btn is-primary" href="${esc(p.liveUrl)}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live demo</a>
+            <a class="pm-btn" href="${esc(p.githubUrl)}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+          <div class="pm-box">
+            <div class="pm-author">
+              <img src="${esc(p.author.avatar)}" alt="">
+              <div><b>${esc(p.author.name)}</b><small>${esc(p.author.role)}</small></div>
+            </div>
+            <div class="pm-author-credentials">
+              <p class="pm-instructor">Instructor: Nhanh Nhim</p>
+              ${p.author.graduate ? '<span class="pm-grad"><i class="fa-solid fa-graduation-cap"></i> Certified Graduate</span>' : ''}
+            </div>
+          </div>
+          <div class="pm-box">
+            <h4>Technologies</h4>
+            <div class="pm-tags">${p.stack.map(t => `<span class="pm-tag">${esc(t)}</span>`).join('')}</div>
+          </div>
+        </aside>
+ 
+        <main>
+          <section class="pm-sec"><h3>Project overview</h3><p>${esc(p.overview)}</p></section>
+          <section class="pm-sec"><h3>Problem statement</h3><p>${esc(p.problem)}</p></section>
+          <section class="pm-sec">
+            <h3>Objectives</h3>
+            <ul class="pm-objectives">${p.objectives.map(o => `<li><i class="fa-solid fa-circle-check"></i><span>${esc(o)}</span></li>`).join('')}</ul>
+          </section>
+          <section class="pm-sec pm-split">
+            <div class="pm-box"><h3><i class="fa-solid fa-triangle-exclamation"></i> Challenges</h3><p>${esc(p.challenges)}</p></div>
+            <div class="pm-box is-solution"><h3><i class="fa-solid fa-lightbulb"></i> Solutions</h3><p>${esc(p.solutions)}</p></div>
+          </section>
+          <section class="pm-sec">
+            <h3>Development process</h3>
+            <ol class="pm-steps">${p.process.map((s, i) => `<li><span class="n">${i + 1}</span><div><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div></li>`).join('')}</ol>
+          </section>
+          <section class="pm-sec">
+            <h3>Screenshots</h3>
+            <div class="pm-gallery" id="pmGallery">
+              ${p.screenshots.map((src, i) => {
+                const hidden = i >= VISIBLE_SHOTS;
+                const more = extra > 0 && i === VISIBLE_SHOTS - 1;
+                return `<button type="button" class="pm-shot${more ? ' is-more' : ''}" data-i="${i}" ${more ? `data-more="+${extra + 1} more"` : ''} ${hidden ? 'hidden' : ''} aria-label="View screenshot ${i + 1}"><img src="${esc(src)}" alt="" loading="lazy"></button>`;
+              }).join('')}
+            </div>
+          </section>
+        </main>
+      </div>`;
+    shots = p.screenshots;
+    scroller.querySelector('.pm-hero-image').addEventListener('error', useHeroFallback, { once: true });
+    updateHero();
+    scroller.scrollTop = 0;
+  }
+
+  function updateHero() {
+    const image = scroller.querySelector('.pm-hero-image');
+    if (!image || !heroImages.length) return;
+    image.src = heroImages[heroIndex];
+    image.alt = `${$('#pmTitle').textContent} preview ${heroIndex + 1}`;
+    scroller.querySelector('.pm-hero-count').textContent = `${heroIndex + 1} / ${heroImages.length}`;
+  }
+
+  function showHero(index) {
+    if (!heroImages.length) return;
+    heroIndex = (index + heroImages.length) % heroImages.length;
+    updateHero();
+  }
+
+  function useHeroFallback() {
+    if (usingHeroFallback) return;
+    usingHeroFallback = true;
+    heroImages = HERO_FALLBACKS;
+    heroIndex = 0;
+    const image = scroller.querySelector('.pm-hero-image');
+    image.addEventListener('error', () => {
+      console.error(`Unable to load project hero image: ${image.src}`);
+    }, { once: true });
+    updateHero();
+  }
+
+  function startHeroAutoplay() {
+    clearInterval(heroTimer);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || document.hidden) return;
+    heroTimer = setInterval(() => showHero(heroIndex + 1), 5000);
+  }
+ 
+  /* ================= Open / close modal ================= */
+  function openProject(id) {
+    const p = PROJECTS[id];
+    if (!p) return;
+    lastFocus = document.activeElement;
+    render(p);
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('pm-locked');
+    startHeroAutoplay();
+    closeBtn.focus();
+  }
+  function closeProject() {
+    clearInterval(heroTimer);
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('pm-locked');
+    if (lastFocus) lastFocus.focus();
+  }
+ 
+  // Click anywhere on a card (except its pause button) opens the modal
+  document.addEventListener('click', e => {
+    const card = e.target.closest('.psx-card');
+    const projectLink = card && card.querySelector('.js-open-project');
+    if (projectLink) openProject(projectLink.dataset.projectId);
+  });
+  closeBtn.addEventListener('click', closeProject);
+  overlay.addEventListener('mousedown', e => { if (e.target === overlay) closeProject(); });
+  document.addEventListener('visibilitychange', () => {
+    if (overlay.classList.contains('is-open')) startHeroAutoplay();
+  });
+  scroller.addEventListener('click', e => {
+    const button = e.target.closest('[data-hero-direction]');
+    if (!button) return;
+    showHero(heroIndex + Number(button.dataset.heroDirection));
+    startHeroAutoplay();
+  });
+ 
+  /* Gallery: "+N more" tile reveals the rest, other tiles open the lightbox */
+  scroller.addEventListener('click', e => {
+    const shot = e.target.closest('.pm-shot');
+    if (!shot) return;
+    if (shot.classList.contains('is-more')) {
+      shot.classList.remove('is-more');
+      scroller.querySelectorAll('.pm-shot[hidden]').forEach(s => s.hidden = false);
+      return;
+    }
+    openLightbox(Number(shot.dataset.i));
+  });
+ 
+  /* ================= Lightbox ================= */
+  const lb = $('#pmLb'), lbImg = $('img', lb), lbCount = $('.count', lb);
+  function showLb(i) {
+    lbIndex = (i + shots.length) % shots.length;
+    lbImg.src = shots[lbIndex];
+    lbCount.textContent = `${lbIndex + 1} / ${shots.length}`;
+  }
+  function openLightbox(i) { showLb(i); lb.classList.add('is-open'); $('.x', lb).focus(); }
+  function closeLightbox() { lb.classList.remove('is-open'); }
+  $('.x', lb).addEventListener('click', closeLightbox);
+  $('.prev', lb).addEventListener('click', () => showLb(lbIndex - 1));
+  $('.next', lb).addEventListener('click', () => showLb(lbIndex + 1));
+  lb.addEventListener('mousedown', e => { if (e.target === lb) closeLightbox(); });
+ 
+  document.addEventListener('keydown', e => {
+    if (lb.classList.contains('is-open')) {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showLb(lbIndex - 1);
+      if (e.key === 'ArrowRight') showLb(lbIndex + 1);
+    } else if (overlay.classList.contains('is-open') && e.key === 'Escape') {
+      closeProject();
+    }
+  });
 </script>
 
 </body>

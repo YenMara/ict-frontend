@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <link>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Detail</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- style -->
+     <link href="./asset/css/style.css" rel="stylesheet">
+     <link href="./asset/css/contact.css" rel="stylesheet">
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+      />
+
+    <!-- icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+<body>
+  <!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand align-middle" href="index.html">
+          <div class="d-flex align-items-center">
+            <img
+              src="./asset/img/ICTLogo9.png"
+              alt="Logo"
+              width="65"
+              height="65"
+            />
+            <div class="ms-2 lh-1">
+              <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+              <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+            </div>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+
+            <!-- Course with hover dropdown -->
+            <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+              COURSE
+            </a>
+            <div class="dropdown-menu course-dropdown-menu">
+
+              <div class="dropdown-item has-submenu">
+                <span>Social</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+                  <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Website</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Frontend Development</a>
+                  <a href="list-course.html" class="submenu-item">Backend Development</a>
+                  <a href="list-course.html" class="submenu-item">WordPress</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Design</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+                  <a href="list-course.html" class="submenu-item">Graphic Design</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Programming</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Python</a>
+                  <a href="list-course.html" class="submenu-item">Java</a>
+                  <a href="list-course.html" class="submenu-item">C++</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Data</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Data Analysis</a>
+                  <a href="list-course.html" class="submenu-item">Database Management</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Office</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+                  <a href="list-course.html" class="submenu-item">Excel</a>
+                  <a href="list-course.html" class="submenu-item">PowerPoint</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Networking</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">CCNA</a>
+                  <a href="list-course.html" class="submenu-item">Network Security</a>
+                </div>
+              </div>
+
+            </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+
+  <!-- dark mode -->
+  <!-- Group theme toggle + login + register together -->
+          <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+            <button class="theme-toggle-btn log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">LOGIN</button>
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">REGISTER</button>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+
+<header class="hero mt-5">
+  <div class="wrap">
+    <span class="eyebrow"><i class="fa-regular fa-comments"></i> We’re here to help</span>
+    <h1>Get in touch</h1>
+    <p>Have questions? We’d love to hear from you. Send us a message and we’ll respond as soon as possible.</p>
+  </div>
+</header>
+ 
+<div class="wrap contact" id="contact">
+ 
+  <!-- Form -->
+  <section class="card form" id="formCard">
+    <h2>Send us a message</h2>
+    <p class="sub">Fill in the form and our team will get back to you shortly.</p>
+ 
+    <form id="contactForm" novalidate>
+      <div class="field">
+        <label for="name">Your name</label>
+        <div class="control"><i class="fa-regular fa-user"></i><input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required></div>
+        <span class="msg">Please enter your name.</span>
+      </div>
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <div class="control"><i class="fa-solid fa-phone"></i><input id="phone" name="phone" type="tel" placeholder="e.g. 092 702 175" autocomplete="tel" inputmode="tel" required></div>
+        <span class="msg">Enter a valid phone number (8–15 digits).</span>
+      </div>
+      <div class="field">
+        <label for="message">Your message</label>
+        <div class="control"><i class="fa-regular fa-message"></i><textarea id="message" name="message" maxlength="500" placeholder="Write your message here" required></textarea></div>
+        <span class="msg">Please write a short message (at least 10 characters).</span>
+        <div class="count"><span id="cnt">0</span> / 500</div>
+      </div>
+      <button class="send" id="sendBtn" type="submit"><span>Send message</span> <i class="fa-solid fa-paper-plane"></i></button>
+      <p class="note"><i class="fa-regular fa-clock"></i> We usually reply within one business day.</p>
+    </form>
+ 
+    <div class="success" role="status">
+      <div class="ok"><i class="fa-solid fa-check"></i></div>
+      <h3>Message sent!</h3>
+      <p>Thank you for reaching out. We’ll contact you soon.</p>
+      <button type="button" id="again">Send another message</button>
+    </div>
+  </section>
+ 
+  <!-- Info -->
+  <aside class="info">
+    <div class="info-card">
+      <span class="ico blue"><i class="fa-solid fa-location-dot"></i></span>
+      <div>
+        <h3>Our office</h3>
+        <p>ផ្លូវលេខ240B ផ្លូវ132 ភូមិ06 សង្កាត់ទឹកល្អក់ទី01 ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</p>
+        <div class="links"><a class="pill" href="https://www.google.com/maps/place/ICT+Professional+Training+Center/@11.56547,104.8891913,1112m/data=!3m2!1e3!4b1!4m6!3m5!1s0x310951ce20dd45cf:0x72d1ef705f4b4029!8m2!3d11.5654648!4d104.8917662!16s%2Fg%2F11zf607r9b?entry=ttu&g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener"><i class="fa-solid fa-diamond-turn-right"></i> Get directions</a></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <span class="ico green"><i class="fa-solid fa-phone"></i></span>
+      <div>
+        <h3>Phone number</h3>
+        <p>092 702 175 / 096 287 5270</p>
+        <div class="links">
+          <a class="pill" href="tel:+85592702175"><i class="fa-solid fa-phone"></i> Call</a>
+          <a class="pill" href="https://t.me/+85592702175" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Telegram</a>
+        </div>
+      </div>
+    </div>
+    <div class="info-card">
+      <span class="ico amber"><i class="fa-regular fa-clock"></i></span>
+      <div>
+        <h3>Office hours <span class="open off" id="openState">Closed</span></h3>
+        <p>Mon–Fri: 8:00 AM – 8:00 PM<br>Sat–Sun: 8:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="card map">
+      <!-- Replace the q= value with your exact address or use the Share → Embed link from Google Maps -->
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4840.206208360032!2d104.88919127586719!3d11.565470044142696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951ce20dd45cf%3A0x72d1ef705f4b4029!2sICT%20Professional%20Training%20Center!5e1!3m2!1sen!2skh!4v1792684504729!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </aside>
+</div>
+ 
+<!-- ===================== FAQ HTML ===================== -->
+<section class="fq-section" id="faq">
+  <div class="fq-head">
+    <h2>Frequently asked questions</h2>
+    <p>Find quick answers to common questions.</p>
+  </div>
+ 
+  <div class="fq-card">
+ 
+    <div class="fq-item is-open">
+      <h3 class="fq-h"><button type="button" class="fq-btn" id="fq-b1" aria-expanded="true" aria-controls="fq-a1">
+        <span class="fq-num">1</span><span class="fq-title">What language are the courses taught in?</span>
+        <svg class="fq-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button></h3>
+      <div class="fq-panel" id="fq-a1" role="region" aria-labelledby="fq-b1"><div class="fq-inner"><p>The teaching language is shown on every course page next to the rating and student count. If you’d like a different language, contact us and we’ll help you find the right class.</p></div></div>
+    </div>
+ 
+    <div class="fq-item">
+      <h3 class="fq-h"><button type="button" class="fq-btn" id="fq-b2" aria-expanded="false" aria-controls="fq-a2">
+        <span class="fq-num">2</span><span class="fq-title">How can I enroll in a course?</span>
+        <svg class="fq-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button></h3>
+      <div class="fq-panel" id="fq-a2" role="region" aria-labelledby="fq-b2"><div class="fq-inner"><p>Open the course you like and press <b>Enroll now</b>, or contact us by phone or Telegram. We’ll confirm your schedule and complete the registration with you.</p></div></div>
+    </div>
+ 
+    <div class="fq-item">
+      <h3 class="fq-h"><button type="button" class="fq-btn" id="fq-b3" aria-expanded="false" aria-controls="fq-a3">
+        <span class="fq-num">3</span><span class="fq-title">Do I need any experience before joining?</span>
+        <svg class="fq-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button></h3>
+      <div class="fq-panel" id="fq-a3" role="region" aria-labelledby="fq-b3"><div class="fq-inner"><p>Most beginner courses only need basic computer skills and a laptop with internet access. Requirements are listed on each course page.</p></div></div>
+    </div>
+ 
+    <div class="fq-item">
+      <h3 class="fq-h"><button type="button" class="fq-btn" id="fq-b4" aria-expanded="false" aria-controls="fq-a4">
+        <span class="fq-num">4</span><span class="fq-title">Will I receive a certificate?</span>
+        <svg class="fq-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button></h3>
+      <div class="fq-panel" id="fq-a4" role="region" aria-labelledby="fq-b4"><div class="fq-inner"><p>Yes. Students who complete a course receive a Certificate of Completion.</p></div></div>
+    </div>
+ 
+    <div class="fq-item">
+      <h3 class="fq-h"><button type="button" class="fq-btn" id="fq-b5" aria-expanded="false" aria-controls="fq-a5">
+        <span class="fq-num">5</span><span class="fq-title">What are the class schedules?</span>
+        <svg class="fq-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button></h3>
+      <div class="fq-panel" id="fq-a5" role="region" aria-labelledby="fq-b5"><div class="fq-inner"><p>Each course lists its weekly schedule, including weekday evening and weekend options, along with the total number of hours.</p></div></div>
+    </div>
+ 
+  </div>
+</section>
+
+ 
+
+
+
+  <!-- footer -->
+  <footer class="site-footer py-5 mt-5">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="row g-4">
+
+        <!-- Brand -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="navbar-brand align-middle" href="index.html">
+        <div class="d-flex align-items-center">
+          <img
+            src="./asset/img/ICTLogo9.png"
+            alt="Logo"
+            width="65"
+            height="65"
+          />
+          <div class="ms-2 lh-1">
+            <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+            <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+          </div>
+        </div>
+      </a>
+          <p class="small my-3" style="color: var(--sub);">
+            Empowering professionals through world-class ICT education since 2020.
+          </p>
+          <div class="d-flex gap-3 footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">About ICT</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">All Course</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Courses -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Popular Course</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Networking CCNA1</a></li>
+            <li><a href="#">C++ Programming</a></li>
+            <li><a href="#">React JS</a></li>
+            <li><a href="#">Web Development Frontend</a></li>
+            <li><a href="#">Mobile App (Flutter)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Contact Info</h6>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">
+              ផ្ទះលេខ 240B ផ្លូវ 132 ភូមិ06<br>
+              សង្កាត់ទឹកល្អក់ទី01<br>
+              ខណ្ឌទួលគោក រាជធានីភ្នំពេញ
+            </p>
+          </div>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">092 702 175 / 096 287 5270</p>
+          </div>
+          <div class="d-flex gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-envelope"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">ICTCenter@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Download App -->
+        <div class="col-12 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Download App</h6>
+          <p class="small mb-3" style="color: var(--sub);">
+            Download our app from the App Store and Google Play Store.
+          </p>
+          <div class="d-flex flex-column gap-2 mb-3">
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-apple"></i>
+              <span>
+                <small>Available on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-google-play"></i>
+              <span>
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+          <p class="small mb-2" style="color: var(--sub);">We accept:</p>
+          <div class="d-flex gap-2">
+            <span class="pay-badge pay-aba">ABA</span>
+            <span class="pay-badge pay-khqr">KHQR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+></script>
+<script src="./asset/js/darkmood.js"></script>
+<script src="./asset/js/stats.js"></script>
+
+
+ 
+<script>
+  /* ---------- Form ---------- */
+  const form = document.getElementById('contactForm'), card = document.getElementById('formCard');
+  const msg = document.getElementById('message'), cnt = document.getElementById('cnt'), btn = document.getElementById('sendBtn');
+  msg.addEventListener('input', () => cnt.textContent = msg.value.length);
+ 
+  const rules = {
+    name: v => v.trim().length >= 2,
+    phone: v => { const d = v.replace(/\D/g, ''); return d.length >= 8 && d.length <= 15; },
+    message: v => v.trim().length >= 10
+  };
+  function check(el) {
+    const ok = rules[el.name](el.value);
+    el.closest('.field').classList.toggle('err', !ok);
+    return ok;
+  }
+  form.querySelectorAll('input, textarea').forEach(el => {
+    el.addEventListener('blur', () => check(el));
+    el.addEventListener('input', () => el.closest('.field').classList.contains('err') && check(el));
+  });
+ 
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const fields = [...form.querySelectorAll('input, textarea')];
+    const bad = fields.filter(el => !check(el));
+    if (bad.length) { bad[0].focus(); return; }
+ 
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+    try {
+      /* TODO: send to your backend, e.g.
+         await fetch('/api/contact', { method: 'POST', headers: {'Content-Type':'application/json'},
+           body: JSON.stringify(Object.fromEntries(new FormData(form))) }); */
+      await new Promise(r => setTimeout(r, 900));
+      card.classList.add('sent');
+      form.reset(); cnt.textContent = 0;
+    } catch (err) {
+      alert('Sorry, something went wrong. Please try again or call us.');
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = '<span>Send message</span> <i class="fa-solid fa-paper-plane"></i>';
+    }
+  });
+  document.getElementById('again').addEventListener('click', () => { card.classList.remove('sent'); document.getElementById('name').focus(); });
+ 
+  /* ---------- Open / closed badge (Phnom Penh time, UTC+7) ---------- */
+  (function () {
+    const now = new Date(Date.now() + (new Date().getTimezoneOffset() + 420) * 60000);
+    const day = now.getDay(), mins = now.getHours() * 60 + now.getMinutes();
+    const close = (day === 0 || day === 6) ? 18 * 60 : 20 * 60;
+    const isOpen = mins >= 8 * 60 && mins < close;
+    const el = document.getElementById('openState');
+    el.textContent = isOpen ? 'Open now' : 'Closed';
+    el.className = 'open ' + (isOpen ? 'on' : 'off');
+  })();
+ 
+  /* ---------- FAQ accordion (one open at a time) ---------- */
+  const items = [...document.querySelectorAll('.q')];
+  items.forEach(q => q.querySelector('button').addEventListener('click', () => {
+    const willOpen = !q.classList.contains('open');
+    items.forEach(o => { o.classList.remove('open'); o.querySelector('button').setAttribute('aria-expanded', 'false'); });
+    if (willOpen) { q.classList.add('open'); q.querySelector('button').setAttribute('aria-expanded', 'true'); }
+  }));
+
+
+
+  // FQA
+  document.querySelectorAll('.fq-card').forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      var btn = e.target.closest('.fq-btn');
+      if (!btn) return;
+      var item = btn.closest('.fq-item');
+      var willOpen = !item.classList.contains('is-open');
+      // one open at a time (delete these 4 lines to allow several open together)
+      card.querySelectorAll('.fq-item.is-open').forEach(function (o) {
+        o.classList.remove('is-open');
+        o.querySelector('.fq-btn').setAttribute('aria-expanded', 'false');
+      });
+      if (willOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+ 
+
+</html>

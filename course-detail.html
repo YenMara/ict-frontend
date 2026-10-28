@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <link>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Detail</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- style -->
+     <link href="./asset/css/style.css" rel="stylesheet">
+     <link href="./asset/css/course-detail.css" rel="stylesheet">
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+      />
+
+    <!-- icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+<body>
+  <!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand align-middle" href="index.html">
+          <div class="d-flex align-items-center">
+            <img
+              src="./asset/img/ICTLogo9.png"
+              alt="Logo"
+              width="65"
+              height="65"
+            />
+            <div class="ms-2 lh-1">
+              <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+              <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+            </div>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+
+            <!-- Course with hover dropdown -->
+            <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+              COURSE
+            </a>
+            <div class="dropdown-menu course-dropdown-menu">
+
+              <div class="dropdown-item has-submenu">
+                <span>Social</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+                  <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Website</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Frontend Development</a>
+                  <a href="list-course.html" class="submenu-item">Backend Development</a>
+                  <a href="list-course.html" class="submenu-item">WordPress</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Design</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+                  <a href="list-course.html" class="submenu-item">Graphic Design</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Programming</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Python</a>
+                  <a href="list-course.html" class="submenu-item">Java</a>
+                  <a href="list-course.html" class="submenu-item">C++</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Data</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Data Analysis</a>
+                  <a href="list-course.html" class="submenu-item">Database Management</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Office</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+                  <a href="list-course.html" class="submenu-item">Excel</a>
+                  <a href="list-course.html" class="submenu-item">PowerPoint</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Networking</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">CCNA</a>
+                  <a href="list-course.html" class="submenu-item">Network Security</a>
+                </div>
+              </div>
+
+            </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+
+  <!-- dark mode -->
+  <!-- Group theme toggle + login + register together -->
+          <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+            <button class="theme-toggle-btn log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">LOGIN</button>
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">REGISTER</button>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+
+<!-- ================= HERO ================= -->
+<header class="hero mt-6">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><i class="fa-solid fa-chevron-right"></i>
+      <a href="/courses">Courses</a><i class="fa-solid fa-chevron-right"></i>
+      <a href="/courses/office">Office</a><i class="fa-solid fa-chevron-right"></i>
+      <span class="cur" aria-current="page">IT Support</span>
+    </nav>
+    <span class="hero-chip"><i class="fa-solid fa-laptop-code"></i> Office</span>
+    <h1>IT Support</h1>
+    <!-- Use a plain space, not &nbsp; entities, in your stored text: they printed literally in the old page -->
+    <p class="hero-desc" id="heroDesc">This IT Support course prepares you for real-world IT support roles, covering everything from setting up and upgrading Windows to using everyday support tools. You will practice hands-on system setup, troubleshooting, and basic networking, building the practical skills IT Support Specialists and Helpdesk Engineers use daily.</p>
+    <ul class="hero-meta">
+      <li><i class="fa-solid fa-star"></i> 4.9 <span style="opacity:.7">(0 reviews)</span></li>
+      <li><i class="fa-solid fa-user-graduate"></i> 15 students</li>
+      <li><i class="fa-solid fa-language"></i> English</li>
+      <li><i class="fa-regular fa-clock"></i> Last updated 10/2026</li>
+    </ul>
+  </div>
+</header>
+ 
+<!-- ================= CONTENT ================= -->
+<div class="wrap layout">
+ 
+  <main class="main">
+    <div class="tabs" role="tablist" aria-label="Course sections">
+      <button class="tab" role="tab" id="t-overview" aria-controls="p-overview" aria-selected="true">Overview</button>
+      <button class="tab" role="tab" id="t-curriculum" aria-controls="p-curriculum" aria-selected="false" tabindex="-1">Curriculum</button>
+    </div>
+ 
+    <section class="panel" id="p-overview" role="tabpanel" aria-labelledby="t-overview">
+      <div class="card">
+        <h2>What you’ll learn</h2>
+        <ul class="learn">
+          <li><i class="fa-solid fa-circle-check"></i> Install and set up Windows operating systems</li>
+          <li><i class="fa-solid fa-circle-check"></i> Upgrade and maintain Windows systems</li>
+          <li><i class="fa-solid fa-circle-check"></i> Use essential IT support software and tools</li>
+          <li><i class="fa-solid fa-circle-check"></i> Understand network basics and connectivity</li>
+          <li><i class="fa-solid fa-circle-check"></i> Prepare for roles such as IT Technician, Helpdesk Support, or Desktop Support</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Requirements</h2>
+        <ul class="reqs">
+          <li><i class="fa-solid fa-circle"></i> Basic computer skills</li>
+          <li><i class="fa-solid fa-circle"></i> No prior IT experience required</li>
+          <li><i class="fa-solid fa-circle"></i> A laptop with internet access</li>
+        </ul>
+      </div>
+      <div class="card desc">
+        <h2>Description</h2>
+        <p>This IT Support course prepares you for real-world IT support roles, covering everything from setting up and upgrading Windows to using everyday support tools.</p>
+        <p>You will practice hands-on system setup, troubleshooting, and basic networking, building the practical skills IT Support Specialists and Helpdesk Engineers use daily.</p>
+        <p>By the end of the course, you’ll be ready for entry-level roles such as IT Technician, Helpdesk Support Engineer, Desktop Support Officer, or Network Administrator.</p>
+      </div>
+    </section>
+ 
+    <section class="panel" id="p-curriculum" role="tabpanel" aria-labelledby="t-curriculum" hidden>
+      <div class="card">
+        <h2>Curriculum</h2>
+        <div class="acc open"><button type="button" aria-expanded="true"><span class="n">1</span> Setup Windows <span class="t">12 hours</span><i class="fa-solid fa-chevron-down chev"></i></button>
+          <div class="acc-body"><ul><li><i class="fa-regular fa-circle-play"></i>Preparing installation media</li><li><i class="fa-regular fa-circle-play"></i>Installing and activating Windows</li><li><i class="fa-regular fa-circle-play"></i>Drivers and first-time configuration</li></ul></div></div>
+        <div class="acc"><button type="button" aria-expanded="false"><span class="n">2</span> Upgrade Windows <span class="t">8 hours</span><i class="fa-solid fa-chevron-down chev"></i></button>
+          <div class="acc-body"><ul><li><i class="fa-regular fa-circle-play"></i>In-place upgrades and backups</li><li><i class="fa-regular fa-circle-play"></i>Updates and rollback</li></ul></div></div>
+        <div class="acc"><button type="button" aria-expanded="false"><span class="n">3</span> Software &amp; Tools <span class="t">14 hours</span><i class="fa-solid fa-chevron-down chev"></i></button>
+          <div class="acc-body"><ul><li><i class="fa-regular fa-circle-play"></i>Remote support tools</li><li><i class="fa-regular fa-circle-play"></i>Troubleshooting workflow</li></ul></div></div>
+        <div class="acc"><button type="button" aria-expanded="false"><span class="n">4</span> Network Basics <span class="t">14 hours</span><i class="fa-solid fa-chevron-down chev"></i></button>
+          <div class="acc-body"><ul><li><i class="fa-regular fa-circle-play"></i>IP addressing and DNS</li><li><i class="fa-regular fa-circle-play"></i>Wi-Fi, routers and connectivity checks</li></ul></div></div>
+      </div>
+    </section>
+  </main>
+ 
+  <aside class="aside">
+    <div class="enroll">
+      <div class="enroll-media">
+        <img class="enroll-img" src="asset/img/IT support.jpg" alt="IT Support course poster">
+        <span class="save"><i class="fa-solid fa-tag" aria-hidden="true"></i> Save $10</span>
+      </div>
+      <div class="enroll-body">
+        <div class="price-row mb-4">
+          <div><span class="price">$119.00</span><span class="old">$129.00</span></div>
+          <span class="rate">4.9 <i class="fa-solid fa-star"></i></span>
+        </div>
+        <a class="btn primary" href="#enroll"><i class="fa-solid fa-graduation-cap"></i> Enroll now</a>
+        <div class="btn-row">
+          <button type="button" class="btn btnrow" id="favBtn" aria-pressed="false"><i class="fa-regular fa-heart"></i> Favorite</button>
+          <button type="button" class="btn btnrow" id="shareBtn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+        </div>
+        <h3 class="inc-title">This course includes</h3>
+        <ul class="inc">
+          <li><i class="fa-solid fa-award"></i> Certificate of Completion</li>
+          <li><i class="fa-regular fa-clock"></i> 48 hours</li>
+          <li style="align-items:flex-start"><i class="fa-regular fa-calendar-days"></i>
+            <div>Weekly schedule
+              <div class="sched" style="margin-top:.5rem">
+                <span>Sunday · 8:30 AM – 11:30 AM</span>
+                <span>Tue – Thu · 6:00 PM – 8:00 PM</span>
+                <span>Saturday · 1:30 PM – 4:30 PM</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</div>
+ 
+<!-- ================= MORE COURSES ================= -->
+<section class="more container-fluid">
+  <div class="wrap">
+    <h2>More courses</h2>
+    <p>Keep building your skills with these popular picks.</p>
+   
+          <div class="row g-4">
+      
+    <div class="col-12 col-sm-6 col-lg-3">
+    <a href="course-detail.html" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <div class="course-img-overlay"></div>
+          <img src="./asset/img/ABA.jpg" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Website</span>
+          <div class="course-img-overlay"></div>
+        </div>
+      
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">ABA PayWay Test Course</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$50.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+    <a href="course-detail.html" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/data_analysis.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Data</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">Data Analysis</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="bi bi-collection"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+    <a href="course-detail.html" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/csharp.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Programming</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">C# Programming</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+    <a href="course-detail.html" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/digital.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Social</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">Digital Marketing</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+    <a href="course-detail.html" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/IT Support.jpg" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Networking</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">IT Support</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+    <a href="course-detail.html" class="course-card-thumb-link">
+      <div class="course-card-v2">
+
+        <div class="course-img">
+          <img src="./asset/img/ms_office.png" alt="Course Image" class="img-fluid">
+          <span class="course-badge z-1">Office</span>
+          <div class="course-img-overlay"></div>
+        </div>
+
+        <div class="course-card-body">
+          <h6 class="course-card-title">Microsoft Office</h6>
+          <div class="course-meta-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <p><i class="fa-brands fa-leanpub"></i> 20 lessons</p>
+              <p><i class="bi bi-clock"></i> 48 hours</p>
+          </div>
+
+          <p class="my-0"><i class="bi bi-calendar3"></i> Mon-Wed-Fri (8:30 AM – 12:30 PM)</p>
+          <!-- <p class="ms-3">Mon-Wed-Fri (8:30 AM – 12:30 PM)</p> -->
+  </div>
+
+          <div class="course-card-footer">
+            <div class="course-rating">
+              <span>4.0</span>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <span class="course-price">$100.00</span>
+          </div>
+        </div>
+
+      </div>
+    </a>
+    </div>
+
+        
+
+      </div>
+  </div>
+</section>
+
+ 
+<!-- Mobile sticky enroll bar -->
+<div class="mbar"><span class="price">$119.00</span><a class="btn primary" href="#enroll">Enroll now</a></div>
+
+
+  <!-- footer -->
+  <footer class="site-footer py-5 mt-5">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="row g-4">
+
+        <!-- Brand -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="navbar-brand align-middle" href="index.html">
+        <div class="d-flex align-items-center">
+          <img
+            src="./asset/img/ICTLogo9.png"
+            alt="Logo"
+            width="65"
+            height="65"
+          />
+          <div class="ms-2 lh-1">
+            <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+            <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+          </div>
+        </div>
+      </a>
+          <p class="small my-3" style="color: var(--sub);">
+            Empowering professionals through world-class ICT education since 2020.
+          </p>
+          <div class="d-flex gap-3 footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">About ICT</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">All Course</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Courses -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Popular Course</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Networking CCNA1</a></li>
+            <li><a href="#">C++ Programming</a></li>
+            <li><a href="#">React JS</a></li>
+            <li><a href="#">Web Development Frontend</a></li>
+            <li><a href="#">Mobile App (Flutter)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Contact Info</h6>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">
+              ផ្ទះលេខ 240B ផ្លូវ 132 ភូមិ06<br>
+              សង្កាត់ទឹកល្អក់ទី01<br>
+              ខណ្ឌទួលគោក រាជធានីភ្នំពេញ
+            </p>
+          </div>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">092 702 175 / 096 287 5270</p>
+          </div>
+          <div class="d-flex gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-envelope"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">ICTCenter@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Download App -->
+        <div class="col-12 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Download App</h6>
+          <p class="small mb-3" style="color: var(--sub);">
+            Download our app from the App Store and Google Play Store.
+          </p>
+          <div class="d-flex flex-column gap-2 mb-3">
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-apple"></i>
+              <span>
+                <small>Available on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-google-play"></i>
+              <span>
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+          <p class="small mb-2" style="color: var(--sub);">We accept:</p>
+          <div class="d-flex gap-2">
+            <span class="pay-badge pay-aba">ABA</span>
+            <span class="pay-badge pay-khqr">KHQR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+></script>
+<script>
+  // Tabs (with arrow-key support)
+  const tabs = [...document.querySelectorAll('.tab')];
+  function selectTab(t) {
+    tabs.forEach(x => {
+      const on = x === t;
+      x.setAttribute('aria-selected', on);
+      x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+    t.focus();
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => selectTab(t));
+    t.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') selectTab(tabs[(i + 1) % tabs.length]);
+      if (e.key === 'ArrowLeft') selectTab(tabs[(i - 1 + tabs.length) % tabs.length]);
+    });
+  });
+ 
+  // Curriculum accordion
+  document.querySelectorAll('.acc > button').forEach(b => b.addEventListener('click', () => {
+    const acc = b.parentElement, open = acc.classList.toggle('open');
+    b.setAttribute('aria-expanded', open);
+  }));
+ 
+  // Favorite toggle
+  const fav = document.getElementById('favBtn');
+  fav.addEventListener('click', () => {
+    const on = fav.getAttribute('aria-pressed') !== 'true';
+    fav.setAttribute('aria-pressed', on);
+    fav.classList.toggle('is-on', on);
+    fav.innerHTML = on ? '<i class="fa-solid fa-heart"></i> Saved' : '<i class="fa-regular fa-heart"></i> Favorite';
+  });
+ 
+  // Share: native sheet if available, otherwise copy the link
+  document.getElementById('shareBtn').addEventListener('click', async function () {
+    const data = { title: document.title, url: location.href };
+    try {
+      if (navigator.share) { await navigator.share(data); return; }
+      await navigator.clipboard.writeText(data.url);
+      this.innerHTML = '<i class="fa-solid fa-check"></i> Link copied';
+      setTimeout(() => this.innerHTML = '<i class="fa-solid fa-share-nodes"></i> Share', 1800);
+    } catch (e) { /* user cancelled */ }
+  });
+ 
+  // Safety net: if stored text still contains literal "&nbsp;", clean it
+  const hd = document.getElementById('heroDesc');
+  hd.textContent = hd.textContent.replace(/&nbsp;/g, ' ');
+</script>
+<script src="./asset/js/darkmood.js"></script>
+<script src="./asset/js/stats.js"></script>
+
+</html>

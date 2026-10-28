@@ -21,8 +21,13 @@ h6,
 .logo-title-color{
     color: #302782;
 }
+.navbar-nav .nav-link {
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
 .navbar-nav .nav-link:hover{
-    color: #302782!important;
+    background-color: rgba(128, 128, 128, 0.15);
+    color: #4f46e5!important;
     font-weight: bold!important;
 }
 .active {
@@ -31,12 +36,15 @@ h6,
 }
 
 .active:hover {
-  color: black;
+  color: #4f46e5!important;
 }
-.log-reg-btn-hover:hover {
-  background-color: #302782!important;
-  color: white;
-
+.navbar .log-reg-btn-hover:hover {
+  background-color: rgba(128, 128, 128, 0.15) !important;
+  color: #4f46e5 !important;
+  border-radius: 8px;
+}
+.navbar .btn.log-reg-btn-hover:hover {
+  border-color: #4f46e5 !important;
 }
 
 /* Remove default Bootstrap dropdown arrow */
@@ -324,12 +332,12 @@ h6,
       }
 
       [data-bs-theme="dark"] .navbar-nav .nav-link:hover {
-        color: #38bdf8 !important;
+        color: #4f46e5 !important;
       }
 
       [data-bs-theme="dark"] .nav-link:hover,
       [data-bs-theme="dark"] .nav-link.active {
-        color: var(--accent) !important;
+        color: #4f46e5 !important;
       }
 
       [data-bs-theme="dark"] .text-dark {
@@ -433,13 +441,14 @@ h6,
         justify-content: center;
         width: 40px;
         height: 40px;
-        border-radius: 50%;
+        border-radius: 8px;
         color: inherit;
         transition: background-color 0.2s ease;
       }
 
       .theme-toggle-btn:hover {
         background-color: rgba(128, 128, 128, 0.15);
+        color: #4f46e5;
       }
 
       .theme-toggle-btn svg {

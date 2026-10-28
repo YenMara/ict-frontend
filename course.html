@@ -31,161 +31,162 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- navbar -->
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand align-middle" href="index.html">
-      <div class="d-flex align-items-center">
-        <img
-          src="./asset/img/ICTLogo9.png"
-          alt="Logo"
-          width="65"
-          height="65"
-        />
-        <div class="ms-2 lh-1">
-          <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
-          <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+  <!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand align-middle" href="index.html">
+          <div class="d-flex align-items-center">
+            <img
+              src="./asset/img/ICTLogo9.png"
+              alt="Logo"
+              width="65"
+              height="65"
+            />
+            <div class="ms-2 lh-1">
+              <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+              <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+            </div>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+
+            <!-- Course with hover dropdown -->
+            <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+              COURSE
+            </a>
+            <div class="dropdown-menu course-dropdown-menu">
+
+              <div class="dropdown-item has-submenu">
+                <span>Social</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+                  <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Website</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Frontend Development</a>
+                  <a href="list-course.html" class="submenu-item">Backend Development</a>
+                  <a href="list-course.html" class="submenu-item">WordPress</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Design</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+                  <a href="list-course.html" class="submenu-item">Graphic Design</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Programming</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Python</a>
+                  <a href="list-course.html" class="submenu-item">Java</a>
+                  <a href="list-course.html" class="submenu-item">C++</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Data</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Data Analysis</a>
+                  <a href="list-course.html" class="submenu-item">Database Management</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Office</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+                  <a href="list-course.html" class="submenu-item">Excel</a>
+                  <a href="list-course.html" class="submenu-item">PowerPoint</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Networking</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">CCNA</a>
+                  <a href="list-course.html" class="submenu-item">Network Security</a>
+                </div>
+              </div>
+
+            </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+
+  <!-- dark mode -->
+  <!-- Group theme toggle + login + register together -->
+          <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+            <button class="theme-toggle-btn log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">LOGIN</button>
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">REGISTER</button>
+          </div>
         </div>
-      </div>
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
-
-        <!-- Course with hover dropdown -->
-        <li class="nav-item dropdown hover-dropdown">
-  <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
-    COURSE
-  </a>
-  <div class="dropdown-menu course-dropdown-menu">
-
-    <div class="dropdown-item has-submenu">
-      <span>Social</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
-        <a href="list-course.html" class="submenu-item">Digital Marketing</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Website</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Frontend Development</a>
-        <a href="list-course.html" class="submenu-item">Backend Development</a>
-        <a href="list-course.html" class="submenu-item">WordPress</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Design</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">UI/UX Design</a>
-        <a href="list-course.html" class="submenu-item">Graphic Design</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Programming</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Python</a>
-        <a href="list-course.html" class="submenu-item">Java</a>
-        <a href="list-course.html" class="submenu-item">C++</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Data</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Data Analysis</a>
-        <a href="list-course.html" class="submenu-item">Database Management</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Office</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Microsoft Word</a>
-        <a href="list-course.html" class="submenu-item">Excel</a>
-        <a href="list-course.html" class="submenu-item">PowerPoint</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Networking</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">CCNA</a>
-        <a href="list-course.html" class="submenu-item">Network Security</a>
-      </div>
-    </div>
-
-  </div>
-</li>
-
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
-        </li>
-      </ul>
-
-      <!-- dark mode -->
-<!-- Group theme toggle + login + register together -->
-  <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
-    <button class="theme-toggle-btn border log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    </button>
-
-    <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">LOGIN</button>
-    <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">REGISTER</button>
-    </div>
-  </div>
-</nav>
-    </header>
+    </nav>
+  </header>
 
     
 
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="container-fluid px-4 px-md-5">
+  <div class="container-fluid">
     <span class="eyebrow-bar"><i class="fa-solid fa-bolt"></i> ICT skills, taught weekly</span>
     <h1>Explore all courses</h1>
     <p class="lead-text">Discover practical, instructor-led courses in tech, marketing and design — built around real weekly schedules, not endless video libraries.</p>
@@ -207,7 +208,7 @@
  
 <!-- ================= MAIN ================= -->
 <div class="page-shell">
-  <div class="container-fluid px-4 px-md-5">
+  <div class="container-fluid">
     <div class="row g-4">
  
       <!-- FILTERS -->
@@ -248,7 +249,7 @@
         <div class="row g-4" id="courseGrid">
  
           <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="website" data-title="Web Development">
-            <a href="#" class="course-card-thumb-link">
+            <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
         <div class="course-img">
@@ -288,7 +289,7 @@
           </div>
  
           <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="data" data-title="Data">
-            <a href="#" class="course-card-thumb-link">
+            <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
         <div class="course-img">
@@ -326,7 +327,7 @@
           </div>
  
           <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="programming" data-title="Programming">
-            <a href="#" class="course-card-thumb-link">
+            <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
         <div class="course-img">
@@ -364,7 +365,7 @@
           </div>
  
           <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="social" data-title="Digital Marketing">
-            <a href="#" class="course-card-thumb-link">
+            <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
         <div class="course-img">
@@ -402,7 +403,7 @@
           </div>
  
           <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="networking" data-title="IT Support">
-            <a href="#" class="course-card-thumb-link">
+            <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
         <div class="course-img">
@@ -440,7 +441,7 @@
           </div>
  
           <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="office" data-title="Microsoft Office">
-             <a href="#" class="course-card-thumb-link">
+             <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
         <div class="course-img">
@@ -479,7 +480,7 @@
 
 
           <div class="col-12 col-sm-6 col-lg-4 course-item" data-cat="design" data-title="Graphic Design">
-            <a href="#" class="course-card-thumb-link">
+            <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
         <div class="course-img">
@@ -655,4 +656,5 @@
     <script src="./asset/js/darkmood.js"></script>
     <script src="./asset/js/home.js"></script>
     <script src="./asset/js/course.js"></script>
+    <script src="./asset/js/stats.js"></script>
 </html>

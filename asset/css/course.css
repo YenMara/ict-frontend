@@ -30,6 +30,7 @@
     overflow:hidden;
     margin-top:82px;
     padding:64px 0 74px;
+    padding-left:40px;
   }
   .hero::before{
     content:"";
@@ -52,7 +53,7 @@
     font-size:13px;
     font-weight:500;
     padding:6px 14px;
-    border-radius:999px;
+    border-radius:9px;
   }
   .hero h1{
     color:#fff;
@@ -75,7 +76,7 @@
   }
   .search-shell input{
     height:58px;
-    border-radius:var(--radius-lg);
+    border-radius:0.7rem;
     border:1px solid rgba(255,255,255,0.12);
     background:rgba(255,255,255,0.97);
     padding-left:52px;
@@ -100,7 +101,7 @@
     right:6px;
     top:6px;
     height:46px;
-    border-radius:12px;
+    border-radius:8px;
     background:var(--accent);
     border:none;
     color:#fff;
@@ -130,11 +131,9 @@
  
   /* ---------- MAIN LAYOUT ---------- */
   .page-shell{
-    padding:48px 0 90px;
+    padding:48px 40px 0px 40px;
   }
-  .page-shell > .container-fluid{
-    max-width:1600px;
-  }
+
   .section-heading{
     display:flex;
     align-items:baseline;
@@ -155,7 +154,7 @@
   .filter-panel{
     background:var(--card);
     border:1px solid var(--line);
-    border-radius:var(--radius-lg);
+    border-radius:1.1rem;
     padding:22px;
     position:sticky;
     top:98px;
@@ -266,7 +265,7 @@
     font-size:11px;
     font-weight:700;
     padding:4px 12px;
-    border-radius:999px;
+    border-radius:9px;
     background:rgba(255,255,255,0.94);
   }
   .course-card-body{

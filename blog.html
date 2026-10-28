@@ -31,154 +31,155 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- navbar -->
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand align-middle" href="index.html">
-      <div class="d-flex align-items-center">
-        <img
-          src="./asset/img/ICTLogo9.png"
-          alt="Logo"
-          width="65"
-          height="65"
-        />
-        <div class="ms-2 lh-1">
-          <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
-          <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+  <!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand align-middle" href="index.html">
+          <div class="d-flex align-items-center">
+            <img
+              src="./asset/img/ICTLogo9.png"
+              alt="Logo"
+              width="65"
+              height="65"
+            />
+            <div class="ms-2 lh-1">
+              <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+              <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+            </div>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+
+            <!-- Course with hover dropdown -->
+            <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+              COURSE
+            </a>
+            <div class="dropdown-menu course-dropdown-menu">
+
+              <div class="dropdown-item has-submenu">
+                <span>Social</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+                  <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Website</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Frontend Development</a>
+                  <a href="list-course.html" class="submenu-item">Backend Development</a>
+                  <a href="list-course.html" class="submenu-item">WordPress</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Design</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+                  <a href="list-course.html" class="submenu-item">Graphic Design</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Programming</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Python</a>
+                  <a href="list-course.html" class="submenu-item">Java</a>
+                  <a href="list-course.html" class="submenu-item">C++</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Data</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Data Analysis</a>
+                  <a href="list-course.html" class="submenu-item">Database Management</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Office</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+                  <a href="list-course.html" class="submenu-item">Excel</a>
+                  <a href="list-course.html" class="submenu-item">PowerPoint</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Networking</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">CCNA</a>
+                  <a href="list-course.html" class="submenu-item">Network Security</a>
+                </div>
+              </div>
+
+            </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+
+  <!-- dark mode -->
+  <!-- Group theme toggle + login + register together -->
+          <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+            <button class="theme-toggle-btn log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">LOGIN</button>
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">REGISTER</button>
+          </div>
         </div>
-      </div>
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
-
-        <!-- Course with hover dropdown -->
-        <li class="nav-item dropdown hover-dropdown">
-  <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
-    COURSE
-  </a>
-  <div class="dropdown-menu course-dropdown-menu">
-
-    <div class="dropdown-item has-submenu">
-      <span>Social</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
-        <a href="list-course.html" class="submenu-item">Digital Marketing</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Website</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Frontend Development</a>
-        <a href="list-course.html" class="submenu-item">Backend Development</a>
-        <a href="list-course.html" class="submenu-item">WordPress</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Design</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">UI/UX Design</a>
-        <a href="list-course.html" class="submenu-item">Graphic Design</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Programming</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Python</a>
-        <a href="list-course.html" class="submenu-item">Java</a>
-        <a href="list-course.html" class="submenu-item">C++</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Data</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Data Analysis</a>
-        <a href="list-course.html" class="submenu-item">Database Management</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Office</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">Microsoft Word</a>
-        <a href="list-course.html" class="submenu-item">Excel</a>
-        <a href="list-course.html" class="submenu-item">PowerPoint</a>
-      </div>
-    </div>
-
-    <div class="dropdown-item has-submenu">
-      <span>Networking</span>
-      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      <div class="submenu">
-        <a href="list-course.html" class="submenu-item">CCNA</a>
-        <a href="list-course.html" class="submenu-item">Network Security</a>
-      </div>
-    </div>
-
-  </div>
-</li>
-
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
-        </li>
-      </ul>
-
-      <!-- dark mode -->
-<!-- Group theme toggle + login + register together -->
-  <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
-    <button class="theme-toggle-btn border log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    </button>
-
-    <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">LOGIN</button>
-    <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">REGISTER</button>
-    </div>
-  </div>
-</nav>
-    </header>
+    </nav>
+  </header>
 
 
 
@@ -209,174 +210,187 @@
   </a>
 </div>
  
+
+ 
+
 <!-- ================= MAIN ================= -->
-<div class="container-fluid page-shell px-4 px-md-5">
+<div class="container-fluid page-shell">
  
   <div class="filter-bar">
-    <div class="pill-group" id="pillGroup">
-      <button class="pill-btn active" data-filter="all">All</button>
-      <button class="pill-btn" data-filter="article">Article</button>
-      <button class="pill-btn" data-filter="facebook">Facebook</button>
-      <button class="pill-btn" data-filter="youtube">Youtube</button>
-      <button class="pill-btn" data-filter="tiktok">Tiktok</button>
+    <div class="pill-group" id="pillGroup" role="group" aria-label="Filter by source">
+      <button class="pill-btn active" data-filter="all">All <span class="count"></span></button>
+      <button class="pill-btn" data-filter="article">Article <span class="count"></span></button>
+      <button class="pill-btn" data-filter="facebook">Facebook <span class="count"></span></button>
+      <button class="pill-btn" data-filter="youtube">Youtube <span class="count"></span></button>
+      <button class="pill-btn" data-filter="tiktok">Tiktok <span class="count"></span></button>
     </div>
-    <div class="search-wrap">
+    <div class="search-wrap" id="searchWrap">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" id="searchInput" class="form-control" placeholder="Search articles...">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search articles..." aria-label="Search articles" autocomplete="off">
+      <button type="button" class="clear" id="clearBtn" aria-label="Clear search"><i class="fa-solid fa-xmark"></i></button>
     </div>
   </div>
+  <p class="result-info" id="resultInfo" aria-live="polite"></p>
  
   <div class="row g-4" id="blogGrid">
  
-    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="article" data-title="Introduction to Backend Development">
+    <div class="col-12 col-sm-6 col-xl-3 blog-item" data-source="article" data-title="Introduction to Backend Development">
       <a href="#" class="blog-card-link">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="Backend Development">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop" alt="Introduction to Backend Development" loading="lazy">
             <span class="source-badge article"><i class="fa-solid fa-file-lines"></i>Article</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i>Jul 29, 2026</span>
+            <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
           <div class="blog-body">
             <h3>Introduction to Backend Development</h3>
             <p>Backend development is the part of web development that manages the server, database and application logic.</p>
             <div class="blog-footer">
-              <span class="date"><i class="fa-regular fa-clock"></i>Jul 29, 2026</span>
               <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
-        </div>
+        </article>
       </a>
     </div>
  
-    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="facebook" data-title="Web Backend Development">
+    <div class="col-12 col-sm-6 col-xl-3 blog-item" data-source="facebook" data-title="Web Backend Development">
       <a href="#" class="blog-card-link">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop" alt="Web Backend Development">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop" alt="Web Backend Development" loading="lazy">
             <span class="source-badge facebook"><i class="fa-brands fa-facebook"></i>Facebook</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i>Aug 08, 2026</span>
+            <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
           <div class="blog-body">
             <h3>Web Backend Development</h3>
             <p>PHP, PHP Framework, Laravel, and Database — everything you need to start building solid backend systems.</p>
             <div class="blog-footer">
-              <span class="date"><i class="fa-regular fa-clock"></i>Aug 08, 2026</span>
               <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
-        </div>
+        </article>
       </a>
     </div>
  
-    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="facebook" data-title="Introduction to Full-Stack Development">
+    <div class="col-12 col-sm-6 col-xl-3 blog-item" data-source="facebook" data-title="Introduction to Full-Stack Development">
       <a href="#" class="blog-card-link">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop" alt="Full-Stack Development">
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop" alt="Introduction to Full-Stack Development" loading="lazy">
             <span class="source-badge facebook"><i class="fa-brands fa-facebook"></i>Facebook</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i>Jul 29, 2026</span>
+            <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
           <div class="blog-body">
             <h3>Introduction to Full-Stack Development</h3>
             <p>Full-stack development involves building both the frontend and backend of a website or application.</p>
             <div class="blog-footer">
-              <span class="date"><i class="fa-regular fa-clock"></i>Jul 29, 2026</span>
               <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
-        </div>
+        </article>
       </a>
     </div>
  
-    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="youtube" data-title="Full Course Preview Web Development">
+    <div class="col-12 col-sm-6 col-xl-3 blog-item" data-source="youtube" data-title="Full Course Preview: Web Development">
       <a href="#" class="blog-card-link">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" alt="Youtube course preview">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" alt="Full Course Preview: Web Development" loading="lazy">
             <span class="source-badge youtube"><i class="fa-brands fa-youtube"></i>Youtube</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i>Jul 12, 2026</span>
+            <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
           <div class="blog-body">
             <h3>Full Course Preview: Web Development</h3>
             <p>A walkthrough of the full-stack curriculum, from HTML basics to deploying a finished project.</p>
             <div class="blog-footer">
-              <span class="date"><i class="fa-regular fa-clock"></i>Jul 12, 2026</span>
               <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
-        </div>
+        </article>
       </a>
     </div>
  
-    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="tiktok" data-title="Quick Tips for New Coders">
+    <div class="col-12 col-sm-6 col-xl-3 blog-item" data-source="tiktok" data-title="Quick Tips for New Coders">
       <a href="#" class="blog-card-link">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&h=400&fit=crop" alt="Tiktok quick tips">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&h=400&fit=crop" alt="Quick Tips for New Coders" loading="lazy">
             <span class="source-badge tiktok"><i class="fa-brands fa-tiktok"></i>Tiktok</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i>Jul 05, 2026</span>
+            <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
           <div class="blog-body">
             <h3>Quick Tips for New Coders</h3>
             <p>Bite-sized advice on debugging, naming variables, and staying consistent when you're just starting out.</p>
             <div class="blog-footer">
-              <span class="date"><i class="fa-regular fa-clock"></i>Jul 05, 2026</span>
               <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
-        </div>
+        </article>
       </a>
     </div>
  
-    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="article" data-title="ICT Course of Student Finish Grade 12">
+    <div class="col-12 col-sm-6 col-xl-3 blog-item" data-source="article" data-title="ICT Course of Student Finish Grade 12">
       <a href="#" class="blog-card-link">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" alt="ICT Course">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" alt="ICT Course of Student Finish Grade 12" loading="lazy">
             <span class="source-badge article"><i class="fa-solid fa-file-lines"></i>Article</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i>Aug 21, 2026</span>
+            <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
           <div class="blog-body">
             <h3>ICT Course of Student Finish Grade 12</h3>
             <p>Web Development, C++, Python, Design — a look at the pathway for grade 12 graduates entering ICT.</p>
             <div class="blog-footer">
-              <span class="date"><i class="fa-regular fa-clock"></i>Aug 21, 2026</span>
               <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
-        </div>
+        </article>
       </a>
     </div>
  
-    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="facebook" data-title="Follow us on Facebook and Telegram">
+    <div class="col-12 col-sm-6 col-xl-3 blog-item" data-source="facebook" data-title="Follow Us on Facebook & Telegram">
       <a href="#" class="blog-card-link">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=600&h=400&fit=crop" alt="Follow channels">
+            <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=600&h=400&fit=crop" alt="Follow Us on Facebook & Telegram" loading="lazy">
             <span class="source-badge facebook"><i class="fa-brands fa-facebook"></i>Facebook</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i>Jun 30, 2026</span>
+            <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
           <div class="blog-body">
             <h3>Follow Us on Facebook &amp; Telegram</h3>
             <p>Stay up to date with new course drops, schedule changes and student spotlights on our official channels.</p>
             <div class="blog-footer">
-              <span class="date"><i class="fa-regular fa-clock"></i>Jun 30, 2026</span>
               <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
-        </div>
+        </article>
       </a>
     </div>
  
-    <div class="col-12 col-md-6 col-lg-3 blog-item" data-source="youtube" data-title="Backend Development Deep Dive">
+    <div class="col-12 col-sm-6 col-xl-3 blog-item" data-source="youtube" data-title="Backend Development Deep Dive">
       <a href="#" class="blog-card-link">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="Backend deep dive">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop" alt="Backend Development Deep Dive" loading="lazy">
             <span class="source-badge youtube"><i class="fa-brands fa-youtube"></i>Youtube</span>
+            <span class="date"><i class="fa-regular fa-calendar"></i>Jun 18, 2026</span>
+            <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>
           <div class="blog-body">
             <h3>Backend Development Deep Dive</h3>
             <p>An hour-long session covering APIs, databases and how to structure a Laravel project from scratch.</p>
             <div class="blog-footer">
-              <span class="date"><i class="fa-regular fa-clock"></i>Jun 18, 2026</span>
               <span class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
-        </div>
+        </article>
       </a>
     </div>
  
@@ -388,11 +402,12 @@
   </div>
  
 </div>
+ 
 
 
 <!-- section2 -->
  <section class="pv-section py-5">
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- Pagination -->
     <nav class="d-flex justify-content-center mb-4" aria-label="Photo pages">
@@ -402,6 +417,10 @@
     <!-- Stage -->
     <div class="pv-stage mx-auto">
       <img id="pvMain" class="pv-main" src="" alt="">
+      <img id="pvNextMain" class="pv-main pv-main-next" src="" alt="" aria-hidden="true">
+      <button type="button" class="pv-autoplay" id="pvAutoplay" aria-label="Pause slideshow">
+        <i class="fa-solid fa-pause" aria-hidden="true"></i>
+      </button>
 
       <button type="button" class="pv-nav pv-prev" id="pvPrev" aria-label="Previous photo">
         <i class="fa-solid fa-chevron-left"></i>
@@ -416,8 +435,10 @@
       </div>
     </div>
 
-    <!-- Thumbnails for the current page -->
-    <div class="row row-cols-3 row-cols-md-6 g-3 mx-auto mt-3 pv-thumbs" id="pvThumbs"></div>
+    <!-- Scrollable thumbnails for all photos -->
+    <div class="pv-thumbs-row mt-3">
+      <div class="pv-thumbs" id="pvThumbs" tabindex="0" aria-label="Photo thumbnails. Scroll horizontally to see more photos."></div>
+    </div>
 
   </div>
 </section>
@@ -547,36 +568,53 @@
 
     <script>
   (function () {
-    /* Replace these with your own photos */
     const photos = [
-      { src: 'asset/img/photos/photo-01.jpg', caption: 'Team photo with instructors' },
-      { src: 'asset/img/photos/photo-02.jpg', caption: 'Students in the lab' },
-      { src: 'asset/img/photos/photo-03.jpg', caption: 'Certificate ceremony' },
-      { src: 'asset/img/photos/photo-04.jpg', caption: 'Hands-on coding session' },
-      { src: 'asset/img/photos/photo-05.jpg', caption: 'Graduation day' },
-      { src: 'asset/img/photos/photo-06.jpg', caption: 'Class group photo' },
-      { src: 'asset/img/photos/photo-07.jpg', caption: 'Competition awards' },
-      { src: 'asset/img/photos/photo-08.jpg', caption: 'Workshop session' },
-      { src: 'asset/img/photos/photo-09.jpg', caption: 'Morning briefing' },
-      { src: 'asset/img/photos/photo-10.jpg', caption: 'Graduates celebrating' },
-      { src: 'asset/img/photos/photo-11.jpg', caption: 'Design studio' },
-      { src: 'asset/img/photos/photo-12.jpg', caption: 'Campus visit' }
+      { src: 'asset/img/about-class1.jpg', caption: 'Students working in the computer lab' },
+      { src: 'asset/img/about-class2.jpg', caption: 'Students learning together' },
+      { src: 'asset/img/about-class3.jpeg', caption: 'Class group photo' },
+      { src: 'asset/img/about-class4.jpeg', caption: 'Hands-on computer class' },
+      { src: 'asset/img/about-class5.jpg', caption: 'Students and instructor in class' },
+      { src: 'asset/img/about-class6.jpg', caption: 'Instructor leading a class' },
+      { src: 'asset/img/about-class6.jpg', caption: 'Instructor leading a class' },
+      { src: 'asset/img/about-class6.jpg', caption: 'Instructor leading a class' },
+      { src: 'asset/img/about-class2.jpg', caption: 'Students learning together' },
+      { src: 'asset/img/about-class4.jpeg', caption: 'Hands-on computer class' },
+      { src: 'asset/img/about-class4.jpeg', caption: 'Hands-on computer class' },
+      { src: 'asset/img/about-class6.jpg', caption: 'Instructor leading a class' },
+      { src: 'asset/img/about-class1.jpg', caption: 'Students working in the computer lab' },
+
     ];
 
     const PER_PAGE = 6;
     const totalPages = Math.ceil(photos.length / PER_PAGE);
 
     const main = document.getElementById('pvMain');
+    const nextMain = document.getElementById('pvNextMain');
     const counter = document.getElementById('pvCounter');
     const caption = document.getElementById('pvCaption');
     const pagination = document.getElementById('pvPagination');
     const thumbs = document.getElementById('pvThumbs');
     const stage = document.querySelector('.pv-stage');
+    const autoplayButton = document.getElementById('pvAutoplay');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     let index = 0;
     let swapTimer = null;
+    let autoplayTimer = null;
+    let autoplayPaused = prefersReducedMotion;
+    let hasCurrentImage = false;
+    let transitionId = 0;
 
     const pageOf = i => Math.floor(i / PER_PAGE);
+
+    function updateAutoplay() {
+      clearInterval(autoplayTimer);
+      autoplayButton.setAttribute('aria-label', autoplayPaused ? 'Play slideshow' : 'Pause slideshow');
+      autoplayButton.innerHTML = `<i class="fa-solid ${autoplayPaused ? 'fa-play' : 'fa-pause'}" aria-hidden="true"></i>`;
+      if (!autoplayPaused && !document.hidden) {
+        autoplayTimer = setInterval(() => show(index + 1), 5000);
+      }
+    }
 
     function renderPagination() {
       const current = pageOf(index);
@@ -606,19 +644,29 @@
     }
 
     function renderThumbs() {
-      const start = pageOf(index) * PER_PAGE;
-      const slice = photos.slice(start, start + PER_PAGE);
-
-      thumbs.innerHTML = slice.map((p, k) => {
-        const i = start + k;
+      thumbs.innerHTML = photos.map((p, i) => {
         return `
-          <div class="col">
+          <div class="pv-thumb-item">
             <button type="button" class="pv-thumb ${i === index ? 'is-active' : ''}"
                     data-index="${i}" aria-label="View ${p.caption}">
               <img src="${p.src}" alt="" loading="lazy">
             </button>
           </div>`;
       }).join('');
+
+      const activeThumb = thumbs.querySelector('.pv-thumb.is-active');
+      if (activeThumb) {
+        const thumbsRect = thumbs.getBoundingClientRect();
+        const activeRect = activeThumb.getBoundingClientRect();
+
+        if (activeRect.left < thumbsRect.left || activeRect.right > thumbsRect.right) {
+          thumbs.scrollTo({
+            left: thumbs.scrollLeft + activeRect.left - thumbsRect.left -
+              (thumbs.clientWidth - activeThumb.offsetWidth) / 2,
+            behavior: 'auto'
+          });
+        }
+      }
     }
 
     function preload(i) {
@@ -631,12 +679,34 @@
       const photo = photos[index];
 
       clearTimeout(swapTimer);
-      main.classList.add('is-swapping');
-      swapTimer = setTimeout(() => {
+      const currentTransition = ++transitionId;
+      nextMain.onload = null;
+
+      if (!hasCurrentImage || prefersReducedMotion) {
         main.src = photo.src;
         main.alt = photo.caption;
-        main.classList.remove('is-swapping');
-      }, 220);
+        nextMain.classList.remove('is-visible');
+        hasCurrentImage = true;
+      } else {
+        nextMain.classList.remove('is-visible');
+        const revealNextImage = () => {
+          if (currentTransition !== transitionId) return;
+          nextMain.onload = null;
+          requestAnimationFrame(() => {
+            if (currentTransition !== transitionId) return;
+            nextMain.classList.add('is-visible');
+            swapTimer = setTimeout(() => {
+              main.src = photo.src;
+              main.alt = photo.caption;
+              nextMain.classList.remove('is-visible');
+              hasCurrentImage = true;
+            }, 1000);
+          });
+        };
+        nextMain.onload = revealNextImage;
+        nextMain.src = photo.src;
+        if (nextMain.complete && nextMain.naturalWidth > 0) revealNextImage();
+      }
 
       caption.textContent = photo.caption;
       counter.textContent = `${index + 1} / ${photos.length}`;
@@ -660,9 +730,71 @@
       if (btn) show(Number(btn.dataset.index));
     });
 
+    thumbs.addEventListener('wheel', e => {
+      if (thumbs.scrollWidth <= thumbs.clientWidth) return;
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (delta) {
+        thumbs.scrollLeft += delta;
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    let dragStartX = 0;
+    let dragStartScrollLeft = 0;
+    let isDragging = false;
+    let didDrag = false;
+    let suppressClick = false;
+    let suppressClickTimer = null;
+
+    thumbs.addEventListener('pointerdown', e => {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      isDragging = true;
+      didDrag = false;
+      dragStartX = e.clientX;
+      dragStartScrollLeft = thumbs.scrollLeft;
+      thumbs.classList.add('is-dragging');
+      thumbs.setPointerCapture(e.pointerId);
+    });
+
+    thumbs.addEventListener('pointermove', e => {
+      if (!isDragging) return;
+      const distance = e.clientX - dragStartX;
+      if (Math.abs(distance) > 4) didDrag = true;
+      if (didDrag) {
+        thumbs.scrollLeft = dragStartScrollLeft - distance * 1.5;
+        e.preventDefault();
+      }
+    });
+
+    function stopThumbnailDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      thumbs.classList.remove('is-dragging');
+      if (didDrag) {
+        suppressClick = true;
+        clearTimeout(suppressClickTimer);
+        suppressClickTimer = setTimeout(() => { suppressClick = false; }, 0);
+      }
+    }
+
+    thumbs.addEventListener('pointerup', stopThumbnailDrag);
+    thumbs.addEventListener('pointercancel', stopThumbnailDrag);
+    thumbs.addEventListener('click', e => {
+      if (!suppressClick) return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      suppressClick = false;
+      clearTimeout(suppressClickTimer);
+    }, true);
+
     /* Arrows */
     document.getElementById('pvPrev').addEventListener('click', () => show(index - 1));
     document.getElementById('pvNext').addEventListener('click', () => show(index + 1));
+    autoplayButton.addEventListener('click', () => {
+      autoplayPaused = !autoplayPaused;
+      updateAutoplay();
+    });
+    document.addEventListener('visibilitychange', updateAutoplay);
 
     /* Keyboard */
     document.addEventListener('keydown', e => {
@@ -684,6 +816,66 @@
     });
 
     show(0);
+    updateAutoplay();
+  })();
+
+
+  // Main
+  (function () {
+    var items = [].slice.call(document.querySelectorAll('.blog-item'));
+    var pills = [].slice.call(document.querySelectorAll('.pill-btn'));
+    var input = document.getElementById('searchInput');
+    var wrap = document.getElementById('searchWrap');
+    var info = document.getElementById('resultInfo');
+    var empty = document.getElementById('emptyState');
+    var filter = 'all';
+ 
+    // Count badge inside each tab
+    pills.forEach(function (p) {
+      var f = p.dataset.filter;
+      p.querySelector('.count').textContent = f === 'all' ? items.length : items.filter(function (i) { return i.dataset.source === f; }).length;
+    });
+ 
+    function apply() {
+      var q = input.value.trim().toLowerCase(), shown = 0;
+      items.forEach(function (it) {
+        var text = (it.dataset.title + ' ' + it.textContent).toLowerCase();
+        var ok = (filter === 'all' || it.dataset.source === filter) && (!q || text.indexOf(q) !== -1);
+        it.classList.toggle('is-hidden', !ok);
+        if (ok) { it.style.animationDelay = (shown * 40) + 'ms'; shown++; }
+      });
+      wrap.classList.toggle('has-text', !!input.value);
+      empty.classList.toggle('show', shown === 0);
+      info.textContent = shown + (shown === 1 ? ' post' : ' posts') + (q ? ' for “' + input.value.trim() + '”' : '');
+    }
+ 
+    pills.forEach(function (p) {
+      p.addEventListener('click', function () {
+        filter = p.dataset.filter;
+        pills.forEach(function (x) { x.classList.toggle('active', x === p); x.setAttribute('aria-pressed', x === p); });
+        apply();
+      });
+    });
+    input.addEventListener('input', apply);
+    document.getElementById('clearBtn').addEventListener('click', function () { input.value = ''; apply(); input.focus(); });
+    apply();
+ 
+    // 3D tilt + cursor light (mouse only, skipped for reduced motion)
+    var grid = document.getElementById('blogGrid');
+    if (window.matchMedia('(hover: hover)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      grid.addEventListener('pointermove', function (e) {
+        var card = e.target.closest('.blog-card'); if (!card) return;
+        var r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        card.style.setProperty('--ry', ((x - .5) * 8) + 'deg');
+        card.style.setProperty('--rx', ((.5 - y) * 6) + 'deg');
+        card.style.setProperty('--mx', (x * 100) + '%');
+        card.style.setProperty('--my', (y * 100) + '%');
+      });
+      grid.addEventListener('pointerout', function (e) {
+        var card = e.target.closest('.blog-card'); if (!card || card.contains(e.relatedTarget)) return;
+        card.style.setProperty('--ry', '0deg'); card.style.setProperty('--rx', '0deg');
+      });
+    }
   })();
 </script>
 </html>
