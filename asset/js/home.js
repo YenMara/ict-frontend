@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const title = titleElement.textContent.trim().toLowerCase();
 
       const matchesFilter = currentFilter === 'all' || badge === currentFilter;
-      const matchesSearch = title.includes(currentSearch);
+      const matchesSearch = title.includes(currentSearch) || badge.includes(currentSearch);
 
       if (matchesFilter && matchesSearch) {
         parentCol.style.display = '';
@@ -75,12 +75,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Search input handling
-  if (searchInput) {
-    searchInput.addEventListener('input', function () {
+  function applySearch() {
+    if (searchInput) {
       currentSearch = searchInput.value.trim().toLowerCase();
       applyFilters();
-    });
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', applySearch);
   }
 
 });

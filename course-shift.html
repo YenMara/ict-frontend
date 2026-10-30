@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course-shift</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- style -->
+     <link href="./asset/css/style.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand: #3b6cf6;
+      --brand-soft: #eef3ff;
+      --ink: #0f172a;
+      --muted: #64748b;
+    }
+    body {
+      background: linear-gradient(180deg, #f6f8fc 0%, #eef2fa 100%);
+      font-family: 'Poppins', system-ui, sans-serif;
+      color: var(--ink);
+      min-height: 100vh;
+      padding-bottom: 120px;
+    }
+    [data-bs-theme="dark"] body {
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+    }
+    .h-display { font-weight: 700; letter-spacing: -0.3px; }
+    .crumb-link { color: var(--muted); text-decoration: none; transition: color .2s ease; }
+    .crumb-link:hover { color: var(--brand); }
+    .breadcrumb-item + .breadcrumb-item::before { content: "›"; font-size: 1.1rem; line-height: 1; color: var(--bs-secondary-color, #94a3b8); }
+
+    /* Stepper */
+    .step-circle {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; background: #e2e8f0; color: #94a3b8;
+      transition: all .3s ease;
+    }
+    .step.active .step-circle {
+      background: var(--brand); color: #fff;
+      box-shadow: 0 0 0 6px rgba(59,108,246,.15);
+    }
+    .step.done .step-circle { background: #22c55e; color: #fff; }
+    .step-label { font-size: .9rem; color: #94a3b8; font-weight: 500; }
+    .step.active .step-label { color: var(--brand); font-weight: 600; }
+    .step-line { flex: 1; height: 2px; background: #e2e8f0; margin: 0 .5rem; margin-bottom: 1.6rem; }
+
+    /* Course header */
+    .course-card {
+      border: 0; border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(15,23,42,.06);
+    }
+    .course-thumb {
+      width: 150px; height: 100px; object-fit: cover; border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(15,23,42,.15);
+    }
+
+    /* Schedule cards */
+    .schedule-card {
+      position: relative; border: 2px solid transparent; border-radius: 20px;
+      background: #fff; cursor: pointer; height: 100%;
+      box-shadow: 0 6px 20px rgba(15,23,42,.06);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .schedule-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(15,23,42,.1); }
+    .schedule-card.selected {
+      border-color: var(--brand);
+      box-shadow: 0 16px 40px rgba(59,108,246,.22);
+    }
+    .schedule-card .check-badge {
+      position: absolute; top: 16px; right: 16px;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--brand); color: #fff;
+      display: none; align-items: center; justify-content: center;
+    }
+    .schedule-card.selected .check-badge { display: flex; }
+
+    .shift-badge { font-size: .78rem; font-weight: 600; padding: .4rem .75rem; border-radius: 9px; }
+    .shift-morning   { background: #fff4e5; color: #b45309; }
+    .shift-afternoon { background: #e8f0ff; color: #1d4ed8; }
+    .shift-evening   { background: #f3e8ff; color: #7e22ce; }
+
+    .info-row { display: flex; align-items: center; gap: .65rem; color: #334155; font-size: .95rem; }
+    .info-row i { color: var(--muted); font-size: 1.05rem; width: 20px; }
+
+    [data-bs-theme="dark"] .course-card,
+    [data-bs-theme="dark"] .schedule-card {
+      background: #1e293b;
+      color: #e2e8f0;
+    }
+    [data-bs-theme="dark"] .info-row { color: #e2e8f0; }
+    [data-bs-theme="dark"] .action-bar {
+      background: rgba(15,23,42,.9);
+      border-top-color: #334155;
+    }
+    .seat-bar > span { display: block; height: 100%; border-radius: 999px; }
+
+    .select-btn {
+      border-radius: 12px; font-weight: 600;
+      background: var(--brand-soft); color: var(--brand); border: 0;
+      transition: all .2s ease;
+    }
+    .schedule-card.selected .select-btn { background: var(--brand); color: #fff; }
+
+    /* Sticky bottom action bar */
+    .action-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 1030;
+      background: rgba(255,255,255,.9); backdrop-filter: blur(10px);
+      border-top: 1px solid #e2e8f0;
+      box-shadow: 0 -8px 30px rgba(15,23,42,.06);
+    }
+    .btn-pay {
+      background: linear-gradient(135deg, #3b6cf6, #6366f1); color: #fff;
+      border: 0; border-radius: 14px; padding: .8rem 1.6rem; font-weight: 600;
+      box-shadow: 0 10px 24px rgba(59,108,246,.35);
+    }
+    .btn-pay:hover:not(:disabled) { color: #fff; transform: translateY(-2px); }
+    .btn-pay:disabled { background: #cbd5e1; box-shadow: none; }
+
+    .modal-content { border: 0; border-radius: 22px; }
+    .summary-box { background: #f8fafc; border-radius: 16px; padding: 1.25rem; }
+
+    @media (max-width: 576px) {
+      .course-thumb { width: 100%; height: auto; aspect-ratio: 16/10; }
+    }
+
+    .mt-6{
+        margin-top: 70px;
+    }
+
+    
+    .website{
+        background-color: #EBF1FF;
+        margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-1 px-4 fixed-top z-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand align-middle" href="index.html">
+          <div class="d-flex align-items-center">
+            <img
+              src="./asset/img/ICTLogo9.png"
+              alt="Logo"
+              width="65"
+              height="65"
+            />
+            <div class="ms-2 lh-1">
+              <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+              <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+            </div>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 title-font">
+
+            <!-- Course with hover dropdown -->
+            <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link px-4 fs-6 text-dark fw-medium dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+              COURSE
+            </a>
+            <div class="dropdown-menu course-dropdown-menu">
+
+              <div class="dropdown-item has-submenu">
+                <span>Social</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+                  <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Website</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Frontend Development</a>
+                  <a href="list-course.html" class="submenu-item">Backend Development</a>
+                  <a href="list-course.html" class="submenu-item">WordPress</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Design</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+                  <a href="list-course.html" class="submenu-item">Graphic Design</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Programming</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Python</a>
+                  <a href="list-course.html" class="submenu-item">Java</a>
+                  <a href="list-course.html" class="submenu-item">C++</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Data</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Data Analysis</a>
+                  <a href="list-course.html" class="submenu-item">Database Management</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Office</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+                  <a href="list-course.html" class="submenu-item">Excel</a>
+                  <a href="list-course.html" class="submenu-item">PowerPoint</a>
+                </div>
+              </div>
+
+              <div class="dropdown-item has-submenu">
+                <span>Networking</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <div class="submenu">
+                  <a href="list-course.html" class="submenu-item">CCNA</a>
+                  <a href="list-course.html" class="submenu-item">Network Security</a>
+                </div>
+              </div>
+
+            </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="project.html">PROJECT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 fs-6 text-dark fw-medium" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+
+  <!-- dark mode -->
+  <!-- Group theme toggle + login + register together -->
+          <div class="d-flex align-items-center gap-2 mobile-action-row ms-3">
+            <button class="theme-toggle-btn log-reg-btn-hover" id="themeToggle" aria-label="Toggle dark mode">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">LOGIN</button>
+            <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">REGISTER</button>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+<div class="container-fluid py-4 py-lg-5 mt-6 px-5">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="mb-4 ps-2">
+    <ol class="breadcrumb mb-0 small align-items-center">
+      <li class="breadcrumb-item"><a href="#" class="crumb-link">Courses</a></li>
+      <li class="breadcrumb-item"><a href="#" class="crumb-link">Web Development Backend</a></li>
+      <li class="breadcrumb-item active fw-semibold text-body" aria-current="page">Select Schedule</li>
+    </ol>
+  </nav>
+
+  <!-- Stepper -->
+  <div class="d-flex align-items-start justify-content-center mb-5" id="stepper">
+    <div class="step active text-center" style="min-width:140px">
+      <div class="step-circle mx-auto">1</div>
+      <div class="step-label mt-2">Select Schedule</div>
+    </div>
+    <div class="step-line" style="max-width:220px"></div>
+    <div class="step text-center" style="min-width:140px">
+      <div class="step-circle mx-auto">2</div>
+      <div class="step-label mt-2">Review &amp; Pay</div>
+    </div>
+    <div class="step-line" style="max-width:220px"></div>
+    <div class="step text-center" style="min-width:140px">
+      <div class="step-circle mx-auto">3</div>
+      <div class="step-label mt-2">Confirmed</div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <!-- Course header -->
+    <div class="card course-card p-4 mb-4">
+      <div class="d-flex flex-column flex-md-row align-items-md-center gap-4">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400"
+             alt="Web Development Backend" class="course-thumb">
+        <div>
+          <span class="badge rounded-3 text-bg-primary-subtle text-primary px-3 py-2 mb- website">Website</span>
+          <h2 class="h3 h-display mb-1">Web Development Backend</h2>
+          <p class="text-muted mb-0">
+            Choose the batch that fits your availability. You'll review pricing and pay on the next step.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schedule cards -->
+    <div class="row g-4" id="scheduleList"></div>
+
+  </div>
+</div>
+
+<!-- Sticky action bar -->
+<div class="action-bar px-2">
+  <div class="container-fluid py-3 px-5 d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3">
+    <div>
+      <div class="small text-muted">Selected schedule</div>
+      <div class="fw-semibold" id="selectedLabel">No schedule selected yet</div>
+    </div>
+    <button class="btn btn-pay" id="payBtn" disabled>
+      Proceed to Payment <i class="bi bi-arrow-right ms-1"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Review & Pay Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 pb-0 px-4 pt-4">
+        <h5 class="modal-title h-display">Review &amp; Pay</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="summary-box mb-4">
+          <div class="small text-muted mb-1">Course</div>
+          <div class="fw-semibold mb-3">Web Development Backend</div>
+          <div class="small text-muted mb-1">Your schedule</div>
+          <div class="fw-semibold" id="modalSchedule"></div>
+          <div class="small text-muted" id="modalTime"></div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label small fw-semibold">Payment method</label>
+          <div class="row g-2">
+            <div class="col-6">
+              <input type="radio" class="btn-check" name="pm" id="pm1" checked>
+              <label class="btn btn-outline-primary w-100 rounded-3 py-2" for="pm1">
+                <i class="bi bi-credit-card me-1"></i> Card
+              </label>
+            </div>
+            <div class="col-6">
+              <input type="radio" class="btn-check" name="pm" id="pm2">
+              <label class="btn btn-outline-primary w-100 rounded-3 py-2" for="pm2">
+                <i class="bi bi-phone me-1"></i> Mobile Pay
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0 px-4 pb-4 pt-0">
+        <button type="button" class="btn btn-light rounded-3 px-4" data-bs-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-pay px-4" id="confirmPayBtn">
+          <i class="bi bi-lock-fill me-1"></i> Pay Now
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content text-center p-4">
+      <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle bg-success-subtle"
+           style="width:80px;height:80px">
+        <i class="bi bi-check-lg text-success" style="font-size:2.2rem"></i>
+      </div>
+      <h5 class="h-display">Enrollment Confirmed!</h5>
+      <p class="text-muted small mb-4">You're all set. We'll send your class details by email.</p>
+      <button class="btn btn-primary rounded-3" data-bs-dismiss="modal">Done</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- footer -->
+  <footer class="site-footer py-5 mt-5">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="row g-4">
+
+        <!-- Brand -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="navbar-brand align-middle" href="index.html">
+        <div class="d-flex align-items-center">
+          <img
+            src="./asset/img/ICTLogo9.png"
+            alt="Logo"
+            width="65"
+            height="65"
+          />
+          <div class="ms-2 lh-1">
+            <h5 class="fw-bold logo-title-color mb-0">ICT PROFESSIONAL</h5>
+            <p class="fs-6 mb-0 fw-bold">TRAINING CENTER</p>
+          </div>
+        </div>
+      </a>
+          <p class="small my-3" style="color: var(--sub);">
+            Empowering professionals through world-class ICT education since 2020.
+          </p>
+          <div class="d-flex gap-3 footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">About ICT</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">All Course</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Courses -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Popular Course</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Networking CCNA1</a></li>
+            <li><a href="#">C++ Programming</a></li>
+            <li><a href="#">React JS</a></li>
+            <li><a href="#">Web Development Frontend</a></li>
+            <li><a href="#">Mobile App (Flutter)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Contact Info</h6>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">
+              ផ្ទះលេខ 240B ផ្លូវ 132 ភូមិ06<br>
+              សង្កាត់ទឹកល្អក់ទី01<br>
+              ខណ្ឌទួលគោក រាជធានីភ្នំពេញ
+            </p>
+          </div>
+          <div class="d-flex gap-3 mb-3">
+            <span class="footer-icon"><i class="fa-solid fa-phone"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">092 702 175 / 096 287 5270</p>
+          </div>
+          <div class="d-flex gap-3">
+            <span class="footer-icon"><i class="fa-solid fa-envelope"></i></span>
+            <p class="small mb-0" style="color: var(--sub);">ICTCenter@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Download App -->
+        <div class="col-12 col-lg-2">
+          <h6 class="fw-bold text-uppercase small mb-3" style="letter-spacing: .06em;">Download App</h6>
+          <p class="small mb-3" style="color: var(--sub);">
+            Download our app from the App Store and Google Play Store.
+          </p>
+          <div class="d-flex flex-column gap-2 mb-3">
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-apple"></i>
+              <span>
+                <small>Available on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a href="#" class="store-badge">
+              <i class="fa-brands fa-google-play"></i>
+              <span>
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+          <p class="small mb-2" style="color: var(--sub);">We accept:</p>
+          <div class="d-flex gap-2">
+            <span class="pay-badge pay-aba">ABA</span>
+            <span class="pay-badge pay-khqr">KHQR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+ <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./asset/js/darkmood.js"></script>
+    <script src="./asset/js/home.js"></script>
+    <script src="./asset/js/stats.js"></script>
+    <script>
+  // ---- Data (edit to match your real batches) ----
+  const schedules = [
+    { id: 1, shift: 'Morning',   days: 'Sat', time: '8:30 – 11:30 AM', teacher: 'Sao Sothea', start: 'August 15, 2026', seatsLeft: 2, total: 10, recommended: true },
+    { id: 2, shift: 'Morning',   days: 'Sat', time: '8:30 – 11:30 AM', teacher: 'No Teacher', start: 'TBA',             seatsLeft: 9, total: 10 },
+    { id: 3, shift: 'Afternoon', days: 'Sat', time: '1:30 – 4:30 PM',  teacher: 'Sao Sothea', start: 'August 29, 2026', seatsLeft: 1, total: 10 },
+    { id: 4, shift: 'Evening',   days: 'Mon • Wed • Fri', time: '6:00 – 8:30 PM', teacher: 'Sao Sothea', start: 'September 1, 2026', seatsLeft: 4, total: 10 }
+  ];
+
+  const shiftIcon = { Morning: 'bi-sunrise', Afternoon: 'bi-sun', Evening: 'bi-moon-stars' };
+  const shiftClass = { Morning: 'shift-morning', Afternoon: 'shift-afternoon', Evening: 'shift-evening' };
+
+  let selected = null;
+  const list = document.getElementById('scheduleList');
+  const payBtn = document.getElementById('payBtn');
+  const selectedLabel = document.getElementById('selectedLabel');
+
+  function renderCards() {
+    list.innerHTML = schedules.map(s => {
+      const pct = Math.round(((s.total - s.seatsLeft) / s.total) * 100);
+      const barColor = s.seatsLeft <= 2 ? '#f97316' : '#22c55e';
+      const seatText = s.seatsLeft <= 2 ? 'text-warning-emphasis' : 'text-muted';
+      return `
+        <div class="col-12 col-md-6 col-md-4 col-lg-3">
+          <div class="schedule-card p-4" data-id="${s.id}" role="button" tabindex="0" aria-pressed="false">
+            <div class="check-badge"><i class="bi bi-check-lg"></i></div>
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="shift-badge ${shiftClass[s.shift]}">
+                <i class="bi ${shiftIcon[s.shift]} me-1"></i>${s.shift}
+              </span>
+              ${s.recommended ? `<span class="shift-badge bg-primary-subtle text-primary"><i class="bi bi-star-fill me-1"></i>Recommended</span>` : ''}
+            </div>
+
+            <h4 class="h5 fw-bold mb-1">${s.days}</h4>
+            <div class="text-muted small mb-3"><i class="bi bi-clock me-1"></i>${s.time}</div>
+
+            <hr class="border-secondary-subtle my-3" style="border-style:dashed">
+
+            <div class="d-grid gap-2 mb-3">
+              <div class="info-row"><i class="bi bi-person-video3"></i>${s.teacher}</div>
+              <div class="info-row"><i class="bi bi-calendar-check"></i>Starts ${s.start}</div>
+              <div class="info-row"><i class="bi bi-hourglass-split"></i>48 hours total</div>
+            </div>
+
+            <div class="seat-bar mb-1"><span style="width:${pct}%;background:${barColor}"></span></div>
+            <div class="small fw-semibold ${seatText} mb-4">${s.seatsLeft} of ${s.total} seats left</div>
+
+            <div class="select-btn text-center py-2">
+              <i class="bi bi-check2 me-1"></i>Select This Schedule <i class="bi bi-chevron-right ms-1"></i>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+
+    document.querySelectorAll('.schedule-card').forEach(card => {
+      card.addEventListener('click', () => selectCard(Number(card.dataset.id)));
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectCard(Number(card.dataset.id)); }
+      });
+    });
+  }
+
+  function selectCard(id) {
+    selected = schedules.find(s => s.id === id);
+
+    document.querySelectorAll('.schedule-card').forEach(card => {
+      const isSel = Number(card.dataset.id) === id;
+      card.classList.toggle('selected', isSel);
+      card.setAttribute('aria-pressed', isSel);
+    });
+
+    selectedLabel.textContent = `${selected.shift} • ${selected.days} • ${selected.time}`;
+    payBtn.disabled = false;
+  }
+
+  payBtn.addEventListener('click', () => {
+    if (!selected) return;
+    const checkoutUrl = new URL('payment.html', window.location.href);
+    checkoutUrl.search = new URLSearchParams({
+      scheduleId: String(selected.id),
+      shift: selected.shift,
+      days: selected.days,
+      time: selected.time,
+      teacher: selected.teacher,
+      start: selected.start
+    }).toString();
+    window.location.assign(checkoutUrl);
+  });
+
+  renderCards();
+  const requestedScheduleId = Number(new URLSearchParams(window.location.search).get('scheduleId'));
+  if (schedules.some(schedule => schedule.id === requestedScheduleId)) {
+    selectCard(requestedScheduleId);
+  }
+</script>
+</html>

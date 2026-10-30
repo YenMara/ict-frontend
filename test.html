@@ -3,8 +3,785 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+     <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- style -->
+     <!-- <link href="./asset/css/style.css" rel="stylesheet"> -->
+     <!-- <link href="./asset/css/home.css" rel="stylesheet"> -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+      />
+
+    <!-- icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <style>
+        
+        /* Glass effect */
+.nav-glass {
+  background: rgba(var(--bs-body-bg-rgb), .75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* Gradient brand text and button */
+.brand-gradient-text {
+  background: linear-gradient(90deg, #4f46e5, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.btn-gradient {
+  color: #fff;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #38bdf8);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, .3);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-gradient:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(79, 70, 229, .4);
+}
+
+.letter-spaced { letter-spacing: .3em; font-size: .7rem; }
+
+/* Animated underline on nav links */
+.nav-underline { position: relative; }
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #4f46e5, #38bdf8);
+  transform: translateX(-50%);
+  transition: width .3s ease;
+}
+.nav-underline:hover::after { width: 60%; }
+.nav-underline:hover { color: #4f46e5 !important; }
+
+/* Theme toggle icons */
+.theme-btn { width: 40px; height: 40px; }
+.icon-sun { display: none; }
+[data-bs-theme="dark"] .icon-sun { display: inline; }
+[data-bs-theme="dark"] .icon-moon { display: none; }
+
+/* Course dropdown: hover on desktop */
+@media (min-width: 992px) {
+  .hover-dropdown:hover > .dropdown-menu { opacity: 1; visibility: visible; }
+  .dropdown-submenu:hover > .submenu-panel { display: block; }
+}
+.course-menu { min-width: 260px; margin-top: .75rem !important; border-top: 3px solid #4f46e5 !important; }
+.course-menu .dropdown-item:hover { color: #4f46e5; background: rgba(79, 70, 229, .08); }
+
+/* Flyout submenu on desktop */
+@media (min-width: 992px) {
+  .dropdown-submenu { position: relative; }
+  .submenu-panel {
+    top: 0;
+    left: 100%;
+    margin: 0 !important;
+    min-width: 250px;
+    border-top: 3px solid #38bdf8 !important;
+  }
+}
+
+/* Mobile: stack everything, submenus expand inline */
+@media (max-width: 991.98px) {
+  .course-menu {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    margin: .5rem 0 0 !important;
+    box-shadow: none !important;
+    border-top: none !important;
+  }
+  .submenu-panel {
+    position: static !important;
+    width: 100%;
+    box-shadow: none !important;
+    border-top: none !important;
+  }
+  .submenu-panel.show { display: block; }
+}
+    </style> -->
+
+<style>
+    /* =========================================================
+   HEADER  (replaces: "navbar styles", the mobile dropdown block,
+   and the navbar parts of "dark mood" in your old CSS.
+   Keep your footer, title-font and .primary-color rules as they are.)
+   ========================================================= */
+
+/* ---- Design tokens ---- */
+:root {
+  --hd-bg: rgba(255, 255, 255, 0.82);
+  --hd-border: rgba(48, 39, 130, 0.08);
+  --hd-text: #1e1b4b;
+  --hd-muted: #64748b;
+  --hd-brand: #302782;
+  --hd-accent: #4f46e5;
+  --hd-accent-2: #38bdf8;
+  --hd-tint: #eef1ff;
+  --hd-panel: #ffffff;
+  --hd-shadow: 0 12px 32px rgba(48, 39, 130, 0.14);
+}
+
+[data-bs-theme="dark"] {
+  --hd-bg: rgba(15, 23, 42, 0.8);
+  --hd-border: rgba(148, 163, 184, 0.14);
+  --hd-text: #e2e8f0;
+  --hd-muted: #94a3b8;
+  --hd-brand: #7dd3fc;
+  --hd-accent: #38bdf8;
+  --hd-accent-2: #818cf8;
+  --hd-tint: rgba(56, 189, 248, 0.1);
+  --hd-panel: #1e293b;
+  --hd-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+[data-bs-theme="dark"] body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* ---- Bar ---- */
+.site-nav {
+  min-height: 82px;
+  padding: 0;
+  background: var(--hd-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--hd-border);
+  transition: min-height 0.25s ease, box-shadow 0.25s ease;
+}
+
+.site-nav.is-scrolled {
+  min-height: 66px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+}
+
+.site-nav .brand img {
+  transition: width 0.25s ease, height 0.25s ease;
+}
+
+.site-nav.is-scrolled .brand img {
+  width: 42px;
+  height: 42px;
+}
+
+/* ---- Brand ---- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0;
+  margin-right: 1.5rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--hd-brand);
+}
+
+.brand-sub {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--hd-muted);
+}
+
+/* ---- Links ---- */
+.site-nav .navbar-nav .nav-link {
+  position: relative;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--hd-text);
+  border-radius: 0;
+  background: none;
+  transition: color 0.2s ease;
+}
+
+/* animated underline */
+.site-nav .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--hd-accent), var(--hd-accent-2));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.site-nav .navbar-nav .nav-link:hover,
+.site-nav .navbar-nav .nav-link:focus-visible,
+.site-nav .navbar-nav .show > .nav-link,
+.site-nav .navbar-nav .nav-link.active {
+  color: var(--hd-accent) !important;
+  background: none;
+  font-weight: 500 !important;
+}
+
+.site-nav .navbar-nav .nav-link:hover::before,
+.site-nav .navbar-nav .nav-link:focus-visible::before,
+.site-nav .navbar-nav .nav-link.active::before,
+.site-nav .navbar-nav .hover-dropdown:hover > .nav-link::before {
+  transform: scaleX(1);
+}
+
+.site-nav .nav-link:focus-visible,
+.site-nav .btn:focus-visible,
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--hd-accent);
+  outline-offset: 3px;
+}
+
+/* ---- Course dropdown (flat, indigo top border, big rows) ---- */
+
+/* make the nav item as tall as the bar so the menu opens flush under it */
+@media (min-width: 992px) {
+  .site-nav > .container-xl { align-self: stretch; }
+  .site-nav .navbar-collapse { align-self: stretch; }
+  .site-nav .navbar-nav { align-self: stretch; }
+  .site-nav .navbar-nav .nav-item { display: flex; align-items: center; }
+}
+
+.hover-dropdown { position: relative; }
+
+.hover-dropdown .dropdown-toggle::after { display: none; }
+
+.hover-dropdown .dropdown-menu {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 0;
+  padding: 0;
+  background: #ffffff;
+  border: none;
+  border-top: 3px solid #4f46e5;
+  border-radius: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: opacity .45s ease, visibility .45s ease;
+}
+
+.hover-dropdown .dropdown-menu.show { opacity: 1; visibility: visible; }
+
+.course-dropdown-menu {
+  width: 250px;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 992px) {
+  .hover-dropdown:hover > .dropdown-menu { opacity: 1; visibility: visible; }
+}
+
+/* first-level rows */
+.course-dropdown-menu .dropdown-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: transparent;
+  border-radius: 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.course-dropdown-menu .dropdown-item:last-child { border-bottom: none; }
+
+.course-dropdown-menu .dropdown-item:hover {
+  background-color: #eef1ff;
+  color: #4f46e5;
+}
+
+.course-dropdown-menu .chevron {
+  width: 18px;
+  height: 18px;
+  margin-left: auto !important;
+  color: #6c757d;
+  flex-shrink: 0;
+}
+
+/* flyout to the right */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 250px;
+  min-height: 100%;
+  margin-left: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  border: none;
+  border-top: 3px solid #4f46e5;
+  border-radius: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.has-submenu:hover .submenu { display: flex;   transition: opacity .50s ease, visibility .50s ease;}
+
+.submenu-item {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.submenu-item:hover {
+  color: #4f46e5;
+  background-color: #eef1ff;
+}
+
+/* dark mode versions */
+[data-bs-theme="dark"] .hover-dropdown .dropdown-menu {
+  background-color: #1e293b;
+  border-top-color: #38bdf8;
+}
+
+[data-bs-theme="dark"] .course-dropdown-menu .dropdown-item {
+  color: #e2e8f0;
+  border-bottom-color: #334155;
+}
+
+[data-bs-theme="dark"] .course-dropdown-menu .dropdown-item:hover {
+  background-color: #0f172a;
+  color: #38bdf8;
+}
+
+[data-bs-theme="dark"] .submenu {
+  background-color: #0f172a;
+  border-top-color: #38bdf8;
+}
+
+[data-bs-theme="dark"] .submenu-item { color: #e2e8f0; }
+
+[data-bs-theme="dark"] .submenu-item:hover {
+  color: #38bdf8;
+  background-color: #1e293b;
+}
+
+/* ---- Actions ---- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: var(--hd-text);
+  background: none;
+  border: 1px solid var(--hd-border);
+  border-radius: 25%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--hd-tint);
+  color: var(--hd-accent);
+  transform: rotate(15deg);
+}
+
+.theme-toggle-btn svg { width: 20px; height: 20px; }
+
+.icon-sun { display: none; }
+.icon-moon { display: inline; }
+[data-bs-theme="dark"] .icon-sun { display: inline; }
+[data-bs-theme="dark"] .icon-moon { display: none; }
+
+.btn-login,
+.btn-register {
+  padding: 0.5rem 1.15rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 9px;
+  transition: all 0.2s ease;
+}
+
+.btn-login {
+  color: var(--hd-text);
+  background: transparent;
+  border: 1px solid var(--hd-border);
+}
+
+.btn-login:hover {
+  color: var(--hd-accent);
+  background: var(--hd-tint);
+  border-color: var(--hd-accent);
+}
+
+.btn-register {
+  color: #fff;
+  background: linear-gradient(135deg, #302782 0%, #4f46e5 100%);
+  border: 1px solid transparent;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+}
+
+.btn-register:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.4);
+}
+
+[data-bs-theme="dark"] .btn-register {
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.25);
+}
+
+/* ---- Hamburger (animates to an X) ---- */
+.navbar-toggler {
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0.4rem;
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--hd-text);
+  background: none !important;
+  filter: none !important;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  transition: transform 0.2s ease, top 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: 0.35rem;
+  box-shadow: 0 0.55rem 0 currentColor;
+}
+
+.navbar-toggler-icon::after {
+  top: 0.62rem;
+  opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  top: 0.62rem;
+  box-shadow: none;
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  opacity: 1;
+  transform: rotate(-45deg);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 991.98px) {
+  .site-nav { min-height: 70px; }
+  .site-nav .brand img { width: 44px; height: 44px; }
+  .brand { margin-right: 0; }
+
+  .navbar-collapse {
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .site-nav .navbar-nav .nav-link {
+    padding: 0.85rem 0.25rem;
+    border-bottom: 1px solid var(--hd-border);
+  }
+
+  .site-nav .navbar-nav .nav-link::before { display: none; }
+
+  .hover-dropdown > .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .hover-dropdown > .dropdown-toggle.open { color: var(--hd-accent); }
+
+  .hover-dropdown .dropdown-menu,
+  .course-dropdown-menu {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    margin: 0.5rem 0 0 !important;
+    padding: 4px !important;
+    background: var(--hd-tint);
+    border: 0;
+    border-radius: 14px;
+    box-shadow: none;
+    animation: none !important;
+  }
+
+  .course-dropdown-menu.show { display: block !important; }
+
+  .course-dropdown-menu .has-submenu {
+    flex-wrap: wrap;
+    padding: 12px 14px;
+  }
+
+  .has-submenu > span {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .has-submenu .chevron { transform: rotate(90deg); }
+  .has-submenu.open .chevron { transform: rotate(-90deg); }
+  .has-submenu.open > span { color: var(--hd-accent); }
+
+  .course-dropdown-menu .has-submenu .submenu {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    flex-basis: 100%;
+    margin: 8px 0 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    animation: none !important;
+    display: none;
+  }
+
+  .has-submenu:hover .submenu { display: none !important; }
+  .has-submenu.open .submenu { display: block !important; }
+
+  .submenu-item {
+    padding: 0.55rem 0 0.55rem 1rem;
+    font-size: 0.9rem;
+    color: var(--hd-muted);
+    border-left: 2px solid var(--hd-border);
+    border-radius: 0;
+  }
+
+  .submenu-item:hover {
+    color: var(--hd-accent);
+    border-left-color: var(--hd-accent);
+    background: transparent;
+  }
+
+  .nav-actions {
+    margin: 1rem 0 0;
+    flex-wrap: wrap;
+  }
+
+  .btn-login,
+  .btn-register { flex: 1; }
+}
+
+/* ---- Respect reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .site-nav,
+  .site-nav *,
+  .hover-dropdown .dropdown-menu,
+  .submenu { animation: none !important; transition: none !important; }
+}
+</style>
 </head>
 <body>
+
+
+
+<!-- navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top z-3 site-nav" id="siteNav">
+      <div class="container-fluid px-5">
+
+        <!-- Brand -->
+        <a class="navbar-brand brand" href="index.html">
+          <img src="./asset/img/ICTLogo9.png" alt="ICT Professional Training Center logo" width="52" height="52" />
+          <span class="brand-text">
+            <span class="brand-title">ICT Professional</span>
+            <span class="brand-sub">Training Center</span>
+          </span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+
+            <!-- Course with hover dropdown -->
+            <li class="nav-item dropdown hover-dropdown">
+              <a class="nav-link dropdown-toggle" href="course.html" role="button" aria-expanded="false">
+                Courses
+              </a>
+              <div class="dropdown-menu course-dropdown-menu">
+
+                <div class="dropdown-item has-submenu">
+                  <span>Social</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <div class="submenu">
+                    <a href="list-course.html" class="submenu-item">AI &amp; Machine Learning</a>
+                    <a href="list-course.html" class="submenu-item">Digital Marketing</a>
+                  </div>
+                </div>
+
+                <div class="dropdown-item has-submenu">
+                  <span>Website</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <div class="submenu">
+                    <a href="list-course.html" class="submenu-item">Frontend Development</a>
+                    <a href="list-course.html" class="submenu-item">Backend Development</a>
+                    <a href="list-course.html" class="submenu-item">WordPress</a>
+                  </div>
+                </div>
+
+                <div class="dropdown-item has-submenu">
+                  <span>Design</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <div class="submenu">
+                    <a href="list-course.html" class="submenu-item">UI/UX Design</a>
+                    <a href="list-course.html" class="submenu-item">Graphic Design</a>
+                  </div>
+                </div>
+
+                <div class="dropdown-item has-submenu">
+                  <span>Programming</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <div class="submenu">
+                    <a href="list-course.html" class="submenu-item">Python</a>
+                    <a href="list-course.html" class="submenu-item">Java</a>
+                    <a href="list-course.html" class="submenu-item">C++</a>
+                  </div>
+                </div>
+
+                <div class="dropdown-item has-submenu">
+                  <span>Data</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <div class="submenu">
+                    <a href="list-course.html" class="submenu-item">Data Analysis</a>
+                    <a href="list-course.html" class="submenu-item">Database Management</a>
+                  </div>
+                </div>
+
+                <div class="dropdown-item has-submenu">
+                  <span>Office</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <div class="submenu">
+                    <a href="list-course.html" class="submenu-item">Microsoft Word</a>
+                    <a href="list-course.html" class="submenu-item">Excel</a>
+                    <a href="list-course.html" class="submenu-item">PowerPoint</a>
+                  </div>
+                </div>
+
+                <div class="dropdown-item has-submenu">
+                  <span>Networking</span>
+                  <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <div class="submenu">
+                    <a href="list-course.html" class="submenu-item">CCNA</a>
+                    <a href="list-course.html" class="submenu-item">Network Security</a>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Actions: theme toggle + login + register -->
+          <div class="nav-actions mobile-action-row">
+            <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button type="button" class="btn btn-login">Login</button>
+            <button type="button" class="btn btn-register">Register</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Add once, before </body> (after your existing scripts): shrinks the header on scroll -->
+  <script>
+    (function () {
+      var nav = document.getElementById('siteNav');
+      if (!nav) return;
+      function onScroll() { nav.classList.toggle('is-scrolled', window.scrollY > 12); }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
+
 
     <header>
 
@@ -31,6 +808,31 @@
     <footer>
 
     </footer>
+
+
+    <script>
+  // Dark mode toggle
+  const root = document.documentElement;
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    root.setAttribute('data-bs-theme', root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  // Mobile submenu toggle
+  document.querySelectorAll('.dropdown-submenu > .dropdown-item').forEach(item => {
+    item.addEventListener('click', e => {
+      if (window.innerWidth < 992) {
+        e.preventDefault();
+        item.nextElementSibling.classList.toggle('show');
+      }
+    });
+  });
+</script>
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+></script>
+<script src="./asset/js/darkmood.js"></script>
     
 </body>
 </html>

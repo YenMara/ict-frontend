@@ -218,7 +218,7 @@
     </div>
 
     <div class="stats-section">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row g-4 text-center">
 
         <div class="col-6 col-md-3 stat-item">
@@ -326,52 +326,51 @@
   <section class="courses-section py-5">
     <div class="container-fluid px-4 px-md-5">
 
-      <!-- Heading + Search -->
-      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+      <!-- Heading -->
+      <div class="mb-4">
         <h2 class="courses-heading mb-0">All Course of ICT</h2>
-
-        <div class="course-search-wrap">
-          <input type="text" class="form-control course-search-input rounded-3" placeholder="Search your course">
-          <button class="course-search-btn" aria-label="Search">
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
       </div>
 
       <!-- Category filter pills -->
-      <div class="category-filter-bar mb-5">
-        <div class="category-scroll">
-          <button class="category-pill active" data-filter="all">
-            <i class="bi bi-grid-fill"></i> All
-          </button>
-          <button class="category-pill" data-filter="website">
-            <i class="bi bi-globe2"></i> Website
-          </button>
-          <button class="category-pill" data-filter="data">
-            <i class="bi bi-server"></i> Data
-          </button>
-          <button class="category-pill" data-filter="programming">
-            <i class="bi bi-code-slash"></i> Programming
-          </button>
-          <button class="category-pill" data-filter="social">
-            <i class="bi bi-layers-fill"></i> Social
-          </button>
-          <button class="category-pill" data-filter="networking">
-            <i class="bi bi-diagram-3-fill"></i> Networking
-          </button>
-          <button class="category-pill" data-filter="office">
-            <i class="bi bi-file-earmark-text-fill"></i> Office
-          </button>
-          <button class="category-pill" data-filter="design">
-            <i class="bi bi-palette-fill"></i> Design
-          </button>
+      <div class="course-toolbar mb-5">
+        <div class="category-filter-bar">
+          <div class="category-scroll">
+            <button class="category-pill active" data-filter="all">
+              <i class="bi bi-grid-fill"></i> All
+            </button>
+            <button class="category-pill" data-filter="website">
+              <i class="bi bi-globe2"></i> Website
+            </button>
+            <button class="category-pill" data-filter="data">
+              <i class="bi bi-server"></i> Data
+            </button>
+            <button class="category-pill" data-filter="programming">
+              <i class="bi bi-code-slash"></i> Programming
+            </button>
+            <button class="category-pill" data-filter="social">
+              <i class="bi bi-layers-fill"></i> Social
+            </button>
+            <button class="category-pill" data-filter="networking">
+              <i class="bi bi-diagram-3-fill"></i> Networking
+            </button>
+            <button class="category-pill" data-filter="office">
+              <i class="bi bi-file-earmark-text-fill"></i> Office
+            </button>
+            <button class="category-pill" data-filter="design">
+              <i class="bi bi-palette-fill"></i> Design
+            </button>
+          </div>
+          <label class="course-search-wrap position-relative">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" class="form-control course-search-input" placeholder="Search courses..." aria-label="Search courses" autocomplete="off">
+          </label>
         </div>
       </div>
 
       <!-- Course cards -->
       <div class="row g-4">
       
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-4 col-xxl-3">
     <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
@@ -411,7 +410,7 @@
     </a>
     </div>
 
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-4 col-xxl-3">
     <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
@@ -449,7 +448,7 @@
     </a>
     </div>
 
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-4 col-xxl-3">
     <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
@@ -487,7 +486,7 @@
     </a>
     </div>
 
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-4 col-xxl-3">
     <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
@@ -525,7 +524,7 @@
     </a>
     </div>
 
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-4 col-xxl-3">
     <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
@@ -563,7 +562,7 @@
     </a>
     </div>
 
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-4 col-xxl-3">
     <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
@@ -601,7 +600,7 @@
     </a>
     </div>
 
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-4 col-xxl-3">
     <a href="course-detail.html" class="course-card-thumb-link">
       <div class="course-card-v2">
 
@@ -1172,6 +1171,7 @@
       crossorigin="anonymous"
 ></script>
 <script src="./asset/js/darkmood.js"></script>
+<script src="./asset/js/home.js"></script>
 <script src="./asset/js/course.js"></script>
 <script src="./asset/js/stats.js"></script>
 </html>

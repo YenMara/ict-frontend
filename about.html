@@ -174,8 +174,8 @@
               </svg>
             </button>
 
-        <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">LOGIN</button>
-        <button type="button" class="btn btn-outline-dark rounded-pill log-reg-btn-hover fw-medium">REGISTER</button>
+        <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">LOGIN</button>
+        <button type="button" class="btn btn-outline-dark rounded-2 log-reg-btn-hover fw-medium">REGISTER</button>
           </div>
         </div>
     </nav>
@@ -501,75 +501,73 @@
 </section>
 
 <!-- section4 -->
- <section class="org-section py-5">
-  <div class="container py-lg-4">
+<!-- section4 -->
+<section class="org-section">
+  <div class="container-fluid">
 
     <!-- Heading -->
-    <div class="text-center mb-5">
-      <span class="badge rounded-3 org-badge px-3 py-2 mb-3">
-        <i class="fa-solid fa-sitemap me-1"></i> Our team
-      </span>
-      <h2 class="display-6 fw-bold mb-3">Organizational Structure</h2>
-      <p class="lead text-body-secondary mb-0">Meet the leadership team driving our vision forward.</p>
+    <div class="org-heading">
+      <span class="org-badge"><i class="fa-solid fa-sitemap"></i> Our team</span>
+      <h2>Organizational structure</h2>
+      <p>Meet the leadership team driving our vision forward.</p>
     </div>
 
-    <!-- Leadership -->
-    <div class="d-flex flex-column align-items-center mb-5">
-
-      <div class="card leader-card border-0 rounded-4 text-center p-4">
-        <img src="./asset/img/kru-nhim2.jpeg" alt="Mr. Nhanh Nhim" class="avatar avatar-lg mx-auto mb-3">
-        <h5 class="fw-bold mb-1">Mr. Nhanh Nhim</h5>
-        <p class="text-body-secondary small mb-3">CEO &amp; Founder</p>
-        <div class="d-flex justify-content-center gap-2">
-          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    <!-- Leadership (CEO -> Deputy) -->
+    <div class="leaders">
+      <article class="leader-card">
+        <img src="./asset/img/kru-nhim2.jpeg" alt="Mr. Nhanh Nhim" class="leader-avatar">
+        <div class="leader-info">
+          <span class="leader-tag">Leadership</span>
+          <h3>Mr. Nhanh Nhim</h3>
+          <p>CEO &amp; Founder</p>
         </div>
-      </div>
+        <div class="leader-social"><a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+      </article>
+      <div class="org-line" aria-hidden="true"></div>
 
-      <div class="org-line"></div>
-
-      <div class="card leader-card border-0 rounded-4 text-center p-4">
-         <img src="./asset/img/vasotheavy-Deputy-director.jpg" alt="Mrs. Va Sotheavy" class="avatar avatar-lg mx-auto mb-3">
-        <h5 class="fw-bold mb-1">Mrs. Va Sotheavy</h5>
-        <p class="text-body-secondary small mb-3">Deputy Director of ICT</p>
-        <div class="d-flex justify-content-center gap-2">
-          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <article class="leader-card">
+        <img src="./asset/img/vasotheavy-Deputy-director.jpg" alt="Mrs. Va Sotheavy" class="leader-avatar">
+        <div class="leader-info">
+          <span class="leader-tag">Deputy</span>
+          <h3>Mrs. Va Sotheavy</h3>
+          <p>Deputy Director of ICT</p>
         </div>
-      </div>
+        <div class="leader-social"><a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a><a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+      </article>
 
+      <div class="org-line is-long" aria-hidden="true"></div>
     </div>
 
+    <!-- Connector label -> departments -->
+    <div class="dept-stem">
+      <span class="dept-label"><i class="fa-solid fa-diagram-project"></i> Departments</span>
+      <div class="org-line" style="height:22px" aria-hidden="true"></div>
+    </div>
 
-    <div class="container py-5">
-    <div class="row g-4">
-
-      <!-- Human Resources -->
+    <div class="row g-4 dept-grid">
       <div class="col-12 col-md-6 col-xl-4">
-        <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="card dept-card border-0 rounded-4 shadow-sm overflow-hidden">
           <div class="card-header dept-header border-0 d-flex justify-content-between align-items-center px-4 py-3">
             <span class="fw-bold"><i class="fa-solid fa-users me-2 dept-icon"></i>Human Resources</span>
             <span class="badge rounded-pill dept-count">3</span>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-              <img src="./asset/img/Channy.jpg" alt="Tha Channy" class="avatar-sm">
-              <div class="flex-grow-1 min-w-0">
-                <div class="fw-semibold text-truncate">Tha Channy</div>
-                <div class="small text-body-secondary">Human Resource</div>
-              </div>
-              <div class="d-none d-sm-flex gap-1">
-                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </li>
+              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Channy.jpg" alt="Tha Channy" class="avatar-sm" loading="lazy">
+                <div class="flex-grow-1 min-w-0">
+                  <div class="fw-semibold text-truncate">Tha Channy</div>
+                  <div class="small text-body-secondary">Human Resource</div>
+                </div>
+                <div class="d-none d-sm-flex gap-1">
+                  <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </li>
           </ul>
           <div class="collapse" id="team-hr">
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Lin.jpg" alt="Choeun Dalin" class="avatar-sm">
+                <img src="./asset/img/Lin.jpg" alt="Choeun Dalin" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Choeun Dalin</div>
                   <div class="small text-body-secondary">Human Resource</div>
@@ -578,9 +576,8 @@
                   <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-              </li>
-              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Soriya.jpg" alt="Hout Soriya" class="avatar-sm">
+              </li><li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Soriya.jpg" alt="Hout Soriya" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Hout Soriya</div>
                   <div class="small text-body-secondary">Human Resource</div>
@@ -592,38 +589,35 @@
               </li>
             </ul>
           </div>
-          <button class="team-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#team-hr"
-                  aria-expanded="false" aria-controls="team-hr">
-            <span>View Team (2)</span>
-            <i class="fa-solid fa-chevron-down chev"></i>
+          <button class="team-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#team-hr" aria-expanded="false" aria-controls="team-hr">
+            <span>View team (2)</span><i class="fa-solid fa-chevron-down chev"></i>
           </button>
         </div>
       </div>
 
-      <!-- Digital Marketing -->
       <div class="col-12 col-md-6 col-xl-4">
-        <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="card dept-card border-0 rounded-4 shadow-sm overflow-hidden">
           <div class="card-header dept-header border-0 d-flex justify-content-between align-items-center px-4 py-3">
             <span class="fw-bold"><i class="fa-solid fa-bullhorn me-2 dept-icon"></i>Digital Marketing</span>
             <span class="badge rounded-pill dept-count">2</span>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-              <img src="./asset/img/Kongkea.jpg" alt="Vatha Chetkongkea" class="avatar-sm">
-              <div class="flex-grow-1 min-w-0">
-                <div class="fw-semibold text-truncate">Vatha Chetkongkea</div>
-                <div class="small text-body-secondary">Digital Marketing</div>
-              </div>
-              <div class="d-none d-sm-flex gap-1">
-                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </li>
+              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Kongkea.jpg" alt="Vatha Chetkongkea" class="avatar-sm" loading="lazy">
+                <div class="flex-grow-1 min-w-0">
+                  <div class="fw-semibold text-truncate">Vatha Chetkongkea</div>
+                  <div class="small text-body-secondary">Digital Marketing</div>
+                </div>
+                <div class="d-none d-sm-flex gap-1">
+                  <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </li>
           </ul>
           <div class="collapse" id="team-dm">
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Lyna.jpg" alt="Reth Annalina" class="avatar-sm">
+                <img src="./asset/img/Lyna.jpg" alt="Reth Annalina" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Reth Annalina</div>
                   <div class="small text-body-secondary">Digital Marketing</div>
@@ -635,92 +629,81 @@
               </li>
             </ul>
           </div>
-          <button class="team-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#team-dm"
-                  aria-expanded="false" aria-controls="team-dm">
-            <span>View Team (1)</span>
-            <i class="fa-solid fa-chevron-down chev"></i>
+          <button class="team-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#team-dm" aria-expanded="false" aria-controls="team-dm">
+            <span>View team (1)</span><i class="fa-solid fa-chevron-down chev"></i>
           </button>
         </div>
       </div>
 
-      <!-- Video Editing -->
       <div class="col-12 col-md-6 col-xl-4">
-        <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="card dept-card border-0 rounded-4 shadow-sm overflow-hidden">
           <div class="card-header dept-header border-0 d-flex justify-content-between align-items-center px-4 py-3">
             <span class="fw-bold"><i class="fa-solid fa-film me-2 dept-icon"></i>Video Editing</span>
             <span class="badge rounded-pill dept-count">1</span>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-              <img src="./asset/img/Chan.jpg" alt="Than Chantheary" class="avatar-sm">
-              <div class="flex-grow-1 min-w-0">
-                <div class="fw-semibold text-truncate">Than Chantheary</div>
-                <div class="small text-body-secondary">Video Editor</div>
-              </div>
-              <div class="d-none d-sm-flex gap-1">
-                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </li>
+              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Chan.jpg" alt="Than Chantheary" class="avatar-sm" loading="lazy">
+                <div class="flex-grow-1 min-w-0">
+                  <div class="fw-semibold text-truncate">Than Chantheary</div>
+                  <div class="small text-body-secondary">Video Editor</div>
+                </div>
+                <div class="d-none d-sm-flex gap-1">
+                  <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </li>
           </ul>
-          <button class="team-toggle" type="button" disabled>
-            <span>View Team (0)</span>
-            <i class="fa-solid fa-chevron-down chev"></i>
-          </button>
+          <button class="team-toggle" type="button" disabled><span>No more members</span><i class="fa-solid fa-chevron-down chev"></i></button>
         </div>
       </div>
 
-      <!-- App Development -->
       <div class="col-12 col-md-6 col-xl-4">
-        <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="card dept-card border-0 rounded-4 shadow-sm overflow-hidden">
           <div class="card-header dept-header border-0 d-flex justify-content-between align-items-center px-4 py-3">
             <span class="fw-bold"><i class="fa-solid fa-mobile-screen me-2 dept-icon"></i>App Development</span>
             <span class="badge rounded-pill dept-count">1</span>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-              <img src="./asset/img/Rasmey.jpg" alt="Savean Raksmey" class="avatar-sm">
-              <div class="flex-grow-1 min-w-0">
-                <div class="fw-semibold text-truncate">Savean Raksmey</div>
-                <div class="small text-body-secondary">Mobile App Developer</div>
-              </div>
-              <div class="d-none d-sm-flex gap-1">
-                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </li>
+              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Rasmey.jpg" alt="Savean Raksmey" class="avatar-sm" loading="lazy">
+                <div class="flex-grow-1 min-w-0">
+                  <div class="fw-semibold text-truncate">Savean Raksmey</div>
+                  <div class="small text-body-secondary">Mobile App Developer</div>
+                </div>
+                <div class="d-none d-sm-flex gap-1">
+                  <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </li>
           </ul>
-          <button class="team-toggle" type="button" disabled>
-            <span>View Team (0)</span>
-            <i class="fa-solid fa-chevron-down chev"></i>
-          </button>
+          <button class="team-toggle" type="button" disabled><span>No more members</span><i class="fa-solid fa-chevron-down chev"></i></button>
         </div>
       </div>
 
-      <!-- UX/UI Design -->
       <div class="col-12 col-md-6 col-xl-4">
-        <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="card dept-card border-0 rounded-4 shadow-sm overflow-hidden">
           <div class="card-header dept-header border-0 d-flex justify-content-between align-items-center px-4 py-3">
             <span class="fw-bold"><i class="fa-solid fa-pen-ruler me-2 dept-icon"></i>UX/UI Design</span>
             <span class="badge rounded-pill dept-count">3</span>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-              <img src="./asset/img/Tra.jpg" alt="Phat Sopheaktra" class="avatar-sm">
-              <div class="flex-grow-1 min-w-0">
-                <div class="fw-semibold text-truncate">Phat Sopheaktra</div>
-                <div class="small text-body-secondary">UX/UI Designer</div>
-              </div>
-              <div class="d-none d-sm-flex gap-1">
-                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </li>
+              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Tra.jpg" alt="Phat Sopheaktra" class="avatar-sm" loading="lazy">
+                <div class="flex-grow-1 min-w-0">
+                  <div class="fw-semibold text-truncate">Phat Sopheaktra</div>
+                  <div class="small text-body-secondary">UX/UI Designer</div>
+                </div>
+                <div class="d-none d-sm-flex gap-1">
+                  <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </li>
           </ul>
           <div class="collapse" id="team-uxui">
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Limey.jpg" alt="Liv Limey" class="avatar-sm">
+                <img src="./asset/img/Limey.jpg" alt="Liv Limey" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Liv Limey</div>
                   <div class="small text-body-secondary">UX/UI Designer</div>
@@ -729,9 +712,8 @@
                   <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-              </li>
-              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Serey.jpg" alt="Yin Prasethy Serey" class="avatar-sm">
+              </li><li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Serey.jpg" alt="Yin Prasethy Serey" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Yin Prasethy Serey</div>
                   <div class="small text-body-secondary">Mobile App Developer</div>
@@ -743,38 +725,35 @@
               </li>
             </ul>
           </div>
-          <button class="team-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#team-uxui"
-                  aria-expanded="false" aria-controls="team-uxui">
-            <span>View Team (2)</span>
-            <i class="fa-solid fa-chevron-down chev"></i>
+          <button class="team-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#team-uxui" aria-expanded="false" aria-controls="team-uxui">
+            <span>View team (2)</span><i class="fa-solid fa-chevron-down chev"></i>
           </button>
         </div>
       </div>
 
-      <!-- Web Development -->
       <div class="col-12 col-md-6 col-xl-4">
-        <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="card dept-card border-0 rounded-4 shadow-sm overflow-hidden">
           <div class="card-header dept-header border-0 d-flex justify-content-between align-items-center px-4 py-3">
             <span class="fw-bold"><i class="fa-solid fa-code me-2 dept-icon"></i>Web Development</span>
             <span class="badge rounded-pill dept-count">8</span>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-              <img src="./asset/img/Ra.jpg" alt="Seth Sopheara" class="avatar-sm">
-              <div class="flex-grow-1 min-w-0">
-                <div class="fw-semibold text-truncate">Seth Sopheara</div>
-                <div class="small text-body-secondary">Full-Stack Developer</div>
-              </div>
-              <div class="d-none d-sm-flex gap-1">
-                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </li>
+              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Ra.jpg" alt="Seth Sopheara" class="avatar-sm" loading="lazy">
+                <div class="flex-grow-1 min-w-0">
+                  <div class="fw-semibold text-truncate">Seth Sopheara</div>
+                  <div class="small text-body-secondary">Full-Stack Developer</div>
+                </div>
+                <div class="d-none d-sm-flex gap-1">
+                  <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </li>
           </ul>
           <div class="collapse" id="team-web">
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Lymeng.jpg" alt="Chhay Lymeng" class="avatar-sm">
+                <img src="./asset/img/Lymeng.jpg" alt="Chhay Lymeng" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Chhay Lymeng</div>
                   <div class="small text-body-secondary">Tester</div>
@@ -783,9 +762,8 @@
                   <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-              </li>
-              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Theary.jpg" alt="Uy Sotheary" class="avatar-sm">
+              </li><li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Theary.jpg" alt="Uy Sotheary" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Uy Sotheary</div>
                   <div class="small text-body-secondary">Frontend Developer</div>
@@ -794,9 +772,8 @@
                   <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-              </li>
-              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Rathana.jpg" alt="Srin Rathana" class="avatar-sm">
+              </li><li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Rathana.jpg" alt="Srin Rathana" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Srin Rathana</div>
                   <div class="small text-body-secondary">Backend Developer</div>
@@ -805,9 +782,8 @@
                   <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-              </li>
-              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Sak.jpg" alt="Tep Panhahsak" class="avatar-sm">
+              </li><li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Sak.jpg" alt="Tep Panhahsak" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Tep Panhahsak</div>
                   <div class="small text-body-secondary">Backend Developer</div>
@@ -816,9 +792,8 @@
                   <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-              </li>
-              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Vathana.jpg" alt="Roeun Vathana" class="avatar-sm">
+              </li><li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Vathana.jpg" alt="Roeun Vathana" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Roeun Vathana</div>
                   <div class="small text-body-secondary">Backend Developer</div>
@@ -827,9 +802,8 @@
                   <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-              </li>
-              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Sothon.jpg" alt="Yeong Vachekasy sothon" class="avatar-sm">
+              </li><li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Sothon.jpg" alt="Yeong Vachekasy sothon" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Yeong Vachekasy sothon</div>
                   <div class="small text-body-secondary">Backend Developer</div>
@@ -838,9 +812,8 @@
                   <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                   <a href="#" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-              </li>
-              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
-                <img src="./asset/img/Sothy.jpg" alt="Keurn Sothy" class="avatar-sm">
+              </li><li class="list-group-item d-flex align-items-center gap-3 px-4 py-3">
+                <img src="./asset/img/Sothy.jpg" alt="Keurn Sothy" class="avatar-sm" loading="lazy">
                 <div class="flex-grow-1 min-w-0">
                   <div class="fw-semibold text-truncate">Keurn Sothy</div>
                   <div class="small text-body-secondary">Backend Developer</div>
@@ -852,16 +825,14 @@
               </li>
             </ul>
           </div>
-          <button class="team-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#team-web"
-                  aria-expanded="false" aria-controls="team-web">
-            <span>View Team (7)</span>
-            <i class="fa-solid fa-chevron-down chev"></i>
+          <button class="team-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#team-web" aria-expanded="false" aria-controls="team-web">
+            <span>View team (7)</span><i class="fa-solid fa-chevron-down chev"></i>
           </button>
         </div>
       </div>
 
     </div>
-  </div>
+
   </div>
 </section>
 

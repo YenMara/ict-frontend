@@ -153,3 +153,28 @@
     .fq-inner p { padding: 2px 16px 18px 16px; }
   }
   @media (prefers-reduced-motion: reduce) { .fq-chev, .fq-panel { transition: none; } }
+[data-bs-theme="dark"] body { background: #0f172a; color: #e2e8f0; }
+[data-bs-theme="dark"] .card { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+
+[data-bs-theme="dark"] .info-card { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+
+[data-bs-theme="dark"] .info-card h3 { color: #f1f5f9 !important; }
+
+[data-bs-theme="dark"] .fq-card { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+
+[data-bs-theme="dark"] .fq-btn { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+
+[data-bs-theme="dark"] .fq-inner { background: #1e293b; color: #e2e8f0; }
+
+[data-bs-theme="dark"] .fq-h { color: #f1f5f9 !important; }
+
+[data-bs-theme="dark"] .fq-item.is-open { background: #1e293b; border-color: #334155; }
+
+[data-bs-theme="dark"] .fq-inner p { color: #e2e8f0 !important; }
+
+[data-bs-theme="dark"] .control input, [data-bs-theme="dark"] .control textarea { background: #0f172a; color: #e2e8f0; border-color: #334155; }
+[data-bs-theme="dark"] .control input:focus, [data-bs-theme="dark"] .control textarea:focus { background: #1e293b; }
+
+[data-bs-theme="dark"] .card h2 { color: #f1f5f9 !important; }
+
+[data-bs-theme="dark"] .field label { color: #e2e8f0 !important; }
