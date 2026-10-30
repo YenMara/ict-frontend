@@ -1,0 +1,88 @@
+/* Shared readable type sizes and light-theme accent contrast. */
+.profile-kicker,
+.related-courses-heading > p { font-size: 11px; }
+.profile-page-heading > div > p:last-child { font-size: 14px; }
+.profile-stat-card > span:last-child,
+.profile-field > span,
+.profile-edit-form-heading p { font-size: 12px; }
+.profile-field > strong,
+.profile-edit-fields input,
+.profile-edit-fields textarea { font-size: 13px; }
+.profile-about-card > p { font-size: 13px; }
+.profile-about-note strong { font-size: 12px; }
+.profile-about-note small { font-size: 11px; }
+.profile-edit-fields label { font-size: 12px; }
+.profile-edit-button,
+.profile-cancel-button { font-size: 12px; }
+.detail-facts-panel small { font-size: 11px; }
+.detail-facts-panel strong { font-size: 13px; }
+.related-course-code { font-size: 11px; }
+.related-course-card h3 { font-size: 14px; }
+.related-course-card p { font-size: 12px; }
+.detail-panel-heading p { font-size: 12px; }
+.detail-students-table th,
+.detail-students-table td { font-size: 12px; }
+html[data-theme="light"] .profile-kicker,
+html[data-theme="light"] .courses-eyebrow,
+html[data-theme="light"] .related-courses-heading > p { color: #5b47aa; }
+html[data-theme="light"] .teacher-footer-logo strong { color: #302782; }
+html[data-theme="light"] .profile-field > span svg { stroke: #52627b; }
+@media (max-width: 480px) {
+  .profile-page-heading > div > p:last-child,
+  .profile-identity-copy p { font-size: 12px; }
+  .profile-stat-card > span:last-child,
+  .profile-field > span,
+  .profile-edit-form-heading p { font-size: 11px; }
+  .profile-field > strong,
+  .profile-edit-fields input,
+  .profile-edit-fields textarea { font-size: 12px; }
+  .profile-about-card > p { font-size: 12px; }
+  .profile-edit-button,
+  .profile-cancel-button { font-size: 11px; }
+  .detail-panel-heading p { font-size: 11px; }
+  .detail-students-table th,
+  .detail-students-table td { font-size: 11px; }
+}
+
+/* Teacher account menu in the header */
+.profile-menu-wrap { position: relative; align-items: center; }
+.profile-popover {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 256px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 14px 35px #03081724;
+  color: var(--text);
+  animation: reveal-in .18s ease both;
+}
+.profile-popover[hidden] { display: none; }
+.profile-menu-identity { display: flex; min-height: 64px; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.profile-menu-avatar { position: relative; display: grid; width: 40px; height: 40px; flex: 0 0 40px; place-items: center; border-radius: 50%; background: linear-gradient(145deg, #8060f6, #17b5a2); color: #fff; font-size: 12px; font-weight: 800; }
+.profile-menu-avatar i { position: absolute; right: 0; bottom: 0; width: 10px; height: 10px; border: 2px solid var(--surface); border-radius: 50%; background: #25b881; }
+.profile-menu-copy { display: grid; min-width: 0; gap: 2px; }
+.profile-menu-copy strong { overflow: hidden; color: var(--text); font-size: 14px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.profile-menu-copy small { overflow: hidden; color: var(--muted); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.profile-menu-links { padding: 5px 0; }
+.profile-menu-links button,
+.profile-menu-signout button { display: flex; width: 100%; min-height: 36px; align-items: center; gap: 10px; padding: 0 16px; border: 0; background: transparent; color: var(--text); cursor: pointer; font: inherit; font-size: 14px; text-align: left; transition: background .16s ease, color .16s ease; }
+.profile-menu-links button:hover,
+.profile-menu-signout button:hover { background: #7550f512; color: #c4b5fd; }
+.profile-menu-links svg,
+.profile-menu-signout svg { width: 15px; height: 15px; flex: 0 0 15px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+.profile-menu-signout { padding: 5px 0; border-top: 1px solid var(--border); }
+.profile-menu-signout button { min-height: 45px; }
+html[data-theme="light"] .profile-popover { border-color: #e7eaf0; background: #fff; box-shadow: 0 14px 35px #1d293914; }
+html[data-theme="light"] .profile-menu-identity,
+html[data-theme="light"] .profile-menu-signout { border-color: #e4e8ef; }
+html[data-theme="light"] .profile-menu-links button:hover,
+html[data-theme="light"] .profile-menu-signout button:hover { background: #f3f1ff; color: #302782; }
+@media (max-width: 480px) {
+  .profile-popover { top: calc(100% + 8px); width: min(256px, calc(100vw - 20px)); }
+}
+
+
