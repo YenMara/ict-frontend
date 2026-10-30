@@ -33,6 +33,7 @@
       if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) toggleProfileMenu(true);
     });
     profileMenuWrap.addEventListener('pointerleave', () => {
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
       profileMenuCloseTimer = window.setTimeout(() => {
         if (!profileMenuWrap.contains(document.activeElement)) toggleProfileMenu(false);
       }, 140);

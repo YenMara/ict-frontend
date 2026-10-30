@@ -295,7 +295,7 @@ html[data-theme="light"] .toast { border-color: #d5deea; background: #fff; color
   .topbar-spacer { display: block; order: 2; min-width: 0; flex: 1 1 auto; }
   .theme-wrap { order: 3; }
   .notifications-wrap { order: 4; }
-  .topbar-profile { order: 5; flex: 0 0 34px; }
+  .profile-menu-wrap { order: 5; flex: 0 0 auto; }
   .sidebar { top: 72px; max-height: calc(100dvh - 84px); }
 }
 @media (min-width: 481px) and (max-width: 650px) {

@@ -85,4 +85,139 @@ html[data-theme="light"] .profile-menu-signout button:hover { background: #f3f1f
   .profile-popover { top: calc(100% + 8px); width: min(256px, calc(100vw - 20px)); }
 }
 
+/* Compact operations dashboard styling. Keep the existing theme colors. */
+#dashboardView .welcome-banner {
+  min-height: 0;
+  align-items: flex-start;
+  padding: clamp(24px, 3vw, 38px);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px #02071520;
+}
+#dashboardView .welcome-copy > p:first-child {
+  margin-bottom: 5px;
+  font-size: clamp(22px, 2.5vw, 31px);
+  font-weight: 700;
+  letter-spacing: -.045em;
+  line-height: 1.1;
+}
+#dashboardView .welcome-copy h1 {
+  max-width: 19ch;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.06;
+}
+#dashboardView .welcome-subtitle { margin-top: 12px; font-size: 12px; line-height: 1.6; }
+#dashboardView .stats-grid { gap: 12px; margin-top: 14px; }
+#dashboardView .stat-card,
+#dashboardView .panel {
+  border-radius: 9px;
+  box-shadow: none;
+}
+#dashboardView .stat-card {
+  min-height: 151px;
+  padding: 14px 15px 13px;
+  transition: transform .18s ease, border-color .18s ease, background-color .18s ease;
+}
+#dashboardView .stat-card::after { display: none; }
+#dashboardView .stat-card:hover { transform: translateY(-2px); }
+#dashboardView .stat-top { margin-bottom: 12px; }
+#dashboardView .stat-icon { width: 31px; height: 31px; border-radius: 6px; }
+#dashboardView .stat-icon svg { width: 17px; height: 17px; }
+#dashboardView .trend {
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface-raised);
+  font-size: 9px;
+}
+#dashboardView .stat-value { font-size: 26px; }
+#dashboardView .stat-card h2 {
+  margin: 7px 0 5px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+#dashboardView .stat-detail { font-size: 11px; }
+#dashboardView .stat-foot { margin-top: 10px; font-size: 10px; }
+#dashboardView .dashboard-columns {
+  grid-template-columns: minmax(0, 1.55fr) minmax(260px, .75fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+#dashboardView .schedule-panel,
+#dashboardView .activity-panel {
+  min-height: 318px;
+  padding: 18px;
+  border-radius: 9px;
+}
+#dashboardView .panel-heading h2 { font-size: 14px; }
+#dashboardView .schedule-heading > div:first-child > p { margin-top: 5px; font-size: 11px; }
+#dashboardView .schedule-pills { gap: 6px; }
+#dashboardView .pill { min-height: 24px; padding: 0 9px; border-radius: 5px; font-size: 10px; }
+#dashboardView .class-card {
+  position: relative;
+  min-height: 190px;
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-radius: 7px;
+  border-left-width: 3px;
+}
+#dashboardView .class-card::after {
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  background: var(--purple);
+  content: '';
+  transform: translateY(-50%);
+}
+#dashboardView .class-time { gap: 7px; }
+#dashboardView .class-time strong { font-size: 14px; }
+#dashboardView .class-info { gap: 6px; }
+#dashboardView .class-info h3 { font-size: 14px; }
+#dashboardView .class-tags { gap: 6px; }
+#dashboardView .class-tags > span { min-height: 48px; padding: 7px; border-radius: 6px; }
+#dashboardView .activity-list { margin-top: 10px; }
+#dashboardView .activity-list li {
+  position: relative;
+  min-height: 61px;
+  gap: 10px;
+  padding: 7px 20px 7px 5px;
+  border-bottom-color: var(--border);
+  transition: background-color .18s ease;
+}
+#dashboardView .activity-list li::after {
+  position: absolute;
+  right: 5px;
+  color: var(--muted);
+  content: '›';
+  font-size: 18px;
+  line-height: 1;
+}
+#dashboardView .activity-list li:hover { padding-left: 8px; background: #ffffff08; }
+#dashboardView .activity-list p { font-size: 11px; }
+#dashboardView .activity-list time { font-size: 10px; }
+
+@media (max-width: 900px) {
+  #dashboardView .dashboard-columns { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 650px) {
+  #dashboardView .welcome-banner { padding: 22px 18px; }
+  #dashboardView .welcome-copy > p:first-child { font-size: clamp(21px, 6vw, 28px); }
+  #dashboardView .welcome-copy h1 { font-size: clamp(25px, 7vw, 32px); }
+  #dashboardView .stats-grid { gap: 10px; margin-top: 12px; }
+  #dashboardView .stat-card { min-height: 139px; padding: 12px; }
+  #dashboardView .dashboard-columns { gap: 12px; margin-top: 12px; }
+  #dashboardView .schedule-panel,
+  #dashboardView .activity-panel { min-height: 0; padding: 15px 13px; }
+  #dashboardView .class-card { min-height: 0; padding: 14px; }
+}
+@media (max-width: 360px) {
+  #dashboardView .stat-card { min-height: 0; }
+}
+
 
