@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1227" />
+    <title>Teacher Dashboard | ICT Professional Training Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../asset/css/teacher-dashboard/teacher-dashboard.css" />
+    <!-- Feature scripts load in dependency order; the last script starts the dashboard. -->
+    <script src="../asset/js/teacher-dashboard/teacher-dashboard-core.js" defer></script>
+    <script src="../asset/js/teacher-dashboard/teacher-dashboard-toolbar.js" defer></script>
+    <script src="../asset/js/teacher-dashboard/teacher-dashboard-overview.js" defer></script>
+    <script src="../asset/js/teacher-dashboard/teacher-dashboard-courses.js" defer></script>
+    <script src="../asset/js/teacher-dashboard/teacher-dashboard-attendance.js" defer></script>
+    <script src="../asset/js/teacher-dashboard/teacher-dashboard-course-details.js" defer></script>
+    <script src="../asset/js/teacher-dashboard/teacher-dashboard-profile.js" defer></script>
+    <script src="../asset/js/teacher-dashboard/teacher-dashboard.js" defer></script>
+</head>
+
+<body>
+    <!-- Header and toolbar -->
+    <header class="topbar" aria-label="Dashboard toolbar">
+        <a class="topbar-brand" href="../index.html" aria-label="ICT Professional Training Center dashboard">
+            <img src="../asset/img/ICTLogo9.png" alt="ICT Professional Training Center logo" />
+            <span class="topbar-brand-copy"><strong class="logo-title-color">ICT PROFESSIONAL</strong><small>TRAINING
+                    CENTER</small></span>
+        </a>
+        <button class="mobile-menu-button" id="menuToggle" type="button" aria-label="Open navigation"
+            aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <div class="topbar-spacer"></div>
+        <div class="toolbar-menu-wrap toolbar-action-wrap theme-wrap">
+            <button class="toolbar-icon-button" id="themeToggle" type="button" aria-label="Switch to light theme"
+                title="Switch theme">
+                <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.4 15.3A8.3 8.3 0 0 1 8.7 3.6 8.4 8.4 0 1 0 20.4 15.3Z" />
+                    <path d="M16 3v4M14 5h4" />
+                </svg>
+                <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                        d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                </svg>
+            </button>
+        </div>
+        <div class="toolbar-menu-wrap toolbar-action-wrap notifications-wrap">
+            <button class="toolbar-icon-button notification-trigger" id="notificationToggle" type="button"
+                aria-label="Notifications" aria-expanded="false" aria-controls="notificationMenu" title="Notifications">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+                </svg><i class="notification-dot"></i>
+            </button>
+            <div class="toolbar-popover notification-popover" id="notificationMenu" hidden>
+                <div class="notification-heading">
+                    <strong>Notifications</strong><span>2 new</span>
+                </div>
+                <div class="notification-item">
+                    <span class="notification-mark">＋</span><span><strong>New student enrollment</strong><small>Web
+                            front end · 2 weeks ago</small></span>
+                </div>
+                <div class="notification-item">
+                    <span class="notification-mark">＋</span><span><strong>New student enrollment</strong><small>C plus
+                            plus · 2 weeks ago</small></span>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar-menu-wrap toolbar-action-wrap profile-menu-wrap">
+            <button class="topbar-profile" id="topbarProfile" type="button" aria-label="Open profile menu"
+                aria-expanded="false" aria-controls="profileMenu" title="Teacher Web Backend">
+                <span class="topbar-avatar">TW</span><i class="online-dot"></i>
+            </button>
+            <div class="profile-popover" id="profileMenu" hidden>
+                <div class="profile-menu-identity">
+                    <span class="profile-menu-avatar" aria-hidden="true">TW<i></i></span>
+                    <span class="profile-menu-copy">
+                        <strong id="profileMenuName">teacher web backend</strong>
+                        <small id="profileMenuEmail">teacher@gmail.com</small>
+                    </span>
+                </div>
+                <div class="profile-menu-links">
+                    <button type="button" data-profile-view="dashboard">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1z" /></svg>
+                        <span>Dashboard</span>
+                    </button>
+                    <button type="button" data-profile-view="profile">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></svg>
+                        <span>Profile</span>
+                    </button>
+                </div>
+                <div class="profile-menu-signout">
+                    <button id="profileMenuSignOut" type="button">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5M15 12H3" /><path d="M12 4h7a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-7" /></svg>
+                        <span>Sign Out</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="app-shell">
+        <!-- Teacher navigation -->
+        <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+            <div class="side-top">
+                <p class="eyebrow">Menu</p>
+                <nav class="nav-list" aria-label="Dashboard pages">
+                    <button class="nav-link is-active" type="button" data-view="dashboard" aria-current="page">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="4" y="4" width="6" height="6" rx="1" />
+                            <rect x="14" y="4" width="6" height="6" rx="1" />
+                            <rect x="4" y="14" width="6" height="6" rx="1" />
+                            <rect x="14" y="14" width="6" height="6" rx="1" />
+                        </svg>
+                        <span>Dashboard</span><i class="active-dot"></i>
+                    </button>
+                    <button class="nav-link" type="button" data-view="courses">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z" />
+                            <path d="M4 5.5v16M8 7h8" />
+                        </svg>
+                        <span>My Courses</span>
+                    </button>
+                    <button class="nav-link" type="button" data-view="profile">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="8" r="3.3" />
+                            <path d="M5 20a7 7 0 0 1 14 0z" />
+                        </svg>
+                        <span>Profile</span>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="side-bottom">
+                <button class="sign-out" id="signOut" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M10 17l5-5-5-5M15 12H3" />
+                        <path d="M12 4h7a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-7" />
+                    </svg>
+                    <span>Sign Out</span>
+                </button>
+                <div class="teacher-identity">
+                    <div class="avatar" aria-hidden="true">TW</div>
+                    <div class="identity-copy">
+                        <strong>Teacher Web Backend</strong><span>Full-Stack Web Development Instructor</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <!-- Dashboard overview -->
+            <section class="view is-visible" id="dashboardView" data-page="dashboard" aria-labelledby="welcomeTitle">
+                <header class="welcome-banner">
+                    <div class="welcome-copy">
+                        <p id="greeting">Good afternoon,</p>
+                        <h1 id="welcomeTitle">
+                            Teacher Web Backend
+                            <span class="wave" aria-hidden="true">👋</span>
+                        </h1>
+                        <p class="welcome-subtitle">
+                            You have 1 class scheduled for today: C plus plus at 1:00 PM in
+                            Room A.
+                        </p>
+                    </div>
+                    <div class="banner-orb" aria-hidden="true"></div>
+                </header>
+
+                <section class="stats-grid" aria-label="Teaching overview">
+                    <article class="stat-card stat-purple">
+                        <div class="stat-top">
+                            <span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v17H5.5A2.5 2.5 0 0 0 3 22.5z" />
+                                    <path d="M3 5.5v17M8 7h8" />
+                                </svg></span><span class="trend">↗</span>
+                        </div>
+                        <strong class="stat-value">3</strong>
+                        <h2>My Courses</h2>
+                        <p class="stat-detail">1 active · 1 upcoming</p>
+                        <span class="stat-foot">Total assigned</span>
+                    </article>
+                    <article class="stat-card stat-blue">
+                        <div class="stat-top">
+                            <span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3.5 19a5.5 5.5 0 0 1 11 0zM16 11a3 3 0 1 0-1-5.8M16 14a5 5 0 0 1 4.5 5" />
+                                </svg></span><span class="trend">↗</span>
+                        </div>
+                        <strong class="stat-value">1</strong>
+                        <h2>Total Students</h2>
+                        <p class="stat-detail">Enrolled students</p>
+                        <span class="stat-foot">Across all courses</span>
+                    </article>
+                    <article class="stat-card stat-green">
+                        <div class="stat-top">
+                            <span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="4" width="18" height="17" rx="2" />
+                                    <path d="M7 2v4M17 2v4M3 9h18M7 13h2M12 13h2M17 13h.01M7 17h2M12 17h2" />
+                                </svg></span><span class="trend">↗</span>
+                        </div>
+                        <strong class="stat-value">1</strong>
+                        <h2>Classes Today</h2>
+                        <p class="stat-detail">1 class scheduled</p>
+                        <span class="stat-foot">Starts at 1:00 PM</span>
+                    </article>
+                    <article class="stat-card stat-amber">
+                        <div class="stat-top">
+                            <span class="stat-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 19a6 6 0 0 1 12 0z" />
+                                    <circle cx="18" cy="16" r="3.5" />
+                                    <path d="m16.5 16 1 1 2-2" />
+                                </svg></span><span class="trend">↗</span>
+                        </div>
+                        <strong class="stat-value">33%</strong>
+                        <h2>Avg. Attendance</h2>
+                        <p class="stat-detail">Recorded sessions</p>
+                        <span class="stat-foot">Overall rate</span>
+                    </article>
+                </section>
+
+                <div class="dashboard-columns">
+                    <section class="panel schedule-panel" aria-labelledby="scheduleTitle">
+                        <div class="panel-heading schedule-heading">
+                            <div>
+                                <h2 id="scheduleTitle">
+                                    <span class="heading-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <rect x="3" y="4" width="18" height="17" rx="2" />
+                                            <path d="M7 2v4M17 2v4M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01" />
+                                        </svg></span>Today's Schedule
+                                </h2>
+                                <p id="todayDate">Friday, October 30, 2026</p>
+                            </div>
+                            <div class="schedule-pills">
+                                <span class="pill pill-primary">1 Class Today</span><span class="pill pill-outline">3.5
+                                    hours at school</span>
+                            </div>
+                        </div>
+                        <article class="class-card">
+                            <div class="class-time">
+                                <span class="class-time-label">CLASS TIME</span><strong>1:00 PM – 4:30 PM</strong><span
+                                    class="class-shift">Afternoon Shift <small>3.5 hours</small></span>
+                            </div>
+                            <div class="class-info">
+                                <span class="class-mode"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M8 9h.01M12 9h.01M16 9h.01" />
+                                    </svg>
+                                    On-campus class</span>
+                                <span class="course-code">ICT-004</span>
+                                <span class="course-category">Programming</span>
+                                <h3>C plus plus</h3>
+                                <div class="class-tags">
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                                            <circle cx="12" cy="10" r="2.5" />
+                                        </svg><span><small class="tag-kicker">LOCATION</small><strong>Classroom
+                                                A</strong><small class="tag-subtitle">Main Campus</small></span></span>
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <circle cx="9" cy="8" r="3" />
+                                            <path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 1 0-1-5.8M17 15a5 5 0 0 1 4 5" />
+                                        </svg><span><small class="tag-kicker">ENROLLED STUDENTS</small><strong>1 of 5
+                                                students</strong></span></span>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="panel activity-panel" aria-labelledby="activityTitle">
+                        <div class="panel-heading">
+                            <h2 id="activityTitle">Recent Activities</h2>
+                        </div>
+                        <ul class="activity-list">
+                            <li>
+                                <span class="activity-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="10" cy="7" r="3" />
+                                        <path d="M4 19a6 6 0 0 1 12 0M18 12v6M15 15h6" />
+                                    </svg></span>
+                                <div>
+                                    <p>Student enrolled in <strong>“Web front end”</strong></p>
+                                    <time>2 weeks ago</time>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="activity-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="10" cy="7" r="3" />
+                                        <path d="M4 19a6 6 0 0 1 12 0M18 12v6M15 15h6" />
+                                    </svg></span>
+                                <div>
+                                    <p>Student enrolled in <strong>“C plus plus”</strong></p>
+                                    <time>2 weeks ago</time>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+            <!-- Teacher courses -->
+            <section class="view secondary-view courses-view" id="coursesView" data-page="courses"
+                aria-labelledby="coursesTitle" hidden>
+                <header class="courses-heading">
+                    <div>
+                        <p class="courses-eyebrow">YOUR TEACHING SPACE</p>
+                        <h1 id="coursesTitle">My Courses</h1>
+                        <p class="courses-subtitle">
+                            Manage and track your assigned courses.
+                        </p>
+                    </div>
+                    <label class="courses-search" for="courseSearch">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7" />
+                            <path d="m20 20-4-4" />
+                        </svg>
+                        <input id="courseSearch" type="search" placeholder="Search courses..." autocomplete="off" />
+                        <kbd>/</kbd>
+                    </label>
+                </header>
+                <div class="courses-controls">
+                    <div class="courses-filter-wrap">
+                        <button class="courses-filter-button" id="courseSortToggle" type="button"
+                            aria-label="Show course sorting options" aria-expanded="false"
+                            aria-controls="courseSortMenu">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5h16l-6.2 7.1v5.2l-3.6 1.8v-7z" />
+                            </svg>
+                        </button>
+                        <div class="courses-sort-menu" id="courseSortMenu" hidden>
+                            <p>Sort courses</p>
+                            <button type="button" data-course-sort="name">
+                                Course name <span>A–Z</span>
+                            </button>
+                            <button type="button" data-course-sort="progress">
+                                Progress <span>Low to high</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="courses-tabs" role="tablist" aria-label="Filter courses by status">
+                        <button class="courses-tab is-selected" type="button" role="tab" aria-selected="true"
+                            data-course-status="all">
+                            All Courses <span>3</span>
+                        </button>
+                        <button class="courses-tab" type="button" role="tab" aria-selected="false"
+                            data-course-status="active">
+                            Active <span>1</span>
+                        </button>
+                        <button class="courses-tab" type="button" role="tab" aria-selected="false"
+                            data-course-status="upcoming">
+                            Upcoming <span>1</span>
+                        </button>
+                        <button class="courses-tab" type="button" role="tab" aria-selected="false"
+                            data-course-status="completed">
+                            Completed <span>1</span>
+                        </button>
+                    </div>
+                    <p class="courses-count" id="courseResultCount" aria-live="polite">
+                        Showing 3 courses
+                    </p>
+                </div>
+                <div class="courses-grid" id="teacherCourseGrid" aria-label="Assigned courses">
+                    <article class="teacher-course-card" data-teacher-course data-status="active"
+                        data-name="C plus plus" data-progress="0" data-code="ICT-004"
+                        data-schedule="Mon · Wed · Fri | Afternoon (1:00 – 4:30 PM)" data-students="1"
+                        data-start="15 Oct, 2026" data-duration="42 hrs" data-sessions="28" data-rating="5.0"
+                        data-level="Beginner" data-location="Phnom Penh" data-enrolled="15 Oct, 2026">
+                        <div class="teacher-course-top">
+                            <span class="teacher-course-icon icon-cyan" aria-hidden="true"><svg viewBox="0 0 24 24">
+                                    <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v17H5.5A2.5 2.5 0 0 0 3 22.5z" />
+                                    <path d="M3 5.5v17M8 7h8" />
+                                </svg></span>
+                            <span class="teacher-course-status status-active"><i></i>Active</span>
+                        </div>
+                        <h2>C plus plus</h2>
+                        <div class="teacher-course-meta">
+                            <span class="teacher-course-code">ICT-004</span><span>Programming</span><span
+                                class="meta-divider">·</span><span class="teacher-room-tag"><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M4 20V4h16v16M8 8h8M8 12h5" />
+                                </svg>Room A</span>
+                        </div>
+                        <p class="teacher-course-description">
+                            Interactive lessons, lab exercises, and assignments.
+                        </p>
+                        <div class="teacher-course-facts">
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 1 0-1-5.8M17 15a5 5 0 0 1 4 5" />
+                                </svg><strong>1 student</strong></span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="10" cy="7" r="3" />
+                                    <path d="M4 20a6 6 0 0 1 12 0M18 13v6M15 16h6" />
+                                </svg><strong>33%</strong></span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M12 7v5l3 2" />
+                                </svg><strong>Mon, Wed, Fri — 1:00 PM</strong></span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="4" y="4" width="16" height="17" rx="2" />
+                                    <path d="M8 2v4m8-4v4M4 9h16M8 13h.01M12 13h.01M16 13h.01" />
+                                </svg><strong>0/28 lessons</strong></span>
+                        </div>
+                        <div class="teacher-course-progress">
+                            <div class="progress-label">
+                                <span>Course progress</span><strong>0%</strong>
+                            </div>
+                            <div class="progress-track">
+                                <span style="width: 0%"></span>
+                            </div>
+                        </div>
+                        <div class="teacher-course-footer">
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="4" y="4" width="16" height="17" rx="2" />
+                                    <path d="M8 2v4m8-4v4M4 9h16" />
+                                </svg>Oct 15, 2026 — Dec 20, 2026</span><button class="teacher-course-details-button"
+                                type="button" aria-expanded="false">
+                                View details
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="teacher-course-extra" hidden>
+                            <span><strong>Next class</strong>Today, 1:00 PM in Room
+                                A</span><span><strong>Students</strong>1 student enrolled</span>
+                        </div>
+                    </article>
+                    <article class="teacher-course-card is-completed" data-teacher-course data-status="completed"
+                        data-name="Web front end" data-progress="0" data-code="ICT-003"
+                        data-schedule="Mon · Wed · Fri | 5:00 PM" data-students="1" data-start="15 Oct, 2026"
+                        data-duration="42 hrs" data-sessions="28" data-rating="—" data-level="—" data-location="Phnom Penh"
+                        data-enrolled="15 Oct, 2026">
+                        <div class="teacher-course-top">
+                            <span class="teacher-course-icon icon-teal" aria-hidden="true"><svg viewBox="0 0 24 24">
+                                    <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v17H5.5A2.5 2.5 0 0 0 3 22.5z" />
+                                    <path d="M3 5.5v17M8 7h8" />
+                                </svg></span>
+                            <span class="teacher-course-status">Completed</span>
+                        </div>
+                        <h2>Web front end</h2>
+                        <div class="teacher-course-meta">
+                            <span class="teacher-course-code">ICT-003</span><span>Programming</span><span
+                                class="meta-divider">·</span><span class="teacher-room-tag"><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M4 20V4h16v16M8 8h8M8 12h5" />
+                                </svg>Room A</span>
+                        </div>
+                        <p class="teacher-course-description">
+                            Interactive lessons, lab exercises, and assignments.
+                        </p>
+                        <div class="teacher-course-facts">
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 1 0-1-5.8M17 15a5 5 0 0 1 4 5" />
+                                </svg><strong>1 student</strong></span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="10" cy="7" r="3" />
+                                    <path d="M4 20a6 6 0 0 1 12 0M18 16h4" />
+                                </svg><strong>—</strong></span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M12 7v5l3 2" />
+                                </svg><strong>Mon, Wed, Fri — 5:00 PM</strong></span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="4" y="4" width="16" height="17" rx="2" />
+                                    <path d="M8 2v4m8-4v4M4 9h16M8 13h.01M12 13h.01M16 13h.01" />
+                                </svg><strong>0/28 lessons</strong></span>
+                        </div>
+                        <div class="teacher-course-progress">
+                            <div class="progress-label">
+                                <span>Course progress</span><strong>0%</strong>
+                            </div>
+                            <div class="progress-track">
+                                <span style="width: 0%"></span>
+                            </div>
+                        </div>
+                        <div class="teacher-course-footer">
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="4" y="4" width="16" height="17" rx="2" />
+                                    <path d="M8 2v4m8-4v4M4 9h16" />
+                                </svg>Oct 15, 2026 — Oct 15, 2026</span><button class="teacher-course-details-button"
+                                type="button" aria-expanded="false">
+                                View details
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="teacher-course-extra" hidden>
+                            <span><strong>Course status</strong>Completed course</span><span><strong>Students</strong>1
+                                student enrolled</span>
+                        </div>
+                    </article>
+                    <article class="teacher-course-card is-upcoming" data-teacher-course data-status="upcoming"
+                        data-name="Web Development" data-progress="0" data-code="ICT-008"
+                        data-schedule="Schedule to be announced" data-students="0" data-start="To be announced"
+                        data-duration="—" data-sessions="—" data-rating="—" data-level="—"
+                        data-location="To be announced" data-enrolled="—">
+                        <div class="teacher-course-top">
+                            <span class="teacher-course-icon icon-blue" aria-hidden="true"><svg viewBox="0 0 24 24">
+                                    <path d="m3 6 9-3 9 3v12l-9 3-9-3z" />
+                                    <path d="M12 3v18M3 6l9 3 9-3" />
+                                </svg></span>
+                            <span class="teacher-course-status status-upcoming"><i></i>Upcoming</span>
+                        </div>
+                        <h2>Web Development</h2>
+                        <div class="teacher-course-meta">
+                            <span class="teacher-course-code">ICT-008</span><span>Web Development</span>
+                        </div>
+                        <p class="teacher-course-description">
+                            Course assigned to you. The class schedule will be announced
+                            soon.
+                        </p>
+                        <div class="teacher-course-facts">
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M12 7v5l3 2" />
+                                </svg><strong>Schedule to be announced</strong></span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 5h16v15H4zM8 3v4m8-4v4M4 10h16" />
+                                </svg><strong>Lessons not started</strong></span>
+                        </div>
+                        <div class="teacher-course-progress">
+                            <div class="progress-label">
+                                <span>Course progress</span><strong>0%</strong>
+                            </div>
+                            <div class="progress-track">
+                                <span style="width: 0%"></span>
+                            </div>
+                        </div>
+                        <div class="teacher-course-footer">
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="4" y="4" width="16" height="17" rx="2" />
+                                    <path d="M8 2v4m8-4v4M4 9h16" />
+                                </svg>Schedule to be announced</span><button class="teacher-course-details-button"
+                                type="button" aria-expanded="false">
+                                View details
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="teacher-course-extra" hidden>
+                            <span><strong>Course status</strong>Assigned, awaiting
+                                schedule</span><span><strong>Next step</strong>Class details will appear here when
+                                scheduled</span>
+                        </div>
+                    </article>
+                    <div class="teacher-courses-empty" id="teacherCoursesEmpty" hidden>
+                        <span>⌕</span>
+                        <h2>No courses found</h2>
+                        <p>Try a different search or status filter.</p>
+                        <button id="resetCourseFilters" type="button">
+                            Clear filters
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Course details, attendance, and related courses -->
+            <section class="view secondary-view course-detail-view" id="courseDetailView" data-page="course-detail"
+                aria-labelledby="detailCourseTitle" hidden>
+                <button class="detail-back-button" id="backToCourses" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m15 18-6-6 6-6M9 12h11" />
+                    </svg>Back to courses
+                </button>
+                <header class="course-detail-hero">
+                    <div class="course-detail-hero-copy">
+                        <span class="detail-course-code" id="detailCourseCode">ICT-004</span>
+                        <h1 id="detailCourseTitle">C plus plus</h1>
+                        <p class="detail-course-schedule" id="detailCourseSchedule">
+                            Mon · Wed · Fri | Afternoon (1:00 – 4:30 PM)
+                        </p>
+                        <div class="detail-course-highlights">
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 1 0-1-5.8M17 15a5 5 0 0 1 4 5" />
+                                </svg><strong id="detailStudentCount">1</strong> Enrolled</span>
+                            <span class="detail-rating"><span aria-hidden="true">★★★★★</span>
+                                <strong id="detailCourseRating">5.0</strong></span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 19V5m0 14h16M8 15v-4m4 4V7m4 8V9m4 6V4" />
+                                </svg><strong id="detailCourseLevel">Beginner</strong></span>
+                        </div>
+                    </div>
+                    <div class="detail-course-art" aria-hidden="true">
+                        <span id="detailCourseMark">C++</span>
+                    </div>
+                    <div class="detail-orbit" aria-hidden="true"></div>
+                </header>
+
+                <div class="course-detail-layout">
+                    <section class="panel course-detail-main">
+                        <div class="course-detail-tabs" role="tablist" aria-label="Course information">
+                            <button class="course-detail-tab is-active" type="button" role="tab" aria-selected="true"
+                                aria-controls="detailStudentsPanel" data-detail-tab="students">
+                                Students
+                            </button>
+                            <button class="course-detail-tab" type="button" role="tab" aria-selected="false"
+                                aria-controls="detailAttendancePanel" data-detail-tab="attendance">
+                                Student's Attendance
+                            </button>
+                            <button class="course-detail-tab" type="button" role="tab" aria-selected="false"
+                                aria-controls="detailSessionPanel" data-detail-tab="sessions">
+                                Session Log
+                            </button>
+                            <button class="course-detail-tab" type="button" role="tab" aria-selected="false"
+                                aria-controls="detailReportPanel" data-detail-tab="report">
+                                Student Report
+                            </button>
+                            <button class="course-detail-tab" type="button" role="tab" aria-selected="false"
+                                aria-controls="detailMyAttendancePanel" data-detail-tab="my-attendance">
+                                My Attendance
+                            </button>
+                        </div>
+                        <section class="course-detail-tab-panel" id="detailStudentsPanel" role="tabpanel">
+                            <div class="detail-panel-heading">
+                                <div>
+                                    <h2>Students</h2>
+                                    <p>Meet people taking this course.</p>
+                                </div>
+                                <div class="student-view-toggle" role="group" aria-label="Student display mode">
+                                    <button type="button" data-student-layout="grid" aria-label="Card view">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <rect x="4" y="4" width="6" height="6" />
+                                            <rect x="14" y="4" width="6" height="6" />
+                                            <rect x="4" y="14" width="6" height="6" />
+                                            <rect x="14" y="14" width="6" height="6" />
+                                        </svg></button><button class="is-active" type="button"
+                                        data-student-layout="list" aria-label="List view">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="detail-students-table-wrap" id="detailStudentTableWrap">
+                                <table class="detail-students-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Enrolled</th>
+                                            <th>Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="detailStudentRows">
+                                        <tr>
+                                            <td>
+                                                <span class="student-avatar">S</span><strong>student</strong>
+                                            </td>
+                                            <td id="detailEnrolledDate">15 Oct, 2026</td>
+                                            <td>
+                                                <span class="student-location"><svg viewBox="0 0 24 24"
+                                                        aria-hidden="true">
+                                                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                                                        <circle cx="12" cy="10" r="2.5" />
+                                                    </svg><span id="detailStudentLocation">Phnom Penh</span></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="detail-student-cards" id="detailStudentCards" hidden>
+                                <article>
+                                    <span class="student-avatar">S</span>
+                                    <div>
+                                        <strong>student</strong><small>Joined
+                                            <span class="detail-enrolled-copy">15 Oct, 2026</span></small>
+                                    </div>
+                                    <span class="detail-student-card-location">Phnom Penh</span>
+                                </article>
+                            </div>
+                            <div class="detail-no-students" id="detailNoStudents" hidden>
+                                <span>♧</span><strong>No students enrolled yet</strong>
+                                <p>Students will appear here when they join this course.</p>
+                            </div>
+                        </section>
+                        <section class="course-detail-tab-panel attendance-management" id="detailAttendancePanel"
+                            role="tabpanel" hidden>
+                            <div class="attendance-heading">
+                                <div>
+                                    <h2><span aria-hidden="true">▤</span>Student Attendance</h2>
+                                    <p id="attendanceDateLabel">Today — Fri Oct 30 2026</p>
+                                </div>
+                                <div class="attendance-date-actions">
+                                    <button class="attendance-date-button is-active" type="button"
+                                        data-attendance-day="today">
+                                        Today</button><button class="attendance-date-button" type="button"
+                                        data-attendance-day="tomorrow">
+                                        Tomorrow</button><label class="attendance-date-picker"><input
+                                            id="attendanceDate" type="date"
+                                            aria-label="Choose attendance date" /></label>
+                                </div>
+                            </div>
+                            <div class="attendance-summary" id="attendanceSummary">
+                                <article>
+                                    <span>Present</span><strong class="present-total" id="presentCount">0</strong>
+                                </article>
+                                <article>
+                                    <span>Absent</span><strong class="absent-total" id="absentCount">0</strong>
+                                </article>
+                                <article>
+                                    <span>Permission</span><strong class="permission-total"
+                                        id="permissionCount">0</strong>
+                                </article>
+                            </div>
+                            <div class="attendance-table-wrap" id="detailAttendanceTable">
+                                <table class="attendance-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Student</th>
+                                            <th>Status</th>
+                                            <th>Note</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-attendance-row>
+                                            <td class="attendance-number">1</td>
+                                            <td>
+                                                <span class="attendance-student"><span
+                                                        class="attendance-avatar">ST</span><strong>student</strong></span>
+                                            </td>
+                                            <td>
+                                                <div class="attendance-status-options">
+                                                    <button type="button" data-attendance-value="present"
+                                                        aria-pressed="false">
+                                                        Present</button><button type="button"
+                                                        data-attendance-value="absent" aria-pressed="false">
+                                                        Absent</button><button type="button"
+                                                        data-attendance-value="permission" aria-pressed="false">
+                                                        Permission
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input class="attendance-note" type="text" maxlength="100"
+                                                    placeholder="Optional..."
+                                                    aria-label="Attendance note for student" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="attendance-empty" id="detailAttendanceEmpty" hidden>
+                                <span>◷</span>
+                                <div>
+                                    <strong>No students enrolled yet</strong>
+                                    <p>
+                                        Student attendance will be available after learners
+                                        enroll.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="attendance-actions" id="attendanceActions">
+                                <button class="attendance-reset" id="resetAttendance" type="button">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M20 7v5h-5M4 17v-5h5" />
+                                        <path d="M6 9a7 7 0 0 1 12-2l2 5M4 12l2 5a7 7 0 0 0 12-2" />
+                                    </svg>Reset Attendance</button><button class="attendance-mark-all"
+                                    id="markAllPresent" type="button">
+                                    Mark All Present
+                                </button>
+                            </div>
+                        </section>
+                        <section class="course-detail-tab-panel session-log-panel" id="detailSessionPanel"
+                            role="tabpanel" hidden>
+                            <div class="session-log-toolbar">
+                                <div>
+                                    <h2>Session Log</h2>
+                                    <p>Review student attendance for each class.</p>
+                                </div>
+                                <label class="session-student-filter"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="9" cy="8" r="3" />
+                                        <path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 1 0-1-5.8M17 15a5 5 0 0 1 4 5" />
+                                    </svg><select id="sessionStudentFilter" aria-label="Filter sessions by student">
+                                        <option value="all">All students</option>
+                                        <option value="student">student</option>
+                                    </select><svg class="select-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m7 10 5 5 5-5" />
+                                    </svg></label>
+                            </div>
+                            <div class="session-log-summary" id="sessionLogSummary">
+                                <article>
+                                    <span>Total Sessions</span><strong id="sessionTotalCount">3</strong>
+                                </article>
+                                <article class="session-present-summary">
+                                    <span>Total Present</span><strong id="sessionPresentCount">1</strong>
+                                </article>
+                                <article class="session-absent-summary">
+                                    <span>Total Absent</span><strong id="sessionAbsentCount">1</strong>
+                                </article>
+                                <article class="session-permission-summary">
+                                    <span>Total Permission</span><strong id="sessionPermissionCount">1</strong>
+                                </article>
+                            </div>
+                            <div class="session-log-overview">
+                                <span id="sessionRecordedCount">☷ 3 sessions recorded</span>
+                                <div class="session-legend">
+                                    <span><i class="legend-present"></i>Present</span><span><i
+                                            class="legend-absent"></i>Absent</span><span><i
+                                            class="legend-permission"></i>Permission</span><span><i
+                                            class="legend-unmarked"></i>Unmarked</span>
+                                </div>
+                            </div>
+                            <div class="session-accordion" id="sessionAccordion">
+                                <article class="session-log-card is-open" data-session-record>
+                                    <button class="session-log-card-toggle" type="button" aria-expanded="true"
+                                        aria-controls="sessionDetail17">
+                                        <span
+                                            class="session-date"><strong>17</strong><small>OCT</small><small>2026</small></span><span
+                                            class="session-record-summary"><span
+                                                class="session-percent">0%</span><span>0P / 1A / 0Perm</span><i
+                                                class="session-status-dot absent-dot"></i></span><svg
+                                            class="session-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m7 10 5 5 5-5" />
+                                        </svg>
+                                    </button>
+                                    <div class="session-log-card-detail" id="sessionDetail17">
+                                        <div class="session-log-table-head">
+                                            <span>Student</span><span>Status</span><span>Note</span>
+                                        </div>
+                                        <div class="session-log-student-row">
+                                            <span><i class="session-avatar">ST</i>Student</span><strong
+                                                class="session-status-label status-label-absent">Absent</strong><span
+                                                class="session-note-value">—</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="session-log-card" data-session-record>
+                                    <button class="session-log-card-toggle" type="button" aria-expanded="false"
+                                        aria-controls="sessionDetail16">
+                                        <span
+                                            class="session-date"><strong>16</strong><small>OCT</small><small>2026</small></span><span
+                                            class="session-record-summary"><span
+                                                class="session-percent">0%</span><span>0P / 0A / 1Perm</span><i
+                                                class="session-status-dot permission-dot"></i></span><svg
+                                            class="session-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m7 10 5 5 5-5" />
+                                        </svg>
+                                    </button>
+                                    <div class="session-log-card-detail" id="sessionDetail16" hidden>
+                                        <div class="session-log-table-head">
+                                            <span>Student</span><span>Status</span><span>Note</span>
+                                        </div>
+                                        <div class="session-log-student-row">
+                                            <span><i class="session-avatar">ST</i>Student</span><strong
+                                                class="session-status-label status-label-permission">Permission</strong><span
+                                                class="session-note-value">—</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="session-log-card" data-session-record>
+                                    <button class="session-log-card-toggle" type="button" aria-expanded="false"
+                                        aria-controls="sessionDetail15">
+                                        <span
+                                            class="session-date"><strong>15</strong><small>OCT</small><small>2026</small></span><span
+                                            class="session-record-summary"><span
+                                                class="session-percent is-full">100%</span><span>1P / 0A /
+                                                0Perm</span><i class="session-status-dot present-dot"></i></span><svg
+                                            class="session-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m7 10 5 5 5-5" />
+                                        </svg>
+                                    </button>
+                                    <div class="session-log-card-detail" id="sessionDetail15" hidden>
+                                        <div class="session-log-table-head">
+                                            <span>Student</span><span>Status</span><span>Note</span>
+                                        </div>
+                                        <div class="session-log-student-row">
+                                            <span><i class="session-avatar">ST</i>Student</span><strong
+                                                class="session-status-label status-label-present">Present</strong><span
+                                                class="session-note-value">—</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="detail-empty-note" id="detailSessionEmpty" hidden>
+                                <span>◷</span>
+                                <div>
+                                    <strong>No session records yet</strong>
+                                    <p>
+                                        Session attendance will appear here after a class has been
+                                        recorded.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="course-detail-tab-panel" id="detailReportPanel" role="tabpanel" hidden>
+                            <div class="detail-panel-heading">
+                                <div>
+                                    <h2>Student Report</h2>
+                                    <p>A quick learning and attendance overview.</p>
+                                </div>
+                            </div>
+                            <div class="detail-report-card">
+                                <span class="detail-report-ring" id="detailReportRing"><strong
+                                        id="detailReportRate">33%</strong></span>
+                                <div>
+                                    <strong>Attendance overview</strong>
+                                    <p id="detailReportMessage">
+                                        1 student enrolled in this course. Average attendance is
+                                        33%.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="course-detail-tab-panel" id="detailMyAttendancePanel" role="tabpanel" hidden>
+                            <div class="detail-panel-heading">
+                                <div>
+                                    <h2>My Attendance</h2>
+                                    <p>Your attendance record for this course.</p>
+                                </div>
+                            </div>
+                            <div class="detail-empty-note">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Teacher attendance</strong>
+                                    <p>
+                                        Teacher attendance records will appear here when they are
+                                        available.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <aside class="course-detail-sidebar">
+                        <div class="detail-course-cover">
+                            <span id="detailCoverMark">C++</span><small id="detailCoverCode">ICT-004 ·
+                                Programming</small>
+                        </div>
+                        <div class="panel detail-facts-panel">
+                            <article>
+                                <span><small>Students</small><strong id="detailSideStudents">1</strong></span><i
+                                    class="fact-purple"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="9" cy="8" r="3" />
+                                        <path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 1 0-1-5.8M17 15a5 5 0 0 1 4 5" />
+                                    </svg></i>
+                            </article>
+                            <article>
+                                <span><small>Start Date</small><strong id="detailStartDate">15 Oct,
+                                        2026</strong></span><i class="fact-blue"><svg viewBox="0 0 24 24"
+                                        aria-hidden="true">
+                                        <rect x="4" y="4" width="16" height="17" rx="2" />
+                                        <path d="M8 2v4m8-4v4M4 9h16" />
+                                    </svg></i>
+                            </article>
+                            <article>
+                                <span><small>Duration</small><strong id="detailDuration">42 hrs</strong></span><i
+                                    class="fact-orange"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M12 7v5l3 2" />
+                                    </svg></i>
+                            </article>
+                            <article>
+                                <span><small>Total Sessions</small><strong id="detailTotalSessions">28</strong></span><i
+                                    class="fact-purple"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5" />
+                                    </svg></i>
+                            </article>
+                        </div>
+                    </aside>
+                </div>
+                <section class="related-courses-section" aria-labelledby="relatedCoursesTitle">
+                    <div class="related-courses-heading">
+                        <div>
+                            <p>KEEP EXPLORING</p>
+                            <h2 id="relatedCoursesTitle">Related Courses</h2>
+                            <span>More courses assigned to you.</span>
+                        </div>
+                        <span class="related-course-count">2 courses</span>
+                    </div>
+                    <div class="related-courses-grid">
+                        <article class="related-course-card" data-related-course="ICT-003" role="button" tabindex="0" aria-label="View Web Front End course">
+                            <div class="related-course-cover related-cover-frontend" role="img" aria-label="Web development illustration">
+                                <span class="cover-bubble bubble-css">CSS</span><span class="cover-bubble bubble-js">JS</span>
+                                <div class="cover-window"><div class="cover-window-bar"><i></i><i></i><i></i></div><div class="cover-window-content"><span class="cover-window-sidebar"></span><span class="cover-code-lines"><i></i><i></i><i></i><i></i><i></i></span><span class="cover-preview"><i></i><i></i><i></i><b></b></span></div></div>
+                                <span class="cover-bubble bubble-html">HTML</span>
+                            </div>
+                            <div class="related-course-content">
+                                <h3>Web Front End</h3>
+                                <div class="related-course-meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>42h</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0m1-8a3 3 0 1 0-1-5.8m2 9a5 5 0 0 1 4 5"/></svg>1 Enrolled</span></div>
+                                <time datetime="2026-10-15">15 Oct, 2026</time>
+                            </div>
+                        </article>
+                        <article class="related-course-card" data-related-course="ICT-008" role="button" tabindex="0" aria-label="View Web Development course">
+                            <div class="related-course-cover related-cover-webdev" role="img" aria-label="Web development illustration">
+                                <span class="cover-bubble bubble-html">HTML</span><span class="cover-bubble bubble-js">JS</span>
+                                <div class="cover-window"><div class="cover-window-bar"><i></i><i></i><i></i></div><div class="cover-window-content"><span class="cover-window-sidebar"></span><span class="cover-code-lines"><i></i><i></i><i></i><i></i><i></i></span><span class="cover-preview"><i></i><i></i><i></i><b></b></span></div></div>
+                                <span class="cover-bubble bubble-css">CSS</span>
+                            </div>
+                            <div class="related-course-content">
+                                <h3>Web Development</h3>
+                                <div class="related-course-meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Upcoming</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0m1-8a3 3 0 1 0-1-5.8m2 9a5 5 0 0 1 4 5"/></svg>0 Enrolled</span></div>
+                                <time>Date to be announced</time>
+                            </div>
+                        </article>
+                        <article class="related-course-card" data-related-course="ICT-004" role="button" tabindex="0" aria-label="View C plus plus course">
+                            <div class="related-course-cover related-cover-cpp" role="img" aria-label="C plus plus programming illustration">
+                                <span class="cover-bubble bubble-cpp">C++</span><span class="cover-bubble bubble-braces">{ }</span>
+                                <div class="cover-window"><div class="cover-window-bar"><i></i><i></i><i></i></div><div class="cover-window-content"><span class="cover-window-sidebar"></span><span class="cover-code-lines"><i></i><i></i><i></i><i></i><i></i></span><span class="cover-preview"><i></i><i></i><i></i><b></b></span></div></div>
+                                <span class="cover-bubble bubble-cpp-small">++</span>
+                            </div>
+                            <div class="related-course-content">
+                                <h3>C plus plus</h3>
+                                <div class="related-course-meta"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>42h</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0m1-8a3 3 0 1 0-1-5.8m2 9a5 5 0 0 1 4 5"/></svg>1 Enrolled</span></div>
+                                <time datetime="2026-10-15">15 Oct, 2026</time>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+            <!-- Teacher profile -->
+            <section class="view secondary-view" id="profileView" data-page="profile" aria-labelledby="profileTitle"
+                hidden>
+                <header class="profile-page-heading">
+                    <div>
+                        <p class="profile-kicker">YOUR ACCOUNT</p>
+                        <h1 id="profileTitle">Profile</h1>
+                        <p>Your personal and professional information.</p>
+                    </div>
+                    <button class="profile-edit-button" id="editProfileButton" type="button">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m15 5 4 4M4 20l4.5-1 10.7-10.7a2.1 2.1 0 0 0-3-3L5.5 16zM13.5 6.5l4 4" />
+                        </svg>Edit Profile
+                    </button>
+                </header>
+                <div class="profile-content" id="profileContent">
+                    <section class="profile-hero-card" aria-label="Teacher profile summary">
+                        <div class="profile-cover"></div>
+                        <div class="profile-identity-row">
+                            <div class="profile-photo" aria-hidden="true">TW<i></i></div>
+                            <div class="profile-identity-copy">
+                                <h2 id="profileNameDisplay">teacher web backend</h2>
+                                <p id="profileRoleDisplay">
+                                    Full-Stack Web Development Instructor
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="profile-stats" aria-label="Teaching statistics">
+                        <article class="profile-stat-card">
+                            <span class="profile-stat-icon profile-stat-purple"><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v17H5.5A2.5 2.5 0 0 0 3 22.5z" />
+                                    <path d="M3 5.5v17M8 7h8" />
+                                </svg></span><strong>3</strong><span>Courses Teaching</span>
+                        </article>
+                        <article class="profile-stat-card">
+                            <span class="profile-stat-icon profile-stat-blue"><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <circle cx="9" cy="8" r="3" />
+                                    <path d="M3 20a6 6 0 0 1 12 0M16 11a3 3 0 1 0-1-5.8M17 15a5 5 0 0 1 4 5" />
+                                </svg></span><strong>1</strong><span>Total Students</span>
+                        </article>
+                        <article class="profile-stat-card">
+                            <span class="profile-stat-icon profile-stat-green"><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <circle cx="12" cy="8" r="6" />
+                                    <path d="m8 13-1 8 5-3 5 3-1-8" />
+                                </svg></span><strong>12 years</strong><span>Years of Experience</span>
+                        </article>
+                        <article class="profile-stat-card">
+                            <span class="profile-stat-icon profile-stat-orange"><svg viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z" />
+                                </svg></span><strong>4.8 / 5</strong><span>Rating</span>
+                        </article>
+                    </section>
+                    <div class="profile-information-grid">
+                        <section class="panel profile-information-card">
+                            <h2>Personal Information</h2>
+                            <div class="profile-fields-grid">
+                                <div class="profile-field">
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                                            <path d="m3 7 9 6 9-6" />
+                                        </svg>Email</span><strong id="profileEmailDisplay">teacher@gmail.com</strong>
+                                </div>
+                                <div class="profile-field">
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <rect x="3" y="5" width="18" height="15" rx="2" />
+                                            <path d="M8 5V3h8v2M3 10h18" />
+                                        </svg>Position</span><strong id="profilePositionDisplay">Full-Stack Web
+                                        Development Instructor</strong>
+                                </div>
+                                <div class="profile-field">
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                                d="M6 3h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z" />
+                                        </svg>Phone</span><strong id="profilePhoneDisplay">012000000</strong>
+                                </div>
+                                <div class="profile-field">
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                                            <circle cx="12" cy="10" r="2.5" />
+                                        </svg>Location</span><strong id="profileLocationDisplay">Phnom Penh,
+                                        Cambodia</strong>
+                                </div>
+                                <div class="profile-field">
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5" />
+                                        </svg>Specialization</span><strong id="profileSpecializationDisplay">Web
+                                        Development &amp; Cloud Computing</strong>
+                                </div>
+                                <div class="profile-field">
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <circle cx="12" cy="8" r="6" />
+                                            <path d="m8 13-1 8 5-3 5 3-1-8" />
+                                        </svg>Experience</span><strong id="profileExperienceDisplay">12 years</strong>
+                                </div>
+                                <div class="profile-field">
+                                    <span><svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                                d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M8 9h.01M12 9h.01M16 9h.01" />
+                                        </svg>Department</span><strong id="profileDepartmentDisplay">Information &amp;
+                                        Communication Technology</strong>
+                                </div>
+                            </div>
+                        </section>
+                        <aside class="panel profile-about-card">
+                            <h2>About Me</h2>
+                            <p id="profileAboutDisplay">
+                                Senior ICT instructor specializing in web development,
+                                database systems, and cloud architecture. Passionate about
+                                equipping students with practical, industry-ready skills.
+                            </p>
+                            <div class="profile-about-note">
+                                <span>✦</span>
+                                <div>
+                                    <strong>Teaching with purpose</strong><small>Helping students build real-world
+                                        skills.</small>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+                <form class="panel profile-edit-form" id="profileEditForm" hidden>
+                    <div class="profile-edit-form-heading">
+                        <div>
+                            <h2>Edit Profile</h2>
+                            <p>Update your professional information.</p>
+                        </div>
+                        <button type="button" class="profile-cancel-button" data-profile-cancel>
+                            Cancel
+                        </button>
+                    </div>
+                    <div class="profile-edit-fields">
+                        <label>Display name<input name="name" maxlength="60" required /></label><label>Email<input
+                                name="email" type="email" maxlength="100" required /></label><label>Phone<input
+                                name="phone" maxlength="30" /></label><label>Position<input name="role" maxlength="80"
+                                required /></label><label>Location<input name="location"
+                                maxlength="80" /></label><label>Specialization<input name="specialization"
+                                maxlength="100" /></label><label>Experience<input name="experience"
+                                maxlength="40" /></label><label>Department<input name="department"
+                                maxlength="100" /></label><label class="profile-about-input">About Me<textarea
+                                name="about" rows="4" maxlength="500"></textarea>
+                        </label>
+                    </div>
+                    <div class="profile-edit-actions">
+                        <button type="button" class="profile-cancel-button" data-profile-cancel>
+                            Cancel</button><button class="button-primary" type="submit">
+                            Save changes
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <!-- Homepage-style footer -->
+    <footer class="teacher-footer">
+        <div class="teacher-footer-inner">
+            <section class="teacher-footer-brand">
+                <a class="teacher-footer-logo" href="../index.html" aria-label="ICT Professional Training Center home">
+                    <img src="../asset/img/ICTLogo9.png" alt="" />
+                    <span><strong>ICT PROFESSIONAL</strong><small>TRAINING CENTER</small></span>
+                </a>
+                <p>Empowering professionals through world-class ICT education since 2020.</p>
+                <div class="teacher-footer-socials" aria-label="Social media">
+                    <span role="img" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h4V4h-4c-3 0-5 2-5 5v3H6v4h3v5h4v-5h4l1-4h-5V9c0-.7.3-1 1-1Z"/></svg></span>
+                    <span role="img" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 3-7 18-4-8-8-4 19-6Zm-11 10 6-6"/></svg></span>
+                    <span role="img" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v10.5a4.5 4.5 0 1 1-4-4.47M14 4c.5 3 2.3 4.6 5 5"/></svg></span>
+                    <span role="img" aria-label="LinkedIn" title="LinkedIn"><strong>in</strong></span>
+                </div>
+            </section>
+            <nav class="teacher-footer-column" aria-label="About ICT">
+                <h2>About ICT</h2>
+                <a href="../index.html">Home</a>
+                <a href="../course.html">All Courses</a>
+                <a href="../about.html">About</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../contact.html">Contact Us</a>
+            </nav>
+            <nav class="teacher-footer-column" aria-label="Popular courses">
+                <h2>Popular Course</h2>
+                <a href="../course.html">Networking CCNA1</a>
+                <a href="../course.html">C++ Programming</a>
+                <a href="../course.html">React JS</a>
+                <a href="../course.html">Web Development Frontend</a>
+                <a href="../course.html">Mobile App (Flutter)</a>
+            </nav>
+            <section class="teacher-footer-contact">
+                <h2>Contact Info</h2>
+                <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>ផ្ទះលេខ 240B ផ្លូវ 132 ភូមិ06<br>សង្កាត់ទឹកល្អក់ទី01<br>ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</span></p>
+                <a href="tel:+85592702175"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg><span>092 702 175 / 096 287 5270</span></a>
+                <a href="mailto:ICTCenter@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>ICTCenter@gmail.com</span></a>
+            </section>
+            <section class="teacher-footer-apps">
+                <h2>Download App</h2>
+                <p>Download our app from the App Store and Google Play Store.</p>
+                <div class="teacher-store-badges">
+                    <div class="teacher-store-badge" role="img" aria-label="Available on the App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 13c0-2 1.6-3 1.7-3.1a4 4 0 0 0-3.2-1.7c-1.4-.1-2.7.8-3.4.8s-1.8-.8-3-.8a4.5 4.5 0 0 0-3.8 2.3c-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 2.9 2.2 1.1-.1 1.6-.7 3-.7s1.8.7 3 .7c1.2 0 2-1.1 2.8-2.2a10 10 0 0 0 1.3-2.7 4.1 4.1 0 0 1-2.5-4.1ZM14.2 6.8A4.2 4.2 0 0 0 15.2 3a4.3 4.3 0 0 0-3.1 1.6 4 4 0 0 0-1 3.6 3.6 3.6 0 0 0 3.1-1.4Z"/></svg><span><small>Available on the</small><strong>App Store</strong></span></div>
+                    <div class="teacher-store-badge" role="img" aria-label="Get it on Google Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5v17l9-8.5z"/><path d="m14 10 5-3-3-2-5 5m3 4 5 3-3 2-5-5"/></svg><span><small>GET IT ON</small><strong>Google Play</strong></span></div>
+                </div>
+                <p class="teacher-footer-accepts">We accept:</p>
+                <div class="teacher-payment-badges"><span class="teacher-pay-aba">ABA</span><span class="teacher-pay-khqr">KHQR</span></div>
+            </section>
+        </div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>

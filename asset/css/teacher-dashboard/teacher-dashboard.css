@@ -1,0 +1,9 @@
+/* Dashboard stylesheet entry point: keep imports in cascade order. */
+@import url("./teacher-dashboard-foundation.css");
+@import url("./teacher-dashboard-shell.css");
+@import url("./teacher-dashboard-courses.css");
+@import url("./teacher-dashboard-course-details.css");
+@import url("./teacher-dashboard-profile.css");
+@import url("./teacher-dashboard-footer.css");
+@import url("./teacher-dashboard-polish.css");
+@import url("./teacher-dashboard-related-courses.css");

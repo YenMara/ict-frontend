@@ -14,7 +14,7 @@ themeToggle.addEventListener('click', () => {
 });
 
 /* responsive dropdown in small screens */
- document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function () {
   const isMobile = () => window.innerWidth < 992;
 
   const courseToggle = document.querySelector('.hover-dropdown > .dropdown-toggle');
