@@ -1,0 +1,131 @@
+/* Responsive teacher dashboard footer */
+.teacher-footer { margin: 22px 24px 0 326px; padding: 25px 25px 13px; border: 1px solid var(--border); border-radius: 17px 17px 0 0; background: var(--surface); box-shadow: 0 -5px 25px #0208170b; color: var(--text); }
+.teacher-footer-inner { display: grid; grid-template-columns: minmax(210px, 1.45fr) repeat(2, minmax(115px, .7fr)) minmax(180px, 1fr); gap: 24px; }
+.teacher-footer-brand { min-width: 0; }
+.teacher-footer-logo { display: inline-flex; align-items: center; gap: 9px; color: inherit; text-decoration: none; }
+.teacher-footer-logo img { width: 47px; height: 47px; object-fit: contain; }
+.teacher-footer-logo span { display: grid; font-family: Roboto, Inter, sans-serif; line-height: 1.1; }
+.teacher-footer-logo strong { color: #38bdf8; font-size: 14px; font-weight: 750; }
+.teacher-footer-logo small { color: #94a3b8; font-size: 11px; font-weight: 700; }
+.teacher-footer-brand > p { max-width: 290px; margin: 13px 0 12px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.teacher-footer-email { display: inline-flex; align-items: center; gap: 7px; color: #93a9c8; font-size: 10px; text-decoration: none; }
+.teacher-footer-email:hover { color: #38bdf8; }
+.teacher-footer-email svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.6; }
+.teacher-footer-nav, .teacher-footer-contact { display: grid; align-content: start; justify-items: start; gap: 9px; }
+.teacher-footer-nav h2, .teacher-footer-contact h2 { margin: 4px 0 3px; color: var(--text); font-size: 11px; font-weight: 750; letter-spacing: .04em; }
+.teacher-footer-nav a, .teacher-footer-contact a, .teacher-footer-contact p { display: inline-flex; align-items: flex-start; gap: 8px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; text-decoration: none; transition: color .18s; }
+.teacher-footer-nav a:hover, .teacher-footer-contact a:hover { color: #38bdf8; }
+.teacher-footer-contact svg { width: 14px; height: 14px; flex: 0 0 auto; margin-top: 1px; fill: none; stroke: #8fa9cc; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.6; }
+.teacher-footer-contact .teacher-footer-note { margin-top: 2px; color: #8092ac; font-size: 9px; }
+.teacher-footer-bottom { display: flex; justify-content: space-between; gap: 12px; margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--border); color: #8495ae; font-size: 9px; }
+html[data-theme="light"] .teacher-footer { background: #fff; }
+html[data-theme="light"] .teacher-footer-logo small { color: #58677d; }
+html[data-theme="light"] .teacher-footer-nav h2, html[data-theme="light"] .teacher-footer-contact h2 { color: #1e2c43; }
+html[data-theme="light"] .teacher-footer-nav a, html[data-theme="light"] .teacher-footer-contact a, html[data-theme="light"] .teacher-footer-contact p, html[data-theme="light"] .teacher-footer-brand > p, html[data-theme="light"] .teacher-footer-email { color: #58677d; }
+html[data-theme="light"] .teacher-footer-nav a:hover, html[data-theme="light"] .teacher-footer-contact a:hover, html[data-theme="light"] .teacher-footer-email:hover { color: #236caa; }
+@media (max-width: 1100px) { .teacher-footer-inner { grid-template-columns: minmax(210px, 1.4fr) repeat(2, minmax(100px, .7fr)) minmax(165px, 1fr); gap: 17px; } }
+@media (max-width: 900px) { .teacher-footer { margin: 20px 24px 0; } }
+@media (max-width: 650px) {
+  .teacher-footer { margin: 18px 14px 0; padding: 20px 16px 12px; }
+  .teacher-footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 21px 16px; }
+  .teacher-footer-brand { grid-column: 1 / -1; }
+  .teacher-footer-brand > p { max-width: 420px; }
+  .teacher-footer-contact { grid-column: 1 / -1; }
+  .teacher-footer-bottom { margin-top: 17px; font-size: 8px; }
+}
+@media (max-width: 360px) { .teacher-footer { margin-right: 10px; margin-left: 10px; padding-right: 12px; padding-left: 12px; } .teacher-footer-inner { gap: 18px 11px; } }
+
+/* Match the homepage footer layout and palette. */
+.teacher-footer { background: linear-gradient(160deg, #f5f6ff 0%, #fff 55%, #eef1ff 100%); box-shadow: 0 1px 4px #00000029; color: #1a1a2e; }
+.teacher-footer-inner { grid-template-columns: minmax(190px, 1.25fr) minmax(105px, .7fr) minmax(145px, .95fr) minmax(205px, 1.3fr) minmax(155px, .95fr); gap: 20px; }
+.teacher-footer-brand > p, .teacher-footer-apps > p { max-width: 260px; margin: 13px 0; color: #5b5f77; font-size: 11px; line-height: 1.65; }
+.teacher-footer-column, .teacher-footer-contact, .teacher-footer-apps { display: grid; align-content: start; justify-items: start; gap: 9px; min-width: 0; }
+.teacher-footer-column h2, .teacher-footer-contact h2, .teacher-footer-apps h2 { margin: 6px 0 5px; color: #1a1a2e; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.teacher-footer-column a { color: #1a1a2e; font-size: 11px; text-decoration: none; transition: color .18s; }
+.teacher-footer-column a:hover { color: #4f46e5; }
+.teacher-footer-socials { display: flex; gap: 10px; margin-top: 3px; }
+.teacher-footer-socials > span { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid #4f46e514; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px #0000000d; color: #4f46e5; transition: transform .2s, box-shadow .2s; }
+.teacher-footer-socials > span:hover { transform: translateY(-3px); box-shadow: 0 8px 18px #4f46e533; }
+.teacher-footer-socials svg { width: 17px; height: 17px; fill: currentColor; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.4; }
+.teacher-footer-socials strong { font: 750 13px Arial, sans-serif; }
+.teacher-footer-logo img { width: 60px; height: 60px; }
+.teacher-footer-logo strong { font-size: 17px; }
+.teacher-footer-logo small { font-size: 13px; }
+.teacher-footer-socials > span { width: 38px; height: 38px; }
+.teacher-footer-contact { gap: 11px; }
+.teacher-footer-contact h2 { margin-bottom: 5px; }
+.teacher-footer-contact p, .teacher-footer-contact a { display: flex; align-items: flex-start; gap: 9px; margin: 0; color: #5b5f77; font-size: 10px; line-height: 1.55; text-decoration: none; }
+.teacher-footer-contact a:hover { color: #4f46e5; }
+.teacher-footer-contact svg { width: 30px; height: 30px; flex: 0 0 30px; margin-top: -2px; padding: 7px; border-radius: 9px; background: #fff; box-shadow: 0 0 0 1px #0000000d; color: #4f46e5; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.6; }
+.teacher-footer-apps { gap: 8px; }
+.teacher-footer-apps > p { margin: 0 0 2px; }
+.teacher-store-badges { display: grid; width: 100%; gap: 8px; margin-bottom: 5px; }
+.teacher-store-badge { display: flex; min-height: 43px; align-items: center; gap: 9px; padding: 6px 10px; border-radius: 8px; background: #101114; color: #fff; }
+.teacher-store-badge > svg { width: 22px; height: 22px; flex: 0 0 auto; fill: currentColor; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.3; }
+.teacher-store-badge > span { display: grid; line-height: 1.1; }
+.teacher-store-badge small { font-size: 8px; opacity: .86; }
+.teacher-store-badge strong { font-size: 12px; font-weight: 750; }
+.teacher-footer-apps .teacher-footer-accepts { margin: 1px 0 0; font-size: 10px; }
+.teacher-payment-badges { display: flex; gap: 7px; }
+.teacher-payment-badges span { display: inline-flex; min-height: 26px; align-items: center; justify-content: center; padding: 0 10px; border-radius: 6px; color: #fff; font-size: 9px; font-weight: 800; }
+.teacher-pay-aba { background: #1a3f8c; }
+.teacher-pay-khqr { background: #c0392b; }
+html[data-theme="dark"] .teacher-footer { border-color: #26334a; background: #1e293b; color: #f7f8ff; }
+html[data-theme="dark"] .teacher-footer-column h2, html[data-theme="dark"] .teacher-footer-contact h2, html[data-theme="dark"] .teacher-footer-apps h2 { color: #f7f8ff; }
+html[data-theme="dark"] .teacher-footer-column a { color: #e2e8f0; }
+html[data-theme="dark"] .teacher-footer-column a:hover { color: #38bdf8; }
+html[data-theme="dark"] .teacher-footer-brand > p, html[data-theme="dark"] .teacher-footer-apps > p, html[data-theme="dark"] .teacher-footer-contact p, html[data-theme="dark"] .teacher-footer-contact a { color: #b0bfd3; }
+html[data-theme="dark"] .teacher-footer-socials > span, html[data-theme="dark"] .teacher-footer-contact svg { background: #e2e8f01c; color: #38bdf8; }
+@media (max-width: 1200px) { .teacher-footer-inner { grid-template-columns: minmax(180px, 1.2fr) repeat(2, minmax(105px, .8fr)) minmax(180px, 1.2fr); } .teacher-footer-apps { grid-column: 2 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } .teacher-footer-apps h2, .teacher-footer-apps > p, .teacher-footer-apps .teacher-footer-accepts, .teacher-payment-badges { grid-column: 1 / -1; } .teacher-store-badges { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .teacher-footer { margin: 20px 24px 0; } }
+@media (max-width: 700px) { .teacher-footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; } .teacher-footer-brand, .teacher-footer-contact, .teacher-footer-apps { grid-column: 1 / -1; } .teacher-footer-apps { display: block; } .teacher-footer-apps h2 { margin-bottom: 8px; } .teacher-store-badges { grid-template-columns: repeat(2, minmax(0, 190px)); margin: 10px 0; } }
+@media (max-width: 480px) { .teacher-footer { margin: 18px 14px 0; padding: 22px 17px; } .teacher-footer-inner { gap: 22px 13px; } .teacher-footer-column a { font-size: 10px; } .teacher-footer-contact p, .teacher-footer-contact a { font-size: 9px; } .teacher-store-badges { grid-template-columns: minmax(0, 1fr); } }
+.teacher-footer { position: relative; z-index: 6; width: 100%; margin: 28px 0 0; padding: 46px clamp(24px, 2.6vw, 50px) 42px; border: 0; border-top: 1px solid #e6e8f1; border-radius: 0; }
+.teacher-footer-inner { width: min(100%, 1800px); grid-template-columns: minmax(300px, 1.45fr) minmax(150px, .85fr) minmax(200px, 1.05fr) minmax(300px, 1.4fr) minmax(260px, 1.15fr); gap: clamp(22px, 3vw, 54px); margin: 0 auto; }
+@media (max-width: 1500px) { .teacher-footer-inner { grid-template-columns: minmax(240px, 1.35fr) minmax(120px, .75fr) minmax(170px, 1fr) minmax(240px, 1.25fr) minmax(220px, 1fr); gap: 24px; } }
+@media (max-width: 1200px) { .teacher-footer-inner { grid-template-columns: minmax(220px, 1.2fr) repeat(2, minmax(130px, .8fr)) minmax(220px, 1.2fr); gap: 22px; } .teacher-footer-apps { grid-column: 2 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } .teacher-footer-apps h2, .teacher-footer-apps > p, .teacher-footer-apps .teacher-footer-accepts, .teacher-payment-badges { grid-column: 1 / -1; } .teacher-store-badges { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .teacher-footer { margin: 24px 0 0; padding: 34px 24px; } }
+@media (max-width: 700px) { .teacher-footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px 20px; } .teacher-footer-brand, .teacher-footer-contact, .teacher-footer-apps { grid-column: 1 / -1; } .teacher-footer-apps { display: block; } .teacher-footer-apps h2 { margin-bottom: 8px; } .teacher-store-badges { grid-template-columns: repeat(2, minmax(0, 190px)); margin: 10px 0; } }
+@media (max-width: 480px) { .teacher-footer { margin: 20px 0 0; padding: 30px 20px; } .teacher-footer-inner { gap: 22px 13px; } .teacher-footer-column a { font-size: 10px; } .teacher-footer-contact p, .teacher-footer-contact a { font-size: 9px; } .teacher-store-badges { grid-template-columns: minmax(0, 1fr); } }
+
+/* Keep the footer brand mark aligned with the responsive header logo. */
+.teacher-footer-logo img { width: 65px; height: 65px; flex: 0 0 65px; }
+.teacher-footer-logo strong { font-size: 20px; }
+.teacher-footer-logo small { font-size: 16px; }
+@media (max-width: 650px) and (min-width: 481px) {
+  .teacher-footer-logo img { width: 54px; height: 54px; flex-basis: 54px; }
+  .teacher-footer-logo strong { font-size: 14px; }
+  .teacher-footer-logo small { font-size: 11px; }
+}
+@media (max-width: 480px) {
+  .teacher-footer-logo img { width: 36px; height: 36px; flex-basis: 36px; }
+  .teacher-footer-logo strong { font-size: 14px; }
+  .teacher-footer-logo small { font-size: 11px; }
+}
+
+/* Use the homepage's readable footer type scale. */
+.teacher-footer-brand > p,
+.teacher-footer-apps > p { font-size: 14px; }
+.teacher-footer-column h2,
+.teacher-footer-contact h2,
+.teacher-footer-apps h2 { font-size: 14px; }
+.teacher-footer-column a,
+.teacher-footer-contact p,
+.teacher-footer-contact a { font-size: 14px; }
+.teacher-footer-apps .teacher-footer-accepts { font-size: 14px; }
+.teacher-store-badge small { font-size: 10px; }
+.teacher-store-badge strong { font-size: 14px; }
+.teacher-payment-badges span { font-size: 11px; }
+@media (max-width: 480px) {
+  .teacher-footer-brand > p,
+  .teacher-footer-apps > p,
+  .teacher-footer-apps .teacher-footer-accepts { font-size: 13px; }
+  .teacher-footer-column h2,
+  .teacher-footer-contact h2,
+  .teacher-footer-apps h2 { font-size: 13px; }
+  .teacher-footer-column a,
+  .teacher-footer-contact p,
+  .teacher-footer-contact a { font-size: 13px; }
+}
+
+
